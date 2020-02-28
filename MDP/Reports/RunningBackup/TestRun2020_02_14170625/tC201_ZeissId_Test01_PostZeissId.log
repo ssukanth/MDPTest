@@ -1,0 +1,29 @@
+Initialized the Logs and Browser with :
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: /var/folders/0d/0fwh5qyd2z5...}, goog:chromeOptions: {debuggerAddress: localhost:50928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+TestCaseName:tC201_ZeissId_Test01_PostZeissId
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+
+UserName:MDPAdmin@id.zeiss.com
+
+PasswordTest123!
+The Effective MDPId for Zeissid Updte is :7834f158-4593-4a24-b573-9215d5168e08
+The Base Uri: https://mdptest.api.zeiss.com
+/nThe Values to change In JSON:{CLIENTID=9ec53cca-baad-2020-b14c-6ff3c1761b0655}
+
+The Changed JSONObjects are :{zeissIdConfiguration.ClientId=9ec53cca-baad-2020-b14c-6ff3c1761b0655}
+
+The Effective end point is :/adminuserservice/api/v2.0/mdpapps/7834f158-4593-4a24-b573-9215d5168e08/ZeissIds
+
+ payload{"zeissIdConfiguration":{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b14c-6ff3c1761b0655","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}}
+
+ Response Code:400
+
+Response:{"Error":{"Code":null,"Message":"Guid should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).","Target":"   at System.Guid.GuidResult.SetFailure(Boolean overflow, String failureMessageID)\n   at System.Guid.TryParseExactD(ReadOnlySpan`1 guidString, GuidResult& result)\n   at System.Guid.TryParseGuid(ReadOnlySpan`1 guidString, GuidResult& result)\n   at System.Guid..ctor(String g)\n   at Newtonsoft.Json.Linq.JToken.op_Explicit(JToken value)\n   at Newtonsoft.Json.Linq.JToken.ToObject(Type objectType)\n   at Newtonsoft.Json.Linq.JToken.ToObject[T]()\n   at Czm.Czi.MDPAdminUserService.Service.Implementation.ZeissIdService.CreateZeissIdConfiguration(Guid mdpAppId, CreateZeissIdConfigurationDto createZeissIdConfigurationDto, Guid createdBy) in /home/vsts/work/1/s/Source/Czm.Czi.MDPAdminUserService.Service/Implementation/ZeissIdService.cs:line 59\n   at Czm.Czi.MDPAdminUserService.API.Controllers.ZeissIdsController.Post(ApiVersion apiVersion, Guid mdpappid, CreateZeissIdConfigurationDto createZeissIdConfigurationDto) in /home/vsts/work/1/s/Source/Czm.Czi.MDP.AdminUserService.API/Controllers/ZeissIdsController.cs:line 98\n   at lambda_method(Closure , Object , Object[] )\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()\n--- End of stack trace from previous location where exception was thrown ---\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\n--- End of stack trace from previous location where exception was thrown ---\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)","Details":null,"InnerError":null}}
+
+The Issues was :java.lang.AssertionError: expected [201] but found [400]

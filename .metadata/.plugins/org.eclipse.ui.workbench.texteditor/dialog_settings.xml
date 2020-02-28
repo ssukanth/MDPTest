@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="dynamicCredentials"/>
+		<item key="casesensitive" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="wrap" value="true"/>
+		<item key="wholeword" value="false"/>
+		<list key="findhistory">
+			<item value="dynamicCredentials"/>
+			<item value="TC192_CreatePatient_Test01_CreatePatientValid"/>
+			<item value="["/>
+			<item value="The Tokenis"/>
+			<item value="gson"/>
+			<item value="demo"/>
+			<item value="schema"/>
+			<item value="siteadmin"/>
+			<item value="update"/>
+			<item value="&#x09;&#x09;&#x09;&#x09;exeData.add"/>
+			<item value="getExe"/>
+			<item value="405"/>
+			<item value="gene"/>
+			<item value="str"/>
+			<item value="datstr"/>
+		</list>
+		<list key="replacehistory">
+			<item value=".queryParam"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_WIDTH" value="385"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_X_ORIGIN" value="685"/>
+		<item key="DIALOG_Y_ORIGIN" value="322"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="575"/>
+		<item key="DIALOG_Y_ORIGIN" value="325"/>
+	</section>
+</section>

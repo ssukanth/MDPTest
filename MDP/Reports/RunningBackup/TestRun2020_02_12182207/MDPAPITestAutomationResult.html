@@ -1,0 +1,2517 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>MDPAPITestAutomationResult</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Report for MDPAPITestAutomationResult</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Feb 12, 2020 06:22:08 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>AdminService</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='88.889%'><span class='strong'>16</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='11.111%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_AdminUser_Test01_GetAllMDPApps</span>
+						<span class='test-time'>Feb 12, 2020 06:22:17 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:22:17 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:22:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+309ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:18 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:18 PM</td>
+				<td class='step-details'>
+						The Auth code Generated With the URL:
+https://zeissidb2ctest.b2clogin.com/accounts-test.zeiss.com/oauth2/v2.0/authorize?ui_locales=en&p=B2C_1A_ZeissIdNormalSignIn&response_type=token&state=CfDJ8HbUd0rYUXFKuExWEjHVKsTN3GdC5DYdHovh-eoPVc9oUekpcA-RAyR2i22Y2Z8gh5U948EQzvlNFmMjPDoT35QCMJm9DVq17zCAeDl35HO4--g5l63YjjOKj7C4KVHVQZITq7NdSybN2eXM7btXGsqQJk4X7HMHB_sfU95h7VSf-1OY6Iw4-l8ETxjynS12mvvTsSijbMlGPPmoLyHO8-rS_Wwhllk3c6ZQqyxcVst1tqav9LuGZHP4SqIdZjoCokSIp3LPclE7T7bEN2x4tUE&client_id=3D30CCC9-7964-4323-90BB-6D72AA8DC9C6&scope=3D30CCC9-7964-4323-90BB-6D72AA8DC9C6+openId&redirect_uri=https%3A%2F%2Fid-ip-test.zeiss.com%2FOAuth%2FAuthorizeCallBack
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:24 PM</td>
+				<td class='step-details'>
+						Clicked on the Element
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:32 PM</td>
+				<td class='step-details'>
+						The Auth token Used :
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IlRva2VuU2lnbmluZ0tleUNvbnRhaW5lciJ9.eyJpc3MiOiJodHRwczovL3plaXNzaWRiMmN0ZXN0LmIyY2xvZ2luLmNvbS83Yzg5NjlkMS0zZDFjLTQ2MGMtYTMyZi04NzlkODk0MTI1NWYvdjIuMC8iLCJleHAiOjE1ODE1MTU1NDcsIm5iZiI6MTU4MTUxMTk0NywiYXVkIjoiM0QzMENDQzktNzk2NC00MzIzLTkwQkItNkQ3MkFBOERDOUM2Iiwib2lkIjoiZjZkMWMyNWQtMWI5ZS00NWQ5LTkyNjMtMTFiNmQxY2EzMWQxIiwic3ViIjoiTm90IHN1cHBvcnRlZCBjdXJyZW50bHkuIFVzZSBvaWQgY2xhaW0uIiwiWmVpc3NJZEJhc2UiOiJ7XHJcbiAgXCJhY2NvdW50SWRcIjogMTExNTQsXHJcbiAgXCJmaXJzdE5hbWVcIjogXCJNRFBcIixcclxuICBcImxhc3ROYW1lXCI6IFwiYWRtaW5cIixcclxuICBcImVNYWlsXCI6IFwiTURQQWRtaW5AaWQuemVpc3MuY29tXCIsXHJcbiAgXCJsYXN0Q2hhbmdlXCI6IFwiMjAxOS0xMi0wMlQwOTowMTo1MC4wMjNcIixcclxuICBcImlkZW50aXR5UHJvdmlkZXJcIjogNixcclxuICBcImpvYlRpdGxlXCI6IFwiXCIsXHJcbiAgXCJkZXBhcnRtZW50XCI6IFwiXCIsXHJcbiAgXCJzYWx1dGF0aW9uXCI6IFwibmFcIixcclxuICBcImxhbmd1YWdlXCI6IFwiZW4tSU5cIlxyXG59IiwiWmVpc3NJZENvbnRhY3QiOiJ7XHJcbiAgXCJzdHJlZXRcIjogXCJcIixcclxuICBcImhvdXNlTnVtYmVyXCI6IFwiXCIsXHJcbiAgXCJ6aXBcIjogXCJcIixcclxuICBcImNpdHlcIjogXCJcIixcclxuICBcImNvdW50cnlcIjogXCJcIixcclxuICBcImNlbGxQaG9uZVwiOiBcIlwiLFxyXG4gIFwicGhvbmVcIjogXCJcIixcclxuICBcImZheFwiOiBcIlwiXHJcbn0iLCJaZWlzc0lkT3JnYW5pc2F0aW9uIjoie30iLCJaZWlzc0lkQXBwbGljYXRpb24iOiJ7XHJcbiAgXCJjbGllbnRBcHBJZFwiOiAzNzYsXHJcbiAgXCJhcHBsaWNhdGlvbkRvbWFpbklkXCI6IDMsXHJcbiAgXCJ0ZXJtc0FuZENvbmRpdGlvbnNJZFwiOiAwLFxyXG4gIFwiYWNjZXB0YW5jZU9mVGVybXNBbmRDb25kaXRpb25zSWRcIjogMCxcclxuICBcImRpcmVjdEFjY2Vzc1wiOiBmYWxzZSxcclxuICBcImludml0YXRpb25JZFwiOiAwXHJcbn0iLCJaZWlzc0lkQ3VzdG9tRmllbGRzIjoie30iLCJaZWlzc0lkQWdyZWVtZW50cyI6IntcclxuICBcImFncmVlbWVudHNcIjogW11cclxufSIsImF6cCI6IjNEMzBDQ0M5LTc5NjQtNDMyMy05MEJCLTZENzJBQThEQzlDNiIsInZlciI6IjEuMCIsImlhdCI6MTU4MTUxMTk0N30.UcS4l18dAW6dTS75no2X01jddYZN5VmKO_Suu16M4Oil12AXI8Izbh40WkTSr4aFo63ZtK3rJyHB-Mth9T89AkUlxuNCmx6VuQ5uJBqzFsb0izz_b0_iM7mx_2cLds8FQMWaUfe8NhuDAycAVkAvgJbqa2kAoPbc6X5X6TwYMtNbNJiqHTO7vyZEJtBXcIRl0sqYv7UviQU74nNn0MZNI5OOfhk7lWfUdmCLnAX8mb31QIGr7rSEP0j3SrJ4Siqqxftv98f1guwTp2V7NCzLZmHuyC7l8GNW0Z22lQhEW3JSsAdkCu6_IKDK4ZJtqyp4KxiPwPujXHRMYbX5MObp3w
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:32 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:32 PM</td>
+				<td class='step-details'>
+						There Are no query params for updating
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:32 PM</td>
+				<td class='step-details'>
+						The Eff End point:https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:39 PM</td>
+				<td class='step-details'>
+						The res is :
+{"pageIndex":0,"pageSize":30,"totalCount":26,"totalPages":1,"indexFrom":0,"items":[{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/802a9b4d-77f3-4166-8668-0885f06ed244","action":"GET"}],"mdpappId":"802a9b4d-77f3-4166-8668-0885f06ed244","name":"zeiss0719+20200211_170115","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1117","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/96b144c4-db4d-4cee-e6e9-08d7629609b9","action":"GET"}],"mdpappId":"96b144c4-db4d-4cee-e6e9-08d7629609b9","name":"DakarConvivo","description":"Seeding Dakar with Zeiss ID config ","configuration":{},"zeissIdConfiguration":[{"ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1103","ApiClientId":"$ApiClientId","ApiClientSecret":"$ApiClientSecret","InitiatorAccountId":"$InitiatorAccountId","DefaultUserPassword":"$DefaultUserPassword","MetatDataAddress":"$MetatDataAddress","ApiConfigurations":[{"Name":1,"Url":"$InviteUrl","SubscriptionKey":"$SubscriptionKey"},{"Name":41,"Url":"$CreateAccountWithPasswordUrl","SubscriptionKey":"$SubscriptionKey"}]},{"ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1104","ApiClientId":"$ApiClientId","ApiClientSecret":"$ApiClientSecret","InitiatorAccountId":"$InitiatorAccountId","DefaultUserPassword":"$DefaultUserPassword","MetatDataAddress":"$MetatDataAddress","ApiConfigurations":[{"Name":1,"Url":"$InviteUrl","SubscriptionKey":"$SubscriptionKey"},{"Name":41,"Url":"$CreateAccountWithPasswordUrl","SubscriptionKey":"$SubscriptionKey"}]},{"ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1143","ApiClientId":"$ApiClientId","ApiClientSecret":"$ApiClientSecret","InitiatorAccountId":"$InitiatorAccountId","DefaultUserPassword":"$DefaultUserPassword","MetatDataAddress":"$MetatDataAddress","ApiConfigurations":[{"Name":1,"Url":"$InviteUrl","SubscriptionKey":"$SubscriptionKey"},{"Name":41,"Url":"$CreateAccountWithPasswordUrl","SubscriptionKey":"$SubscriptionKey"}]},{"ClientId":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5","ApiClientId":"373","ApiClientSecret":"2krBma5267F9XmaA5VtvxqH2YVWWaM","InitiatorAccountId":"11013","DefaultUserPassword":null,"MetatDataAddress":"https://id-ip-test.zeiss.com/OAuth/OpenidConfiguration?p=B2C_1A_ZeissIdNormalSignIn","ApiConfigurations":[{"Name":1,"Url":"https://zeissidapimanagementtest.azure-api.net/V1.0/Public/Interfaces/Subscribe/Invite/","SubscriptionKey":"1091d8c3667e451eb5f859e79823a55c"}]}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/fc49872a-e3e9-476c-98e1-1644ca44898d","action":"GET"}],"mdpappId":"fc49872a-e3e9-476c-98e1-1644ca44898d","name":"zeiss0719+20200212_170941","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/f00c47c0-85a2-4251-8a45-1bbe7a3a9d9e","action":"GET"}],"mdpappId":"f00c47c0-85a2-4251-8a45-1bbe7a3a9d9e","name":"zeiss0719+20200212_170931","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b12c-6ff3c61b0909","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/f9353d68-4d2a-4ca1-8646-27898170b61a","action":"GET"}],"mdpappId":"f9353d68-4d2a-4ca1-8646-27898170b61a","name":"Test Env Mdp App","description":"string","configuration":{},"zeissIdConfiguration":[{"ClientId":"89F3022D-AAC0-4191-B12F-247CCD0C29D7","ApiClientId":"376","ApiClientSecret":"x93eYC5hnd19kT659pDx8uFt76ET8O","InitiatorAccountId":"11145","DefaultUserPassword":"string","MetatDataAddress":"https://id-ip-test.zeiss.com/OAuth/OpenidConfiguration?p=B2C_1A_ZeissIdNormalSignIn","ApiConfigurations":[{"Name":1,"Url":"https://zeissidapimanagementtest.azure-api.net/V1.0/Public/Interfaces/Subscribe/Invite/","SubscriptionKey":"7453c4f89add47fbaad2a27fcf7ac14a"},{"Name":2,"Url":"https://zeissidapimanagementtest.azure-api.net/V1.0/Public/Interfaces/Read/Account/CheckIfExists/","SubscriptionKey":"7453c4f89add47fbaad2a27fcf7ac14a"}]}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/83260a18-6428-4ec1-b0cd-307f8e85cb90","action":"GET"}],"mdpappId":"83260a18-6428-4ec1-b0cd-307f8e85cb90","name":"zeiss0719+20200212_172953","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/71b6581e-0ba3-47bc-845b-379130fe567e","action":"GET"}],"mdpappId":"71b6581e-0ba3-47bc-845b-379130fe567e","name":"MDPATestapp110220201446","description":"string","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1422","ApiClientId":"$ApiClientId","ApiClientSecret":"$ApiClientSecret","InitiatorAccountId":"$InitiatorAccountId","DefaultUserPassword":"$DefaultUserPassword","MetatDataAddress":"$MetatDataAddress","ApiConfigurations":[{"Name":1,"Url":"$InviteUrl","SubscriptionKey":"$SubscriptionKey"},{"Name":41,"Url":"$CreateAccountWithPasswordUrl","SubscriptionKey":"$SubscriptionKey"}]}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/81caf0b2-090b-450f-8f09-44e4d7d5552b","action":"GET"}],"mdpappId":"81caf0b2-090b-450f-8f09-44e4d7d5552b","name":"zeiss0719+20200212_134217","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1242","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/6cdf5aea-675d-4dbd-b239-4c31f3cc5ee6","action":"GET"}],"mdpappId":"6cdf5aea-675d-4dbd-b239-4c31f3cc5ee6","name":"Test ","description":"string","configuration":{},"zeissIdConfiguration":[{"ClientId":"64714B0F-CE7E-4A13-9144-8716BE0C4208","ApiClientId":"376","ApiClientSecret":"x93eYC5hnd19kT659pDx8uFt76ET8O","InitiatorAccountId":"11145","DefaultUserPassword":"string","MetatDataAddress":"https://id-ip-test.zeiss.com/OAuth/OpenidConfiguration?p=B2C_1A_ZeissIdNormalSignIn","ApiConfigurations":[{"Name":1,"Url":"https://zeissidapimanagementtest.azure-api.net/V1.0/Public/Interfaces/Subscribe/Invite/","SubscriptionKey":"7453c4f89add47fbaad2a27fcf7ac14a"},{"Name":2,"Url":"https://zeissidapimanagementtest.azure-api.net/V1.0/Public/Interfaces/Read/Account/CheckIfExists/","SubscriptionKey":"7453c4f89add47fbaad2a27fcf7ac14a"}]}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/65643efb-0789-4ebc-a766-4d1c1bc827e7","action":"GET"}],"mdpappId":"65643efb-0789-4ebc-a766-4d1c1bc827e7","name":"zeiss0719+20200212_150529","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/704eece6-d117-441f-97c6-53d5cd064b2e","action":"GET"}],"mdpappId":"704eece6-d117-441f-97c6-53d5cd064b2e","name":"zeiss0719+20200211_165952","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1116","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/b48b5657-af06-40b1-a1e5-76cf6cc410db","action":"GET"}],"mdpappId":"b48b5657-af06-40b1-a1e5-76cf6cc410db","name":"zeiss0719+20200212_134156","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1241","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/da790cd3-3de3-4ea8-9b90-895019142735","action":"GET"}],"mdpappId":"da790cd3-3de3-4ea8-9b90-895019142735","name":"MDPATestapp280120201439","description":"string","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/a4ae65a7-41d4-4b27-b032-90975e40508e","action":"GET"}],"mdpappId":"a4ae65a7-41d4-4b27-b032-90975e40508e","name":"zeiss0719+20200212_175715","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/d08461db-7837-4b3f-b3c5-9506e220ef1b","action":"GET"}],"mdpappId":"d08461db-7837-4b3f-b3c5-9506e220ef1b","name":"zeiss0719+20200212_172937","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b12c-6ff3c61b2929","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/19a682c3-3300-4bdf-a142-9bcd72332336","action":"GET"}],"mdpappId":"19a682c3-3300-4bdf-a142-9bcd72332336","name":"zeiss0719+20200212_163414","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b12c-6ff3c61b3434","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/87d25df7-7007-4da6-b4ea-b04393ea0e72","action":"GET"}],"mdpappId":"87d25df7-7007-4da6-b4ea-b04393ea0e72","name":"zeiss0719+20200212_181005","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/a6b74645-dd11-4801-b34b-b574f4660d28","action":"GET"}],"mdpappId":"a6b74645-dd11-4801-b34b-b574f4660d28","name":"zeiss0719+20200212_165324","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b12c-6ff3c61b5353","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/0a83f27d-aaf8-446e-af07-ca782ef9e880","action":"GET"}],"mdpappId":"0a83f27d-aaf8-446e-af07-ca782ef9e880","name":"zeiss0719+20200212_144220","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/a9058640-f4d6-4fd0-9170-d07ff4b9d515","action":"GET"}],"mdpappId":"a9058640-f4d6-4fd0-9170-d07ff4b9d515","name":"MDP User Management","description":"Uses to onboard all SSC admin Users","configuration":{"test":"value"},"zeissIdConfiguration":[{"ClientId":"3d30ccc9-7964-4323-90bb-6d72aa8dc9c6","ApiClientId":"376","ApiClientSecret":"x93eYC5hnd19kT659pDx8uFt76ET8O","InitiatorAccountId":"11145","DefaultUserPassword":"string","MetatDataAddress":"https://id-ip-test.zeiss.com/OAuth/OpenidConfiguration?p=B2C_1A_ZeissIdNormalSignIn","ApiConfigurations":[{"Name":1,"Url":"https://zeissidapimanagementtest.azure-api.net/V1.0/Public/Interfaces/Subscribe/Invite/","SubscriptionKey":"7453c4f89add47fbaad2a27fcf7ac14a"},{"Name":2,"Url":"https://zeissidapimanagementtest.azure-api.net/V1.0/Public/Interfaces/Read/Account/CheckIfExists/","SubscriptionKey":"7453c4f89add47fbaad2a27fcf7ac14a"}]}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/5853bea0-2eb6-457d-954a-d1eb4d14be4d","action":"GET"}],"mdpappId":"5853bea0-2eb6-457d-954a-d1eb4d14be4d","name":"zeiss0719+20200212_175704","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b12c-6ff3c61b5757","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/21151e49-9396-4621-87d5-d807c5ec25cc","action":"GET"}],"mdpappId":"21151e49-9396-4621-87d5-d807c5ec25cc","name":"zeiss0719+20200212_163429","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/81c666ef-4d61-408f-9596-e61afc88c9c0","action":"GET"}],"mdpappId":"81c666ef-4d61-408f-9596-e61afc88c9c0","name":"zeiss0719+20200212_134211","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/7c1fdc51-4c9f-417e-a2c1-eec59d556328","action":"GET"}],"mdpappId":"7c1fdc51-4c9f-417e-a2c1-eec59d556328","name":"MDPATestapp280120201416","description":"string","configuration":{},"zeissIdConfiguration":[{"ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1421","ApiClientId":"$ApiClientId","ApiClientSecret":"$ApiClientSecret","InitiatorAccountId":"$InitiatorAccountId","DefaultUserPassword":"$DefaultUserPassword","MetatDataAddress":"$MetatDataAddress","ApiConfigurations":[{"Name":1,"Url":"$InviteUrl","SubscriptionKey":"$SubscriptionKey"},{"Name":41,"Url":"$CreateAccountWithPasswordUrl","SubscriptionKey":"$SubscriptionKey"}]}]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/b26bdfb2-ea32-4ad4-825e-efb0c75e01d3","action":"GET"}],"mdpappId":"b26bdfb2-ea32-4ad4-825e-efb0c75e01d3","name":"zeiss0719+20200212_165340","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]},{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/69ceb30f-8f37-4024-8bb3-fb256da1a61d","action":"GET"}],"mdpappId":"69ceb30f-8f37-4024-8bb3-fb256da1a61d","name":"zeiss0719+20200212_120511","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]}],"hasPreviousPage":false,"hasNextPage":false}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:22:39 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test01_PostMDPApp</span>
+						<span class='test-time'>Feb 12, 2020 06:22:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:22:43 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:22:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+16ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:43 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:43 PM</td>
+				<td class='step-details'>
+						Creating the app with the default namezeiss0719+20200212_182243
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:43 PM</td>
+				<td class='step-details'>
+						Creating the app with the default CleintId9ec53cca-baad-2020-b43c-6ff3c61b1822
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:43 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:43 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{CLIENTID=9ec53cca-baad-2020-b43c-6ff3c61b1822, NAME=zeiss0719+20200212_182243}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:43 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2.0/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:43 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b43c-6ff3c61b1822","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}],"name":"zeiss0719+20200212_182243","description":"testautomation app"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:44 PM</td>
+				<td class='step-details'>
+						Response Code:201
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:44 PM</td>
+				<td class='step-details'>
+						Response:{"mdpappId":"7a5a5b72-5145-4ca0-85ac-e14c218b84ad","name":"zeiss0719+20200212_182243","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b43c-6ff3c61b1822","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:22:44 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test03_PostMDPAppWithExistingZeissIdConfig</span>
+						<span class='test-time'>Feb 12, 2020 06:22:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:22:49 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:22:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+604ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:49 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:49 PM</td>
+				<td class='step-details'>
+						Creating the app with the default namezeiss0719+20200212_182249
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:49 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:49 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{"ZEISSIDCONFIGURATION":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1422","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}],"NAME":"zeiss0719+20200212_182249"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:49 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2.0/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:49 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-4126-b43c-6ff3c61b1422","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}],"name":"zeiss0719+20200212_182249","description":"testautomation app"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:49 PM</td>
+				<td class='step-details'>
+						Response Code:409
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:49 PM</td>
+				<td class='step-details'>
+						Response:{"Error":{"Code":"ConfigurationAlreadyExists","Message":"The Configuration already Exists for a MDPApp","Target":null,"Details":null,"InnerError":null}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:22:49 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration</span>
+						<span class='test-time'>Feb 12, 2020 06:22:54 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:22:54 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:22:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+591ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						Creating the app with the default namezeiss0719+20200212_182254
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						Creating the app with the default CleintId9ec53cca-baad-2020-b43c-6ff3c61b1822
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{"ZEISSIDCONFIGURATION":[],"CLIENTID":"9ec53cca-baad-2020-b43c-6ff3c61b1822","NAME":"zeiss0719+20200212_182254"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2.0/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{"key1":"val1"},"zeissIdConfiguration":[],"name":"zeiss0719+20200212_182254","description":"testautomation app"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						Response Code:201
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						Response:{"mdpappId":"4550f67f-fd87-4e71-ae84-4d5b0ec62b7f","name":"zeiss0719+20200212_182254","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[]}
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:22:54 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: expected [400] but found [201]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at com.mdp.api.tests.AdminUserService_MdpAppsTests.tC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration(AdminUserService_MdpAppsTests.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/MDPAPITESTING/MDP/Reports/TestRun2020_02_12182207/tC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration.png' src='/Users/MDPAPITESTING/MDP/Reports/TestRun2020_02_12182207/tC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration.png' data-src='/Users/MDPAPITESTING/MDP/Reports/TestRun2020_02_12182207/tC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test06_PostMDPAppWithConfigurationAsString</span>
+						<span class='test-time'>Feb 12, 2020 06:22:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:22:59 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:23:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+629ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:59 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:59 PM</td>
+				<td class='step-details'>
+						Creating the app with the default namezeiss0719+20200212_182259
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:59 PM</td>
+				<td class='step-details'>
+						Creating the app with the default CleintId9ec53cca-baad-2020-b43c-6ff3c61b1822
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:59 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:59 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{CONFIGURATION=config20200243182259, CLIENTID=9ec53cca-baad-2020-b43c-6ff3c61b1822, NAME=zeiss0719+20200212_182259}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:59 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2.0/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:22:59 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":"config20200243182259","zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b43c-6ff3c61b1822","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}],"name":"zeiss0719+20200212_182259","description":"testautomation app"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:00 PM</td>
+				<td class='step-details'>
+						Response Code:400
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:00 PM</td>
+				<td class='step-details'>
+						Response:{"Error":{"Code":"InvalidOrMissingParameter","Message":"One or more required parameters are invalid or missing.","Target":null,"Details":[{"Code":"InvalidOrMissingParameter","Message":"Error setting value to 'Configuration' on 'Czm.Czi.MDPAdminUserService.DTO.CreateMdpAppDto'.","Target":"configuration","Details":null,"InnerError":null}],"InnerError":null}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:23:00 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test07_PostMDPAppWithNameAsNull</span>
+						<span class='test-time'>Feb 12, 2020 06:23:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:23:04 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:23:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+654ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:05 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:05 PM</td>
+				<td class='step-details'>
+						Creating the app with the default CleintId9ec53cca-baad-2020-b43c-6ff3c61b1823
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:05 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:05 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{CLIENTID=9ec53cca-baad-2020-b43c-6ff3c61b1823, NAME=null}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:05 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2.0/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:05 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b43c-6ff3c61b1823","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}],"name":null,"description":"testautomation app"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:10 PM</td>
+				<td class='step-details'>
+						Response Code:400
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:10 PM</td>
+				<td class='step-details'>
+						Response:{"Error":{"Code":"InvalidOrMissingParameter","Message":"One or more required parameters are invalid or missing.","Target":null,"Details":[{"Code":"InvalidOrMissingParameter","Message":"The Name field is required.","Target":"Name","Details":null,"InnerError":null}],"InnerError":null}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:23:10 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test08_PostMDPAppWithZeissIdAsJsonObject</span>
+						<span class='test-time'>Feb 12, 2020 06:23:15 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:23:15 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:23:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+667ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						Creating the app with the default namezeiss0719+20200212_182315
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						Creating the app with the default CleintId9ec53cca-baad-2020-b43c-6ff3c61b1823
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{"ZEISSIDCONFIGURATION":{"key1":"val1"},"CLIENTID":"9ec53cca-baad-2020-b43c-6ff3c61b1823","NAME":"zeiss0719+20200212_182315"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2.0/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{"key1":"val1"},"zeissIdConfiguration":{"key1":"val1"},"name":"zeiss0719+20200212_182315","description":"testautomation app"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						Response Code:400
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						Response:{"Error":{"Code":"InvalidOrMissingParameter","Message":"One or more required parameters are invalid or missing.","Target":null,"Details":[{"Code":"InvalidOrMissingParameter","Message":"Cannot deserialize the current JSON object (e.g. {\"name\":\"value\"}) into type 'System.Collections.Generic.List`1[Newtonsoft.Json.Linq.JObject]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.\nTo fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.\nPath 'zeissIdConfiguration.key1', line 1, position 64.","Target":"zeissIdConfiguration.key1.zeissIdConfiguration","Details":null,"InnerError":null}],"InnerError":null}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:23:15 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_AdminUser_Test04_CreateSSCAdminWithUserType1</span>
+						<span class='test-time'>Feb 12, 2020 06:23:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:23:20 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:28:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 4m 45s+853ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:25:42 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:25:42 PM</td>
+				<td class='step-details'>
+						Creating the user with defualt generated email:zeiss0719+20200212_182542@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:25:42 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:25:42 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{"COUNTRY":"SA","ALTERNATEEMAIL":"noemaildude@fuckoff.com","ZEISSIDUSERTYPE":1,"ROLEID":"985b931d-a04f-491c-de88-08d790386491","EMAIL":"zeiss0719+20200212_182542@gmail.com","CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:25:42 PM</td>
+				<td class='step-details'>
+						The Effective end point is :/adminuserservice/api/v2.0/mdpapps/96b144c4-db4d-4cee-e6e9-08d7629609b9/AdminUsers
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:25:42 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"firstName":"ZeissUSer","lastName":"Admin","clientId":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5","zeissIdUserType":1,"roleId":"985b931d-a04f-491c-de88-08d790386491","contactDetails":[{"country":"SA","alternateEmail":"noemaildude@fuckoff.com","period":"string","city":"Bangalore","district":"string","postalCode":"string","addressLine1":"Zeiss","addressLine2":"EC","state":"KA","type":"string","alternateNo":"string","contactNo":"string"}],"email":"zeiss0719+20200212_182542@gmail.com"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:25:46 PM</td>
+				<td class='step-details'>
+						Response Code:201
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:25:46 PM</td>
+				<td class='step-details'>
+						Response:{"id":"89f93791-3c0e-4618-a54d-361863e78181","clientId":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5","roleId":"985b931d-a04f-491c-de88-08d790386491","email":"zeiss0719+20200212_182542@gmail.com","firstName":"ZeissUSer","lastName":"Admin","contactDetails":[{"addressLine1":"Zeiss","addressLine2":"EC","city":"Bangalore","district":"string","state":"KA","country":"SA","postalCode":"string","period":"string","alternateEmail":"noemaildude@fuckoff.com","contactNo":"string","alternateNo":"string","type":"string"}],"zeissIdUserType":1}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:27:26 PM</td>
+				<td class='step-details'>
+						The generated link in the email  for verificationhttps://id-test.zeiss.com/Invitation/Redeem?invitationToken=kdz2NCRINYz1F2yMp0ZFVQIneEHcTDcog24LYgTRDarrg5g7R83Lbt%2B%2FtK2oyD4aXff0JwR59A3oDXI6lb5RfiLZSvhkSwvEde15AS1G%2B9s9DvPGhTSwAO2olQFhLUyL%2BEoLaM1O7OiejbLtc1dEyyR6%2BdL2EdE6o4wcKM0Os8KBGZFbNX5dt474XbXm34I3eIjmKMa0vZ1rJiEni9DBC5xMmDqiGl%2BiNkSMplfK1Oz2%2BoirPSGawBjGmTi8ZC5hQDCTKsDInhDkPBhlDt58VnceyCM2frNPRnDqbODH5KBHt16I4NRHi9n4QXzuE6Vc8DslkV8tE0OBK9ukaCBMPQqw%2BE%2Fa9VV0QGxD1pU42YN7DR20VMESEMZUZQvOSGYFqKuFTmO%2Bx4VUHmNZxaNyrEe9H%2BV1HtFAQtxKWU9MDiYJKitv0DRPr8SZEXFkMBoIbKitTsjOXesTWnef1KqSlGjnl26qtHqvzQS%2FOJc8CKBmOLIBoiLGQlmBBF2K7l7zY0KKhmEXMAhVYHsxp5Qf%2FuW%2BCAExILbpA7Hkw%2BMYjk8G%2BLGvT%2BxVB5V9sdHOIiLukrNPPaailvZzSM%2FFuuiBM9tMU974P9CvZVadh8o%2Fw4w641eaP%2F%2Fz70Y8OsAKjlvQUWmNVvFBCa%2BMTkGAmtduAVvKjIJaYd9F5u8sWJ5tcQrDpmOnmQ1nu4IJ2NhNUWBknYIjiBFF6EEtUzV%2BNc0846JoUE1IEDbKlGzKqGf1VzZBdX1uLXROW1I5H%2BJcxnMs%2BmZMMYbp6OQ3Zcx%2FWOHGlw%3D%3D
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:28:06 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_AdminUser_Test01_GetMDPApp</span>
+						<span class='test-time'>Feb 12, 2020 06:28:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:28:10 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:28:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+778ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:10 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:10 PM</td>
+				<td class='step-details'>
+						The MDPId We Are Seraching for Is:7a5a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:10 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:10 PM</td>
+				<td class='step-details'>
+						The QueryParams for Update are :7a5a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:10 PM</td>
+				<td class='step-details'>
+						The Eff End point:https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps/7a5a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:11 PM</td>
+				<td class='step-details'>
+						The res is :
+{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/7a5a5b72-5145-4ca0-85ac-e14c218b84ad","action":"GET"}],"mdpappId":"7a5a5b72-5145-4ca0-85ac-e14c218b84ad","name":"zeiss0719+20200212_182243","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b43c-6ff3c61b1822","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:28:11 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_AdminUser_Test02_GetAllMDPAppsWithZeissIdFilter</span>
+						<span class='test-time'>Feb 12, 2020 06:28:15 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:28:15 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:28:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+656ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:16 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:16 PM</td>
+				<td class='step-details'>
+						The ZeissId We Are Seraching for Is:9ec53cca-baad-2020-b43c-6ff3c61b1822
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:16 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:16 PM</td>
+				<td class='step-details'>
+						The QueryParams for Update are :9ec53cca-baad-2020-b43c-6ff3c61b1822
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:16 PM</td>
+				<td class='step-details'>
+						The Effective Endointwith qParam is :https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps?ZeissId=9ec53cca-baad-2020-b43c-6ff3c61b1822
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:16 PM</td>
+				<td class='step-details'>
+						The res is :
+{"pageIndex":0,"pageSize":30,"totalCount":1,"totalPages":1,"indexFrom":0,"items":[{"links":[{"rel":"self","href":"http://mdp-api-adminuser-svc/adminuserservice/api/v2/MdpApps/7a5a5b72-5145-4ca0-85ac-e14c218b84ad","action":"GET"}],"mdpappId":"7a5a5b72-5145-4ca0-85ac-e14c218b84ad","name":"zeiss0719+20200212_182243","description":"testautomation app","configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b43c-6ff3c61b1822","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}]}],"hasPreviousPage":false,"hasNextPage":false}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:28:16 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_AdminUser_Test04_GetAllMDPAppsWithNonExistingZeissId</span>
+						<span class='test-time'>Feb 12, 2020 06:28:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:28:21 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:28:21 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+685ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:21 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:21 PM</td>
+				<td class='step-details'>
+						The Invalid ZeissId We Are Seraching for Is:9ec53cca-baad-2020-b43c-6ff3c61b4328
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:21 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:21 PM</td>
+				<td class='step-details'>
+						The QueryParams for Update are :9ec53cca-baad-2020-b43c-6ff3c61b4328
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:21 PM</td>
+				<td class='step-details'>
+						The Effective Endointwith qParam is :https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps?ZeissId=9ec53cca-baad-2020-b43c-6ff3c61b4328
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:21 PM</td>
+				<td class='step-details'>
+						The res is :
+{"pageIndex":0,"pageSize":30,"totalCount":0,"totalPages":0,"indexFrom":0,"items":[],"hasPreviousPage":false,"hasNextPage":false}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:28:21 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test01_PutMDPAppWithConfigurationAsEditedValue</span>
+						<span class='test-time'>Feb 12, 2020 06:28:26 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:28:26 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:28:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+652ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:26 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:26 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:26 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{"CONFIGURATION":{"key2":"Updated config"}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:26 PM</td>
+				<td class='step-details'>
+						The QueryParams for Update are :7a5a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:26 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps/7a5a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:26 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{"key2":"Updated config"}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:26 PM</td>
+				<td class='step-details'>
+						Response Code:204
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:26 PM</td>
+				<td class='step-details'>
+						Response:
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:28:26 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test02_GetMDPAppWithSSCAdminAuth</span>
+						<span class='test-time'>Feb 12, 2020 06:28:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:28:31 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:28:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+411ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:31 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:zeiss0719+20200212_182542@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:31 PM</td>
+				<td class='step-details'>
+						The Auth code Generated With the URL:
+https://zeissidb2ctest.b2clogin.com/accounts-test.zeiss.com/oauth2/v2.0/authorize?ui_locales=en&p=B2C_1A_ZeissIdNormalSignIn&response_type=token&state=CfDJ8HbUd0rYUXFKuExWEjHVKsTN3GdC5DYdHovh-eoPVc9oUekpcA-RAyR2i22Y2Z8gh5U948EQzvlNFmMjPDoT35QCMJm9DVq17zCAeDl35HO4--g5l63YjjOKj7C4KVHVQZITq7NdSybN2eXM7btXGsqQJk4X7HMHB_sfU95h7VSf-1OY6Iw4-l8ETxjynS12mvvTsSijbMlGPPmoLyHO8-rS_Wwhllk3c6ZQqyxcVst1tqav9LuGZHP4SqIdZjoCokSIp3LPclE7T7bEN2x4tUE&client_id=ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5&scope=ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5+openId&redirect_uri=https%3A%2F%2Fid-ip-test.zeiss.com%2FOAuth%2FAuthorizeCallBack
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:28:35 PM</td>
+				<td class='step-details'>
+						Clicked on the Element
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:45 PM</td>
+				<td class='step-details'>
+						The Auth token Used :
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IlRva2VuU2lnbmluZ0tleUNvbnRhaW5lciJ9.eyJpc3MiOiJodHRwczovL3plaXNzaWRiMmN0ZXN0LmIyY2xvZ2luLmNvbS83Yzg5NjlkMS0zZDFjLTQ2MGMtYTMyZi04NzlkODk0MTI1NWYvdjIuMC8iLCJleHAiOjE1ODE1MTU5MjAsIm5iZiI6MTU4MTUxMjMyMCwiYXVkIjoiZWQ4ZDYyNzAtZGE4Yi00ZWEwLWFhYTAtNzIxNGY2ZGQwOWQ1Iiwib2lkIjoiOTQwZmVjYzYtNzgyNi00ZjEwLWJhNjYtYzcyODM5NTRmYmU1Iiwic3ViIjoiTm90IHN1cHBvcnRlZCBjdXJyZW50bHkuIFVzZSBvaWQgY2xhaW0uIiwiWmVpc3NJZEJhc2UiOiJ7XHJcbiAgXCJhY2NvdW50SWRcIjogMTQ2ODgsXHJcbiAgXCJmaXJzdE5hbWVcIjogXCJaZWlzc1VTZXJcIixcclxuICBcImxhc3ROYW1lXCI6IFwiQWRtaW5cIixcclxuICBcImVNYWlsXCI6IFwiemVpc3MwNzE5KzIwMjAwMjEyXzE4MjU0MkBnbWFpbC5jb21cIixcclxuICBcImxhc3RDaGFuZ2VcIjogXCIyMDIwLTAyLTEyVDEyOjU3OjU5Ljc5N1wiLFxyXG4gIFwiaWRlbnRpdHlQcm92aWRlclwiOiAxLFxyXG4gIFwiam9iVGl0bGVcIjogXCJcIixcclxuICBcImRlcGFydG1lbnRcIjogXCJcIixcclxuICBcInNhbHV0YXRpb25cIjogXCJuYVwiLFxyXG4gIFwibGFuZ3VhZ2VcIjogXCJlbi1HQlwiLFxyXG4gIFwiZGF0ZU9mQmlydGhcIjogXCJcIlxyXG59IiwiWmVpc3NJZENvbnRhY3QiOiJ7XHJcbiAgXCJzdHJlZXRcIjogXCJcIixcclxuICBcImhvdXNlTnVtYmVyXCI6IFwiXCIsXHJcbiAgXCJ6aXBcIjogXCJcIixcclxuICBcImNpdHlcIjogXCJcIixcclxuICBcImNvdW50cnlcIjogXCJcIixcclxuICBcImNlbGxQaG9uZVwiOiBcIlwiLFxyXG4gIFwicGhvbmVcIjogXCJcIixcclxuICBcImZheFwiOiBcIlwiLFxyXG4gIFwiZmVkZXJhbFN0YXRlXCI6IFwiXCJcclxufSIsIlplaXNzSWRPcmdhbmlzYXRpb24iOiJ7fSIsIlplaXNzSWRBcHBsaWNhdGlvbiI6IntcclxuICBcImNsaWVudEFwcElkXCI6IDM3MyxcclxuICBcImFwcGxpY2F0aW9uRG9tYWluSWRcIjogMyxcclxuICBcInRlcm1zQW5kQ29uZGl0aW9uc0lkXCI6IDAsXHJcbiAgXCJhY2NlcHRhbmNlT2ZUZXJtc0FuZENvbmRpdGlvbnNJZFwiOiAwLFxyXG4gIFwiZGlyZWN0QWNjZXNzXCI6IGZhbHNlLFxyXG4gIFwiaW52aXRhdGlvbklkXCI6IDU0MjJcclxufSIsIlplaXNzSWRDdXN0b21GaWVsZHMiOiJ7fSIsIlplaXNzSWRBZ3JlZW1lbnRzIjoie1xyXG4gIFwiYWdyZWVtZW50c1wiOiBbXVxyXG59IiwiYXpwIjoiZWQ4ZDYyNzAtZGE4Yi00ZWEwLWFhYTAtNzIxNGY2ZGQwOWQ1IiwidmVyIjoiMS4wIiwiaWF0IjoxNTgxNTEyMzIwfQ.aB8DsxIAWq_kPAQ2WH9_u276QyD3zhpcdWkIL9JcnyL5x7LtpPpnm0vfgbrCLvDXO1Dp76Nk5yNpAOZW_4Z4TEojDcernN2CDjzXiyc91BxIMBuqqeMUxH09-67OsOCY5sGofXddJCUTJLuUNYyBJMe9rCmUh_QRG4weFMFtQFr7RTpHFzaS9YkUOW8xEqz_9ojCHoeD_-V-oNaeI-il9VZ5QzjGuNWKznv3U5ztuy72V2UZyYuGy-ND0WUXDZfYlTQ58cOGSCqycamjL7FFePv-w8k1MAkPtdlChNoKLDLpL3dcMUePBsJwIQ6zPYTuEQU99Xid-Y86D-XhFRP14A
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:45 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:45 PM</td>
+				<td class='step-details'>
+						The QueryParams for Update are :7a5a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:45 PM</td>
+				<td class='step-details'>
+						The Eff End point:https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps/7a5a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:45 PM</td>
+				<td class='step-details'>
+						The res is :
+{"error":{"code":"UnAuthorized","message":"Privileges From Claim: [\"CanReadAdminUser\",\"CanUpdateAdminUser\",\"CanReadZiessIDConfiguration\",\"CanCreateAccount\",\"CanReadAccounts\",\"CanUpdateAccount\",\"CanReadAccount\",\"CanReadAccountsOfApp\",\"CanReadAccountsOfUser\",\"CanCreateSite\",\"CanReadSite\",\"CanReadSites\",\"CanUpdateSite\",\"CanCreateAccountUser\",\"CanReadAccountUser\",\"CanReadAccountUsers\",\"CanUpdateAccountUser\",\"CanReadRoles\",\"CanUpdateUserRole\",\"CanReadUserRole\"]  Prvileges User Should have :[\"CanReadMdpApp\"]","target":null,"details":null,"innerError":null}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:28:45 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test02_PostMDPAppWithSSCAdminAuth</span>
+						<span class='test-time'>Feb 12, 2020 06:28:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:28:50 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:28:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+537ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:zeiss0719+20200212_182542@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						Creating the app with the default namezeiss0719+20200212_182850
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						Creating the app with the default CleintId9ec53cca-baad-2020-b43c-6ff3c61b1828
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{CLIENTID=9ec53cca-baad-2020-b43c-6ff3c61b1828, NAME=zeiss0719+20200212_182850}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2.0/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b43c-6ff3c61b1828","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}],"name":"zeiss0719+20200212_182850","description":"testautomation app"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						Response Code:401
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						Response:{"error":{"code":"UnAuthorized","message":"Privileges From Claim: [\"CanReadAdminUser\",\"CanUpdateAdminUser\",\"CanReadZiessIDConfiguration\",\"CanCreateAccount\",\"CanReadAccounts\",\"CanUpdateAccount\",\"CanReadAccount\",\"CanReadAccountsOfApp\",\"CanReadAccountsOfUser\",\"CanCreateSite\",\"CanReadSite\",\"CanReadSites\",\"CanUpdateSite\",\"CanCreateAccountUser\",\"CanReadAccountUser\",\"CanReadAccountUsers\",\"CanUpdateAccountUser\",\"CanReadRoles\",\"CanUpdateUserRole\",\"CanReadUserRole\"]  Prvileges User Should have :[\"CanCreateMdpApp\"]","target":null,"details":null,"innerError":null}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:28:50 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp</span>
+						<span class='test-time'>Feb 12, 2020 06:28:55 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:28:55 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:29:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+731ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:55 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:55 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:55 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{"CONFIGURATION":{"key2":"Updated config"}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:55 PM</td>
+				<td class='step-details'>
+						The QueryParams for Update are :1828a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:55 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps/1828a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:28:55 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{"key2":"Updated config"}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:06 PM</td>
+				<td class='step-details'>
+						Response Code:400
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:06 PM</td>
+				<td class='step-details'>
+						Response:{"Error":{"Code":"InvalidOrMissingParameter","Message":"One or more required parameters are invalid or missing.","Target":null,"Details":[{"Code":"InvalidOrMissingParameter","Message":"The value '1828a5b72-5145-4ca0-85ac-e14c218b84ad' is not valid.","Target":"id","Details":null,"InnerError":null}],"InnerError":null}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:29:06 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.AssertionError: expected [404] but found [400]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at com.mdp.api.tests.AdminUserService_MdpAppsTests.tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp(AdminUserService_MdpAppsTests.java:335)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/MDPAPITESTING/MDP/Reports/TestRun2020_02_12182207/tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp.png' src='/Users/MDPAPITESTING/MDP/Reports/TestRun2020_02_12182207/tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp.png' data-src='/Users/MDPAPITESTING/MDP/Reports/TestRun2020_02_12182207/tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test03_GetAllMDPAppWithSSCAdminAuth</span>
+						<span class='test-time'>Feb 12, 2020 06:29:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:29:11 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:29:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+590ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:11 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:zeiss0719+20200212_182542@gmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:11 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:11 PM</td>
+				<td class='step-details'>
+						There Are no query params for updating
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:11 PM</td>
+				<td class='step-details'>
+						The Eff End point:https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:11 PM</td>
+				<td class='step-details'>
+						The res is :
+{"error":{"code":"UnAuthorized","message":"Privileges From Claim: [\"CanReadAdminUser\",\"CanUpdateAdminUser\",\"CanReadZiessIDConfiguration\",\"CanCreateAccount\",\"CanReadAccounts\",\"CanUpdateAccount\",\"CanReadAccount\",\"CanReadAccountsOfApp\",\"CanReadAccountsOfUser\",\"CanCreateSite\",\"CanReadSite\",\"CanReadSites\",\"CanUpdateSite\",\"CanCreateAccountUser\",\"CanReadAccountUser\",\"CanReadAccountUsers\",\"CanUpdateAccountUser\",\"CanReadRoles\",\"CanUpdateUserRole\",\"CanReadUserRole\"]  Prvileges User Should have :[\"SysPrivClaim\",\"CanReadMdpApps\"]","target":null,"details":null,"innerError":null}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:29:11 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test03_PutMDPAppWithConfigurationAsEmpty</span>
+						<span class='test-time'>Feb 12, 2020 06:29:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:29:16 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:29:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+600ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:16 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:16 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:16 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{"CONFIGURATION":{}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:16 PM</td>
+				<td class='step-details'>
+						The QueryParams for Update are :7a5a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:16 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps/7a5a5b72-5145-4ca0-85ac-e14c218b84ad
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:16 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:16 PM</td>
+				<td class='step-details'>
+						Response Code:204
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:16 PM</td>
+				<td class='step-details'>
+						Response:
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:29:16 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>tC201_MDPApps_Test04_PostMDPAppWithExistingAppName</span>
+						<span class='test-time'>Feb 12, 2020 06:29:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 12, 2020 06:29:21 PM</span>
+	<span class='label end-time'>Feb 12, 2020 06:29:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+673ms</span>
+</div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>AdminService</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:21 PM</td>
+				<td class='step-details'>
+						UserName Used for Genrating the Access token:MDPAdmin@id.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:21 PM</td>
+				<td class='step-details'>
+						The Duplicte Name Used Is :zeiss0719+20200212_182243
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:21 PM</td>
+				<td class='step-details'>
+						Creating the app with the default CleintId9ec53cca-baad-2020-b43c-6ff3c61b1829
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:21 PM</td>
+				<td class='step-details'>
+						The BaseUri is :https://mdptest.api.zeiss.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:21 PM</td>
+				<td class='step-details'>
+						/nThe Values to change In JSON:{CLIENTID=9ec53cca-baad-2020-b43c-6ff3c61b1829, NAME=zeiss0719+20200212_182243}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:21 PM</td>
+				<td class='step-details'>
+						The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2.0/MdpApps
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:21 PM</td>
+				<td class='step-details'>
+						Created users with the payload{"configuration":{"key1":"val1"},"zeissIdConfiguration":[{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b43c-6ff3c61b1829","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}],"name":"zeiss0719+20200212_182243","description":"testautomation app"}
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:27 PM</td>
+				<td class='step-details'>
+						Response Code:409
+					
+				</td>
+			</tr>
+			<tr class='log' status='debug'>
+				<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+				<td class='timestamp'>6:29:27 PM</td>
+				<td class='step-details'>
+						Response:{"Error":{"Code":"MdpAppNameAlreadyExists","Message":"App name specified already exists","Target":null,"Details":null,"InnerError":null}}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:29:27 PM</td>
+				<td class='step-details'>
+						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>AdminService</span>
+						<span class='category-status right'>
+						<span class='label pass'>16</span>
+						<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 16</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 12, 2020 06:22:17 PM</td>
+										<td class='linked' test-id='1'>tC201_AdminUser_Test01_GetAllMDPApps</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:22:43 PM</td>
+										<td class='linked' test-id='2'>tC201_MDPApps_Test01_PostMDPApp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:22:49 PM</td>
+										<td class='linked' test-id='3'>tC201_MDPApps_Test03_PostMDPAppWithExistingZeissIdConfig</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:22:54 PM</td>
+										<td class='linked' test-id='4'>tC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:22:59 PM</td>
+										<td class='linked' test-id='5'>tC201_MDPApps_Test06_PostMDPAppWithConfigurationAsString</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:23:04 PM</td>
+										<td class='linked' test-id='6'>tC201_MDPApps_Test07_PostMDPAppWithNameAsNull</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:23:15 PM</td>
+										<td class='linked' test-id='7'>tC201_MDPApps_Test08_PostMDPAppWithZeissIdAsJsonObject</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:23:20 PM</td>
+										<td class='linked' test-id='8'>tC201_AdminUser_Test04_CreateSSCAdminWithUserType1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:28:10 PM</td>
+										<td class='linked' test-id='9'>tC201_AdminUser_Test01_GetMDPApp</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:28:15 PM</td>
+										<td class='linked' test-id='10'>tC201_AdminUser_Test02_GetAllMDPAppsWithZeissIdFilter</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:28:21 PM</td>
+										<td class='linked' test-id='11'>tC201_AdminUser_Test04_GetAllMDPAppsWithNonExistingZeissId</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:28:26 PM</td>
+										<td class='linked' test-id='12'>tC201_MDPApps_Test01_PutMDPAppWithConfigurationAsEditedValue</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:28:31 PM</td>
+										<td class='linked' test-id='13'>tC201_MDPApps_Test02_GetMDPAppWithSSCAdminAuth</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:28:50 PM</td>
+										<td class='linked' test-id='14'>tC201_MDPApps_Test02_PostMDPAppWithSSCAdminAuth</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:28:55 PM</td>
+										<td class='linked' test-id='15'>tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:29:11 PM</td>
+										<td class='linked' test-id='16'>tC201_MDPApps_Test03_GetAllMDPAppWithSSCAdminAuth</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:29:16 PM</td>
+										<td class='linked' test-id='17'>tC201_MDPApps_Test03_PutMDPAppWithConfigurationAsEmpty</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:29:21 PM</td>
+										<td class='linked' test-id='18'>tC201_MDPApps_Test04_PostMDPAppWithExistingAppName</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 12, 2020 06:22:54 PM</td>
+										<td class='linked' test-id='4'>tC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [400] but found [201]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at com.mdp.api.tests.AdminUserService_MdpAppsTests.tC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration(AdminUserService_MdpAppsTests.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Feb 12, 2020 06:28:55 PM</td>
+										<td class='linked' test-id='15'>tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: expected [404] but found [400]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at com.mdp.api.tests.AdminUserService_MdpAppsTests.tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp(AdminUserService_MdpAppsTests.java:335)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>18</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Feb 12, 2020 06:22:08 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Feb 12, 2020 06:29:32 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 7m 24s+204ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>HostName</td>
+								<td>Kanchenjungas-MacBook-Pro.local</td>
+							</tr>
+							<tr>
+								<td>Operating System</td>
+								<td>MAC</td>
+							</tr>
+							<tr>
+								<td>APIServiceName</td>
+								<td>MDPAPITestAutomationResult</td>
+							</tr>
+							<tr>
+								<td>BuildeDetails: </td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>AdminService</td>
+								<td>1.0.0.37</td>
+							</tr>
+							<tr>
+								<td>ReportService</td>
+								<td>1.0.0.35</td>
+							</tr>
+							<tr>
+								<td>PatientService</td>
+								<td>1.0.0.37</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>AdminService</td>
+							<td>16</td>
+							<td>2</td>
+							<td>0</td>
+							<td>
+									88.889%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 18,
+				passParent: 16,
+				failParent: 2,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 2,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "tC201_AdminUser_Test01_GetAllMDPApps":21.309,"tC201_MDPApps_Test01_PostMDPApp":1.016,"tC201_MDPApps_Test03_PostMDPAppWithExistingZeissIdConfig":0.604,"tC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration":0.591,"tC201_MDPApps_Test06_PostMDPAppWithConfigurationAsString":0.629,"tC201_MDPApps_Test07_PostMDPAppWithNameAsNull":5.654,"tC201_MDPApps_Test08_PostMDPAppWithZeissIdAsJsonObject":0.667,"tC201_AdminUser_Test04_CreateSSCAdminWithUserType1":285.853,"tC201_AdminUser_Test01_GetMDPApp":0.778,"tC201_AdminUser_Test02_GetAllMDPAppsWithZeissIdFilter":0.656,"tC201_AdminUser_Test04_GetAllMDPAppsWithNonExistingZeissId":0.685,"tC201_MDPApps_Test01_PutMDPAppWithConfigurationAsEditedValue":0.652,"tC201_MDPApps_Test02_GetMDPAppWithSSCAdminAuth":14.411,"tC201_MDPApps_Test02_PostMDPAppWithSSCAdminAuth":0.537,"tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp":10.731,"tC201_MDPApps_Test03_GetAllMDPAppWithSSCAdminAuth":0.59,"tC201_MDPApps_Test03_PutMDPAppWithConfigurationAsEmpty":0.6,"tC201_MDPApps_Test04_PostMDPAppWithExistingAppName":5.673
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

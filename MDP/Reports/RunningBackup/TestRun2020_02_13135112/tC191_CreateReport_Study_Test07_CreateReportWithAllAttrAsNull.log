@@ -1,0 +1,21 @@
+Initialized the Logs and Browser with :
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.100, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: /var/folders/0d/0fwh5qyd2z5...}, goog:chromeOptions: {debuggerAddress: localhost:51624}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+TestCaseName:tC191_CreateReport_Study_Test07_CreateReportWithAllAttrAsNull
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Study//Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :
+
+The Issues was :java.lang.AssertionError: expected [400] but found [404]

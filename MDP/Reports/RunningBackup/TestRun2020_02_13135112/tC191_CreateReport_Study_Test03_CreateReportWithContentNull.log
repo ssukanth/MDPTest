@@ -1,0 +1,21 @@
+Initialized the Logs and Browser with :
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.100, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: /var/folders/0d/0fwh5qyd2z5...}, goog:chromeOptions: {debuggerAddress: localhost:51572}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+TestCaseName:tC191_CreateReport_Study_Test03_CreateReportWithContentNull
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Study/1.2.840.200213.14/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"2ccc6156-c7c6-4e69-8183-b66c20a1437b","createdAt":"2020-02-13T08:33:09.4774206Z","referencedUID":"1.2.840.200213.14","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+
+The Issues was :java.lang.AssertionError: expected [400] but found [201]

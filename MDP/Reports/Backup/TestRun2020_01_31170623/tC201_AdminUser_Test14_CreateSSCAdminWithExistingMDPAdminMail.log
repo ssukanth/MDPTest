@@ -1,0 +1,24 @@
+TestCaseName:tC201_AdminUser_Test14_CreateSSCAdminWithExistingMDPAdminMail
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+
+UserName:MDPAdmin@id.zeiss.com
+
+PasswordTest123!
+The Base Uri: https://mdptest.api.zeiss.com
+/nThe Values to change In JSON:{"ALTERNATEEMAIL":"noemaildude@fuckoff.com","ZEISSIDUSERTYPE":1,"ROLEID":"985b931d-a04f-491c-de88-08d790386491","EMAIL":"MDPAdmin@id.zeiss.com","CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5"}
+
+The Changed JSONObjects are :{contactDetails[0].alternateEmail=noemaildude@fuckoff.com, zeissIdUserType=1, clientId=ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5, roleId=985b931d-a04f-491c-de88-08d790386491, email=MDPAdmin@id.zeiss.com}
+
+The Effective end point is :/adminuserservice/api/v2.0/mdpapps/96b144c4-db4d-4cee-e6e9-08d7629609b9/AdminUsers
+
+ payload{"firstName":"ZeissUSer","lastName":"Admin","clientId":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5","zeissIdUserType":1,"roleId":"985b931d-a04f-491c-de88-08d790386491","contactDetails":[{"country":"string","alternateEmail":"noemaildude@fuckoff.com","period":"string","city":"Bangalore","district":"string","postalCode":"string","addressLine1":"Zeiss","addressLine2":"EC","state":"KA","type":"string","alternateNo":"string","contactNo":"string"}],"email":"MDPAdmin@id.zeiss.com"}
+
+ Response Code:201
+
+The Issues was :java.lang.AssertionError: expected [400] but found [201]

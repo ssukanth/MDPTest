@@ -1,0 +1,29 @@
+Initialized the Logs and Browser with :
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: /var/folders/0d/0fwh5qyd2z5...}, goog:chromeOptions: {debuggerAddress: localhost:50882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+TestCaseName:tC201_ZeissId_Test01_PostZeissId
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+
+UserName:MDPAdmin@id.zeiss.com
+
+PasswordTest123!
+The Effective MDPId for Zeissid Updte is :c629e661-1b10-4928-8e47-a69f91741e41
+The Base Uri: https://mdptest.api.zeiss.com
+/nThe Values to change In JSON:{CLIENTID=9ec53cca-baad-2020-b14c-6ff3c61b1703}
+
+The Changed JSONObjects are :{zeissIdConfiguration.ClientId=9ec53cca-baad-2020-b14c-6ff3c61b1703}
+
+The Effective end point is :/adminuserservice/api/v2.0/mdpapps/c629e661-1b10-4928-8e47-a69f91741e41/ZeissIds
+
+ payload{"zeissIdConfiguration":{"ApiClientId":"$ApiClientId","InitiatorAccountId":"$InitiatorAccountId","ApiConfigurations":[{"SubscriptionKey":"$SubscriptionKey","Url":"$InviteUrl","Name":1},{"SubscriptionKey":"$SubscriptionKey","Url":"$CreateAccountWithPasswordUrl","Name":41}],"MetatDataAddress":"$MetatDataAddress","ClientId":"9ec53cca-baad-2020-b14c-6ff3c61b1703","ApiClientSecret":"$ApiClientSecret","DefaultUserPassword":"$DefaultUserPassword"}}
+
+ Response Code:409
+
+Response:{"Error":{"Code":"ConfigurationAlreadyExists","Message":"The Configuration already Exists for a MDPApp","Target":null,"Details":null,"InnerError":null}}
+
+The Issues was :java.lang.AssertionError: expected [201] but found [409]

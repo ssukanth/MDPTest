@@ -1,0 +1,19 @@
+TestCaseName:tC191_CreateReport_Study_Test03_CreateReportWithContentNull
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Study/f19bb71e-350a-4b8e-d44f-202001291715/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"1de5c609-53d6-44f1-ae08-80e662e3ed78","createdAt":"2020-01-29T11:45:27.0855681Z","referencedUID":"f19bb71e-350a-4b8e-d44f-202001291715","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+
+The Issues was :java.lang.AssertionError: expected [400] but found [201]

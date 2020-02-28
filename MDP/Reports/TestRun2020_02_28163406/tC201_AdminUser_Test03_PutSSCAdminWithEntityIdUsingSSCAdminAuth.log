@@ -1,0 +1,24 @@
+Initialized the Logs and Browser with :
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: /var/folders/0d/0fwh5qyd2z5...}, goog:chromeOptions: {debuggerAddress: localhost:61599}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+TestCaseName:tC201_AdminUser_Test03_PutSSCAdminWithEntityIdUsingSSCAdminAuth
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+
+UserName:zeiss0719+20200228_164149@gmail.com
+
+PasswordTest123!
+The Base Uri: https://mdptest.api.zeiss.com
+/nThe Values to change In JSON:null
+
+The Effective end point is :/adminuserservice/api/v2/mdpapps/96b144c4-db4d-4cee-e6e9-08d7629609b9/AdminUsers/f3933cf7-a9d3-4bcb-8510-cee2aa8b9ad2
+
+ payload{"contactDetails":[{"country":"INDIA","alternateEmail":"user@example.com","period":"string","city":"Bengaluru","district":"Urban","postalCode":"560069","addressLine1":"UpdateAdr1","addressLine2":"UpdateAdr1","state":"KA","type":"string","alternateNo":"string","contactNo":"string"}]}
+
+ Response Code:204
+
+The Issues was :java.lang.AssertionError: expected [401] but found [204]

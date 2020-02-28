@@ -1,0 +1,24 @@
+TestCaseName:TC201_AdminUser_Test28_CreateSSCAdminWithoutContactDetails
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+
+UserName:MDPAdmin@id.zeiss.com
+
+PasswordTest123!
+The Base Uri: https://mdptest.api.zeiss.com
+/nThe Values to change In JSON:{"CONTACTDETAILS":[],"ZEISSIDUSERTYPE":1,"ALTERNATEEMAIL":"zeiss0719+20200131_172039@gmail.com","ROLEID":"985b931d-a04f-491c-de88-08d790386491","CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5"}
+
+The Changed JSONObjects are :{contactDetails[0].alternateEmail=zeiss0719+20200131_172039@gmail.com, zeissIdUserType=1, clientId=ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5, roleId=985b931d-a04f-491c-de88-08d790386491, contactDetails=[]}
+
+The Effective end point is :/adminuserservice/api/v2.0/mdpapps/96b144c4-db4d-4cee-e6e9-08d7629609b3/AdminUsers
+
+ payload{"firstName":"ZeissUSer","lastName":"Admin","clientId":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5","zeissIdUserType":1,"roleId":"985b931d-a04f-491c-de88-08d790386491","contactDetails":[],"email":"user230120201500@example.com"}
+
+ Response Code:400
+
+The Issues was :java.lang.AssertionError: expected [404] but found [400]

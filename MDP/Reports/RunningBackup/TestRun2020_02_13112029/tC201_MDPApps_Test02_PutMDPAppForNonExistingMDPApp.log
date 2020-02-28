@@ -1,0 +1,26 @@
+Initialized the Logs and Browser with :
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.100, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: /var/folders/0d/0fwh5qyd2z5...}, goog:chromeOptions: {debuggerAddress: localhost:49792}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+TestCaseName:tC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+
+UserName:MDPAdmin@id.zeiss.com
+
+PasswordTest123!
+The Base Uri: https://mdptest.api.zeiss.com
+/nThe Values to change In JSON:{}
+
+The Changed JSONObjects are :{}
+
+The Effective end point is :https://mdptest.api.zeiss.com/adminuserservice/api/v2/MdpApps/11289db9b-8d65-4b18-8c17-ad0cb59fa2ab
+
+ payload{"configuration":{"key1":"val1"}}
+
+ Response Code:400
+
+The Issues was :java.lang.AssertionError: expected [404] but found [400]

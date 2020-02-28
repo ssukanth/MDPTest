@@ -1,0 +1,2647 @@
+{
+	"TC192_CreatePatient_Test01_CreatePatientValid":
+	[
+		{
+		"scname":"valid_male",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+		"SEX":"male",
+		"DOB":"2009-12-26T09:05:55.320Z",
+		"PATIENTPHONE":1234567891,
+		"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		{
+		"scname":"valid_female",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+			"SEX":"female",
+			"DOB":"2009-12-26T09:05:55.320Z",
+			"PATIENTPHONE":1234567891,
+			"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		{
+		"scname":"valid_1_monthold",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"DOB":"2019-12-11T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		{
+		"scname":"valid_100_year_old",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+			"SEX":"female",
+			"DOB":"1909-11-26T09:05:55.320Z",
+			"PATIENTPHONE":1234567891,
+			"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		{
+		"scname":"valid_delimited_PATIENTEMAIL",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_9999999999",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":9999999999,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_9999999999_with_countrycode_+91",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":919999999999,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_ideographyname",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"FAMILYNAME":null,
+				"GIVENNAME":null,
+				"FAMILYNAMEIDO":"FamilyIdeo",
+				"GIVENNAMEIDO":"GivenIdeo",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_phonetic_name",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"FAMILYNAME":null,
+				"GIVENNAME":null,
+				"FAMILYNAMEPH":"FamilyPho",
+				"GIVENNAMEPH":"GivenPho",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_conflict_false",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"expCode":"201",
+		"conflict":"false"
+		}
+	],
+		
+	
+	
+	"TC192_Test02_Create_Patient_With_Invalid_less_than_ten_digits":
+	[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"PATIENTPHONE":123456789
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test03_Create_Patient_With_Invalid_more_than_twelve_digits":[
+	{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"PATIENTPHONE":1234567891234
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test04_Create_Patient_Invalid_Email_Id":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"PATIENTEMAIL":"test@gmail"
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test05_Create_Patient_Valid_With_Issuer_Of_PatientId_as_null":[
+	
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"ISSUEROFPATIENTID":""
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test06_Create_Patient_With_null_for_PatientId":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"PATIENTID":""
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test07_Create_Patient_With_date_format_mm_dd_yyyy":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"DOB":"12-26-2020T09:05:55.320Z"
+					},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test08_Create_Patient_With_date_format_yyyy_dd_mm":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"DOB":"2019-26-12"
+					},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test09_Create_Patient_With_date_format_yyyy_mm_d":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"DOB":"2019-12-6T09:05:55.320Z"
+					},
+		"expCode":"201",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test10_Create_Patient_With_Invalid_Future_Date":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test11_Create_Patient_Invalid_Gender":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+			"SEX":"random"
+					},
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test12_Create_Patient_Invalid_Gender_As_null":[
+	{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+			"SEX":""
+					},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	
+	"TC192_CreatePatient_Test13_CreatePatient_InvalidPayload":	[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+		"SEX":"female",
+		"DOB":"2009-12-26T09:05:55.320Z",
+		"PATIENTPHONE":1234567891,
+		"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"400",
+		"conflict":"false"
+		}
+		],
+		
+		"TC192_CreatePatient_Test14_CreatePatient_DuplicateWithConflictTrue":	[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+		"SEX":"female",
+		"DOB":"2009-12-26T09:05:55.320Z",
+		"PATIENTPHONE":1234567891,
+		"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"409",
+		"conflict":"true"
+		}
+		],
+		
+		"TC192_CreatePatient_Test15_CreatePatient_DuplicateWithConflictFalse":	[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+		"SEX":"female",
+		"DOB":"2009-12-26T09:05:55.320Z",
+		"PATIENTPHONE":1234567891,
+		"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"false"
+		}
+		],
+		
+
+		
+	"TC192_Test01_GetallthepatientsByAcc":[
+		{"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250"
+		}
+		],
+		
+	"TC192_Test02_GetallthepatientsByAccAndAppType":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"APPTYPE":"Testing"
+					}
+		}
+		],
+		
+	"TC192_Test03_GetallthepatientsByAccandSearchName":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"SearchQuery":"Test"
+					}
+		}
+		],
+		
+		"TC192_Test04_GetallthepatientsByAccandSearchPatId":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"patId":"PatId_Test123",
+			"qparams":{
+			"SearchQuery":"PatId_Test123"
+					}
+		}
+		],
+		
+		"TC192_Test05_GetallthepatientsByAccandSearchDOB":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"SearchQuery":"2009-12-26T09:05:55.320Z"
+					}
+		}
+		],
+		
+	"TC192_Test06_GetallthepatientsByAccandPagenum":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"PageNumber":"10"
+					}
+		}
+		],
+		
+	"TC192_Test07_GetallthepatientsByAccandPageSizeLessThan10":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"PageSize":"4"
+						}
+		}
+		],
+		
+		"TC192_Test08_GetallthepatientsByAccandPageSizeGrtThan10":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"PageSize":"15"
+						}
+		}
+		],
+		
+		
+	"TC192_Test09_GetallthepatientsByAccandAllparams":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"APPTYPE":"Testing",
+			"SearchQuery":"Test",
+			"PageSize":"3"
+					}
+		}
+		],
+		
+		
+		
+		
+		"TC192_Test01_GetPatientById":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":{
+			"SEX":"female",
+			"FAMILYNAME":"GetpatByidFamiliy",
+			"GIVENNAME":"GetpatByidGiven",
+			"DOB":"2009-12-26T09:05:55.320Z",
+			"PATIENTPHONE":1234567891,
+			"PATIENTEMAIL":"test.test@gmail.com"
+			},
+			"expCode":"201",
+			"conflict":"true"
+		}
+		],
+		"TC192_Test02_GetPatientByIdWithInvalidId":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250"
+		}
+		],
+		
+		
+		
+		
+		"TC192_Test01_PutPatient_EditPatientWithMandatoryFields":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"editedPATIENTID",
+				"SEX":"female",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"2019-12-26T09:05:55.329Z",
+				"PATIENTPHONE":1224567891,
+				"PATIENTEMAIL":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"200",
+					"conflict":"true"			
+				}
+
+		],
+		
+		"TC192_Test02_PutPatient_EditPatientWithMandatoryFieldSexAsNull":[
+			{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"editedPATIENTID",
+				"SEX":"",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"2019-12-26T09:05:55.329Z",
+				"PATIENTPHONE":1224567891,
+				"PATIENTEMAIL":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"			
+				}
+		],
+		
+		"TC192_Test03_PutPatient_EditPatientWithMandatoryFieldDOBNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"editedPATIENTID",
+				"SEX":"female",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"",
+				"PATIENTPHONE":1224567891,
+				"PATIENTEMAIL":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"	
+			}
+		],
+		
+		"TC192_Test04_PutPatient_EditPatientWithMandatoryFieldFamilyAndGivenNameNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"editedPATIENTID",
+				"SEX":"female",
+				"FAMILYNAME":null,
+				"GIVENNAME":null,
+				"DOB":"2019-12-26T09:05:55.329Z",
+				"PATIENTPHONE":1224567891,
+				"PATIENTEMAIL":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"	
+			}
+		],
+		
+		"TC192_Test05_PutPatient_EditPatientWithMandatoryFieldApplicationTypeNull":[
+			{"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"editedPATIENTID",
+				"SEX":"female",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"2019-12-26T09:05:55.329Z",
+				"PATIENTPHONE":1224567891,
+				"PATIENTEMAIL":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE":"",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"
+			}
+		],
+		
+		"TC192_Test06_PutPatient_EditPatientWithMandatoryFieldPatientIdNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"",
+				"SEX":"female",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"2019-12-26T09:05:55.329Z",
+				"PATIENTPHONE":1224567891,
+				"PATIENTEMAIL":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"
+			}
+		],
+		
+		"TC192_Test07_PutPatient_EditPatientWithMandatoryFieldPhonenumberNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"UpdatedInCode",
+				"SEX":"female",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"2019-12-26T09:05:55.329Z",
+				"PATIENTPHONE":null,
+				"PATIENTEMAIL":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"
+			}
+		],
+		
+		"TC192_Test08_PutPatient_EditPatientWithMandatoryFieldEmailNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"UpdatedInCode",
+				"SEX":"female",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"2019-12-26T09:05:55.329Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"
+			}
+		],
+		
+		"TC192_Test09_PutPatient_EditPatientWithInvalidDateFormatDDMMYYYHHMMSS":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"UpdatedInCode",
+				"SEX":"female",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"26-12-2019T09:05:55.329Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"
+			}
+		],
+		
+		"TC192_Test10_PutPatient_EditPatientWithInvalidDateFormatYYYYDDMMSS":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"UpdatedInCode",
+				"SEX":"female",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"26-12-2019T55.329Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"
+			}
+		],
+		
+		
+		"TC192_Test11_PutPatient_EditPatientWithInvalidDateFormatDDMMYYY":[
+			{
+				
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":
+				{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp"
+				},
+				"jsonobject1":{
+				"PATIENTID":"UpdatedInCode",
+				"SEX":"female",
+				"FAMILYNAME":"EditedFamily",
+				"GIVENNAME":"EditedGiven",
+				"DOB":"26-12-2019",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"",
+				"APPTYPE":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+				},
+							
+					"expCode":"400",
+					"conflict":"true"
+			}
+		],
+		
+		
+	
+		
+		
+		
+"Start Of :":"----------------Report Serivice------------------------------------",
+		
+		"Study Of :":"---------------------Study Level-------------------------------------",
+		"Post Repor At Study Level":"--------------------------------------------------------",
+		"TC191_CreateReport_Study_Test01_CreateReport":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		
+		"TC191_CreateReport_Study_Test02_CreateReportWithRandomentityId":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		"TC191_CreateReport_Study_Test03_CreateReportWithContentNull":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":null,
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		"TC191_CreateReport_Study_Test04_CreateReportWithTagNull":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"Test Content",
+					"TAG":null,
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		"TC191_CreateReport_Study_Test05_CreateReportWithAdditionalInfoNull":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Study_Test06_CreateReportWithEntityIdNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+			}
+		],
+		
+		"TC191_CreateReport_Study_Test07_CreateReportWithAllAttrAsNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"",
+					"TAG":"",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"400"
+			}
+		],
+		
+	"GetAll Repor At Study Level":"--------------------------------------------------------",
+	"TC191_GetAllReports_Study_Test01_GetAllReportsForStudy":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+	
+	"TC191_GetAllReports_Study_Test02_GetAllReportsForStudyWithoutCreatedAt":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+		
+		"TC191_GetAllReports_Study_Test04_GetAllReportsForStudyWithInvalidEntityId":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		
+		"TC191_GetAllReports_Study_Test05_DeleteAllReportsForStudyWithValidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetAllReports_Study_Test06_GetAllReportsForStudyWithInvalidClustername":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+	
+	"Get Repor At Study Level":"--------------------------------------------------------",
+	
+	
+			
+		"TC191_GetReport_Study_Test01_GetReportForStudy":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetReport_Study_Test02_GetReportForStudyWithInvalidEntityId":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Study_Test03_GetReportForStudyWithInvalidReportId":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Study_Test04_GetReportForStudyWithEntityIdAsNull":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Study_Test05_GetReportForStudyWithReportIdAsNull":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+				}
+		],
+		
+		"TC191_DeleteReport_Study_Test06_GetReportForStudy":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"405"
+				}
+		],
+		
+		
+		
+		
+		"Series Of :":"---------------------Series Level-------------------------------------",
+		"Post Report At Series Level":"--------------------------------------------------------",
+		"TC191_CreateReport_Series_Test01_CreateReport":[
+				{
+					
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Series_Test02_CreateReportWithRandomentityId":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		"TC191_CreateReport_Series_Test03_CreateReportWithContentNull":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":null,
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		"TC191_CreateReport_Series_Test04_CreateReportWithTagNull":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"Test Content",
+					"TAG":null,
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		"TC191_CreateReport_Series_Test05_CreateReportWithAdditionalInfoNull":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":null
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Series_Test06_CreateReportWithEntityIdNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+			}
+		],
+		
+		
+		"TC191_CreateReport_Series_Test07_CreateReportWithAllAttrAsNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"",
+					"TAG":"",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"400"
+			}
+		],
+		
+	"GetAll Repor At Series Level":"--------------------------------------------------------",
+	
+	
+	"TC191_GetAllReports_Series_Test01_GetAllReportsForSeries":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+	
+	"TC191_GetAllReports_Series_Test02_GetAllReportsForSeriesWithoutCreatedAt":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+		
+		"TC191_GetAllReports_Series_Test04_GetAllReportsForSeriesWithInvalidEntityId":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		
+		"TC191_GetAllReports_Series_Test05_DeleteAllReportsForStudyWithValidEntityId":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetAllReports_Series_Test06_GetAllReportsForSeriesWithInvalidClustername":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+	
+	
+	
+	"Get Repor At Sereis Level":"--------------------------------------------------------",
+		
+		
+		"TC191_GetReport_Series_Test01_GetReportForSeries":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetReport_Series_Test02_GetReportForSeriesWithInvalidEntityId":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Series_Test03_GetReportForSeriesWithInvalidReportId":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Series_Test04_GetReportForSeriesWithEntityIdAsNull":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Series_Test05_GetReportForSeriesWithReportIdAsNull":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+				}
+		],
+		
+		"TC191_DeleteReport_Series_Test06_GetReportForSeries":[
+				{
+					"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"405"
+				}
+		],
+		
+		
+		
+		"Exam Of :":"---------------------Exam Level-------------------------------------",
+		"Post Report At Exam Level":"--------------------------------------------------------",
+		
+		"TC191_CreateReport_Exam_Test01_CreateReport":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Exam_Test02_CreateReportWithRandomentityId":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		"TC191_CreateReport_Exam_Test03_CreateReportWithContentNull":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":null,
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		"TC191_CreateReport_Exam_Test04_CreateReportWithTagNull":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"Test Content",
+					"TAG":null,
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		"TC191_CreateReport_Exam_Test05_CreateReportWithAdditionalInfoNull":[
+				{"entityid":"1.2.840." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Exam_Test06_CreateReportWithEntityIdNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+			}
+		],
+		
+		"TC191_CreateReport_Exam_Test07_CreateReportWithAllAttrAsNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"",
+					"TAG":"",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		
+	"GetAll Repor At Exam Level":"--------------------------------------------------------",
+	
+	"TC191_GetAllReports_Exam_Test01_GetAllReportsForExam":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+	
+	"TC191_GetAllReports_Exam_Test02_GetAllReportsForExamWithoutCreatedAt":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+		
+		"TC191_GetAllReports_Exam_Test04_GetAllReportsForExamWithInvalidEntityId":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		
+		"TC191_GetAllReports_Exam_Test05_DeleteAllReportsForStudyWithValidEntityId":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetAllReports_Exam_Test06_GetAllReportsForExamWithInvalidClustername":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+	
+	
+	
+	"Get Report At Exam Level":"--------------------------------------------------------",
+	
+		"TC191_GetReport_Exam_Test01_GetReportForExam":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetReport_Exam_Test02_GetReportForExamWithInvalidEntityId":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Exam_Test03_GetReportForExamWithInvalidReportId":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Exam_Test04_GetReportForExamWithEntityIdAsNull":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Exam_Test05_GetReportForExamWithReportIdAsNull":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+				}
+		],
+		
+		"TC191_DeleteReport_Exam_Test06_GetReportForExam":[
+				{
+					"entityid":"1.2." ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"405"
+				}
+		],
+		
+		"AdminUserSerice":"-----------AdminUser------------- ",
+		"PostRequest":"---------------------------Create AdminUser----------------------------",
+		"TC201_AdminUser_Test01_CreateAppAdminSibblingWithUserType1":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "COUNTRY":"SA",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":1
+					},
+				"expCode":"201"
+				}
+		],
+		
+		"TC201_AdminUser_Test02_CreateAppAdminSibblingWithUserType2":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":2
+					},
+				"expCode":"201"
+				}
+		],
+		"TC201_AdminUser_Test03_CreateAppAdminSibblingWithUserType3":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":3
+					},
+				"expCode":"201"
+				}
+		],
+		
+		"TC201_AdminUser_Test04_CreateSSCAdminWithUserType1":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "COUNTRY":"SA",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":1
+					},
+				"expCode":"201"
+				}
+		],
+		
+		"TC201_AdminUser_Test05_CreateSSCAdminWithUserType2":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":2
+					},
+				"expCode":"201"
+				}
+		],
+		"TC201_AdminUser_Test06_CreateSSCAdminWithUserType3":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":3
+					},
+				"expCode":"201"
+				}
+		],
+		
+		"TC201_AdminUser_Test09_CreateSSCAdminWithSSCAdmin":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":1
+					},
+				"expCode":"401"
+				}
+		],
+		
+		"TC201_AdminUser_Test10_CreateAccountAdminWithSSCAdmin":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386492",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":1
+					},
+				"expCode":"401"
+				}
+		],
+		"TC201_AdminUser_Test11_CreateSiteAdminWithSSCAdmin":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386493",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":1
+					},
+				"expCode":"401"
+				}
+		],
+		"TC201_AdminUser_Test12_CreateAppAdminWithExistingMDPAdminMail":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"409"
+				}
+		],
+		"TC201_AdminUser_Test13_CreateAppAdminWithExistingSSCAdminMail":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"201"
+				}
+		],
+		"TC201_AdminUser_Test14_CreateSSCAdminWithExistingMDPAdminMail":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"201"
+				}
+		],
+		"TC201_AdminUser_Test15_CreateSSCAdminWithExistingSSCAdminMail":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"409"
+				}
+		],
+		
+		"TC201_AdminUser_Test16_CreateMDPAdminWithEmailAsUniqueAndNoAlternateEmailForUserType2":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":2
+					},
+					
+				"expCode":"400"
+				}
+		],
+		
+		"TC201_AdminUser_Test17_CreateSSCAdminWithEmailAsUniqueAndNoAlternateEmailForUserType2":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":2
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test18_CreateMDPAdminWithEmailAsUniqueAndExistingAlternateEmailForUserType2":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":2
+					},
+					
+				"expCode":"409"
+				}
+		],
+		
+		"TC201_AdminUser_Test19_CreateSSCAdminWithEmailAsUniqueAndExistingAlternateEmailForUserType2":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"noemaildude@fuckoff.com",
+					"ZEISSIDUSERTYPE":2
+					},
+					
+				"expCode":"409"
+				}
+		],
+		"TC201_AdminUser_Test20_CreateMDPAdminWithClientIdNull":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test21_CreateMDPAdminWithRoleIdNull":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test22_CreateMDPAdminWithUserTypeNull":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":null
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test23_CreateMDPAdminWithClientIdRandom":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d6",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d79038649",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test24_CreateMDPAdminWithRoleIdRandom":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386410",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test25_CreateMDPAdminWithUserTypeRandom":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":5
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test26_CreateMDPAdminWithMDPAppIdNull":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"404"
+				}
+		],
+		"TC201_AdminUser_Test27_CreateMDPAdminWithMDPAppIdInvalid":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"alternatemail@gmail.com",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"404"
+				}
+		],
+		
+		"TC201_AdminUser_Test28_CreateMDPAdminWithInvalidemailId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test"
+					},
+					
+				"expCode":"400"
+				},
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test@gmail"
+					},
+					
+				"expCode":"400"
+				},
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test@gmail."
+					},
+					
+				"expCode":"400"
+				},
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test@gmail.com."
+					},
+					
+				"expCode":"400"
+				},
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test@gmail.com@id"
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test29_CreateMDPAdminWithoutContactDetails":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"CONTACTDETAILS":[],
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test30_CreateSSCAdminWithoutClientIdAsNull":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":null,
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test31_CreateSSCAdminWithRoleidNull":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":null,
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test32_CreateSSCAdminWithUserTypeNull":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"CONTACTDETAILS":[],
+					"ZEISSIDUSERTYPE":null
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test33_CreateSSCAdminWithCleintIdRandom":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09e5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"CONTACTDETAILS":[],
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test34_CreateSSCAdminWithRoleIdRandom":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386498",
+					"CONTACTDETAILS":[],
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test35_CreateSSCAdminWithUsertypeRandom":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":10
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test36_CreateSSCAdminWithMDPAppIdNull":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"404"
+				}
+		],
+		"TC201_AdminUser_Test37_CreateSSCAdminWithMDPAppIdInvalid":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b4",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"404"
+				}
+		]
+		,
+		"TC201_AdminUser_Test38_CreateSSCAdminWithInvalidemailId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test"
+					},
+					
+				"expCode":"400"
+				},
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test@gmail"
+					},
+					
+				"expCode":"400"
+				},
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test@gmail."
+					},
+					
+				"expCode":"400"
+				},
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test@gmail.com."
+					},
+					
+				"expCode":"400"
+				},
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					 "ALTERNATEEMAIL":"",
+					"ZEISSIDUSERTYPE":1,
+					"EMAIL":"test@gmail.com@id"
+					},
+					
+				"expCode":"400"
+				}
+		],
+		"TC201_AdminUser_Test39_CreateSSCAdminWithoutContactDetails":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b3",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"CONTACTDETAILS":[],
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"400"
+				}
+		],
+		
+		
+		"GetAllAdminRequest":"---------------------------Get Admin Users----------------------------",
+		"TC201_AdminUser_Test01_GetAdminUsers":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test02_GetAdminUsersAndVerifyHeaderDataInbody":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test03_GetAdminUsersWithFirstNameFilter":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test04_GetAdminUsersWithLastNameFilter":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test05_GetAdminUsersWithFirstAndLastNameFilter":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test06_GetAdminUsersWithUsingSSCAdminAuth":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					 "ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"401"
+				}
+		]
+		,
+		"TC201_AdminUser_Test07_GetAdminUsersWithPageSizeGrt10":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"expCode":"200"
+				}
+		]
+		,
+		"TC201_AdminUser_Test08_GetAdminUsersWithPageSizeLs10":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",	
+					"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test09_GetAdminUsersWithPageSizeGrt31":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test10_GetAdminUsersWithPageSize0":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test11_GetAdminUsersWithCountryFilter":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"COUNTRY":"Uganda",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		],
+		
+		"GetAdminRequest":"---------------------------Get Admin User By Id orMail----------------------------",
+		"TC201_AdminUser_Test01_GetMDPAdminWithEntityId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"a9058640-f4d6-4fd0-9170-d07ff4b9d515",
+					"jsonobjects":{
+					"CLIENTID":"3D30CCC9-7964-4323-90BB-6D72AA8DC9C6",
+					"ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					"COUNTRY":"Uganda",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test02_GetSSCAdminWithEntityId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"COUNTRY":"Uganda",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		]
+		
+		,
+		"TC201_AdminUser_Test03_GetMDPAdminWithEmailId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"a9058640-f4d6-4fd0-9170-d07ff4b9d515",
+					"jsonobjects":{
+					"CLIENTID":"3D30CCC9-7964-4323-90BB-6D72AA8DC9C6",
+					"ROLEID":"985b931d-a04f-491c-de88-08d790386490",
+					"COUNTRY":"Uganda",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		]
+		
+		,
+		"TC201_AdminUser_Test04_GetSSCAdminWithEmailId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"ROLEID":"985b931d-a04f-491c-de88-08d790386491",
+					"COUNTRY":"Uganda",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		]
+		
+		,
+		"TC201_AdminUser_Test05_GetAccountAdminWithEntityId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"ROLEID":"985b931d-a04f-491c-de88-08d790386492",
+					"COUNTRY":"Uganda",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test06_GetSiteAdminWithEntityId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"ROLEID":"985b931d-a04f-491c-de88-08d790386493",
+					"COUNTRY":"Uganda",
+					"ZEISSIDUSERTYPE":1
+					},
+					
+				"expCode":"200"
+				}
+		],
+		"TC201_AdminUser_Test07_GetSSCAdminWithEntityIdUsingSSCAdminAuth":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"ROLEID":"985b931d-a04f-491c-de88-08d790386492",
+					"COUNTRY":"Uganda",
+					"ZEISSIDUSERTYPE":1
+					},
+					"expCode":"401"
+				}
+		],
+		"TC201_AdminUser_Test08_GetSSCAdminWithInvalidMDPIdAndValidEntityId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b2",
+					"expCode":"404"
+				}
+		],
+		"TC201_AdminUser_Test09_GetSSCAdminWithvalidMDPIdAndInValidEntityId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"expCode":"404"
+				}
+		],
+		
+		"PutAdminRequest":"---------------------------Edit Admin User By Id----------------------------",
+		
+			"TC201_AdminUser_Test01_PutMDPAdminWithEntityId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"expCode":"204"
+				}
+		],
+		"TC201_AdminUser_Test02_PutSSCAdminWithEntityId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"expCode":"204"
+				}
+		],
+		"TC201_AdminUser_Test03_PutSSCAdminWithEntityIdUsingSSCAdminAuth":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"expCode":"401"
+				}
+		],
+		"TC201_AdminUser_Test04_PutSSCAdminWithEntityIdWithContact1":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CONTACTDETAILS":[
+										    {
+										      "addressLine1": "UpdateAdr1",
+										      "addressLine2": "UpdateAdr1",
+										      "city": "Bengaluru",
+										      "district": "Urban",
+										      "state": "KA",
+										      "country": "INDIA",
+										      "postalCode": "560069",
+										      "period": "string",
+										      "alternateEmail": "user@example.com",
+										      "contactNo": "string",
+										      "alternateNo": "string",
+										      "type": "string"
+										    }
+  									]
+					},
+					"expCode":"204"
+				}
+		],
+		"TC201_AdminUser_Test05_PutSSCAdminWithEntityIdWithContact3":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CONTACTDETAILS":[
+										    {
+										      "addressLine1": "UpdateAdr1",
+										      "addressLine2": "UpdateAdr1",
+										      "city": "Bengaluru",
+										      "district": "Urban",
+										      "state": "KA",
+										      "country": "INDIA",
+										      "postalCode": "560069",
+										      "period": "string",
+										      "alternateEmail": "user@example.com",
+										      "contactNo": "string",
+										      "alternateNo": "string",
+										      "type": "string"
+										    },
+										    {
+										      "addressLine1": "UpdateAdr2",
+										      "addressLine2": "UpdateAdr2",
+										      "city": "Bengaluru",
+										      "district": "Urban",
+										      "state": "KA",
+										      "country": "INDIA",
+										      "postalCode": "560069",
+										      "period": "string",
+										      "alternateEmail": "user@example.com",
+										      "contactNo": "string",
+										      "alternateNo": "string",
+										      "type": "string"
+										    },
+										    {
+										      "addressLine1": "UpdateAdr3",
+										      "addressLine2": "UpdateAdr3",
+										      "city": "Bengaluru",
+										      "district": "Urban",
+										      "state": "KA",
+										      "country": "INDIA",
+										      "postalCode": "560069",
+										      "period": "string",
+										      "alternateEmail": "user@example.com",
+										      "contactNo": "string",
+										      "alternateNo": "string",
+										      "type": "string"
+										    }
+  									]
+					},
+					"expCode":"204"
+				}
+		],
+		"TC201_AdminUser_Test06_PutSSCAdminWithEntityIdWithContact0":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"mdpappid":"96b144c4-db4d-4cee-e6e9-08d7629609b9",
+					"jsonobjects":{
+					"CONTACTDETAILS":[]
+					},
+					"expCode":"204"
+				}
+		],
+		
+		"Start Of MDPApps":"All The AdminServices API Related To The MDPApps Creation and edit and Get",
+		"PostMDPAppRequest" :"---------------------------Create An MDPApp----------------------------",
+		"TC201_MDPApps_Test01_PostMDPApp":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"201"
+				}
+		],
+		"TC201_MDPApps_Test02_PostMDPAppWithSSCAdminAuth":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		],
+		"TC201_MDPApps_Test03_PostMDPAppWithExistingZeissIdConfig":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":[
+									    {
+									      "ClientId": "9ec53cca-baad-4126-b43c-6ff3c61b1422",
+									      "ApiClientId": "$ApiClientId",
+									      "ApiClientSecret": "$ApiClientSecret",
+									      "InitiatorAccountId": "$InitiatorAccountId",
+									      "DefaultUserPassword": "$DefaultUserPassword",
+									      "MetatDataAddress": "$MetatDataAddress",
+									      "ApiConfigurations": [
+									        {
+									          "Name": 1,
+									          "Url": "$InviteUrl",
+									          "SubscriptionKey": "$SubscriptionKey"
+									        },
+									        {
+									          "Name": 41,
+									          "Url": "$CreateAccountWithPasswordUrl",
+									          "SubscriptionKey": "$SubscriptionKey"
+									        }
+									      ]
+									    }
+									  ]
+					},
+					"expCode":"409"
+				}
+		],
+		"TC201_MDPApps_Test04_PostMDPAppWithExistingAppName":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"409"
+				}
+		],
+		
+		"TC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":[]
+					},
+					"expCode":"201"
+				}
+		],
+		"TC201_MDPApps_Test06_PostMDPAppWithConfigurationAsString":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"CONFIGURATION":"String"
+					},
+					"expCode":"400"
+				}
+		],
+		"TC201_MDPApps_Test07_PostMDPAppWithNameAsNull":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"400"
+				}
+		],
+		"TC201_MDPApps_Test08_PostMDPAppWithZeissIdAsJsonObject":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":{"key1":"val1"}
+					},
+					"expCode":"400"
+				}
+		],
+		
+		
+			"GetAllMDPApps":"---------------------------Get All The MDPApps----------------------------",
+		
+			
+			"TC201_AdminUser_Test01_GetAllMDPApps":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			
+			"TC201_AdminUser_Test02_GetAllMDPAppsWithZeissIdFilter":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			"TC201_MDPApps_Test03_GetAllMDPAppWithSSCAdminAuth":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		],
+			
+			"TC201_AdminUser_Test04_GetAllMDPAppsWithNonExistingZeissId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			
+			
+			"GetMDPApp":"---------------------------Get A Particular MDPApps----------------------------",
+		
+			
+			"TC201_AdminUser_Test01_GetMDPApp":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			"TC201_MDPApps_Test02_GetMDPAppWithSSCAdminAuth":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		],
+		
+		"PutMDPApp":"---------------------------Edit An MDPApp----------------------------",
+		
+		"TC201_MDPApps_Test01_PutMDPAppWithConfigurationAsEditedValue":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"CONFIGURATION":{"key2":"Updated config"}
+					},
+					"expCode":"204"
+				}
+		],
+		
+		"TC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"CONFIGURATION":{"key2":"Updated config"}
+					},
+					"expCode":"404"
+				}
+		],
+		
+		"TC201_MDPApps_Test03_PutMDPAppWithConfigurationAsEmpty":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"CONFIGURATION":{}
+					},
+					"expCode":"204"
+				}
+		],
+		
+		
+				
+		"Start Of ZeissId":"All The AdminServices API Related To The ZeissId Creation and edit and Get",
+		"PostZeissIdRequest" :"---------------------------Create An MDPApp----------------------------",
+		"TC201_ZeissId_Test01_PostZeissId":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"201"
+				}
+		],
+		"TC201_ZeissId_Test02_PostZeissIdWithSSCAdmin":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		],
+		"TC201_ZeissId_Test03_PostZeissIdWithNonExistingAppId":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"404"
+				}
+		],
+		"TC201_ZeissId_Test04_PostZeissIdWithInvalidGuidClientid":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"400"
+				}
+		],
+		"TC201_ZeissId_Test05_PostZeissIdWithEmptyZeissId":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":{}
+					},
+					"expCode":"400"
+				}
+		],
+		
+		"GetZeissId":"---------------------------Get A Particular ZeissId----------------------------",
+		
+			
+			"TC201_ZeissId_Test01_GetZeissId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			"TC201_ZeissId_Test02_GetZeissIdWithSSCAuth":[
+				{
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+			],
+			
+			"TC201_ZeissId_Test03_GetZeissIdWithValidMDPidButInvalidZid":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"404"
+				}
+			],
+			
+			"TC201_ZeissId_Test04_GetZeissIdWithValidZidButInvalidMDPId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"404"
+				}
+			],
+			
+			"PutZeissId":"---------------------------Get A Particular ZeissId----------------------------",
+		
+			
+			"TC201_ZeissId_Test01_PutZeissId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"204"
+				}
+			],
+			
+		"TC201_ZeissId_Test04_PutZeissIdWithValidZeissIdButInvalidMdpId":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"404"
+				}
+		],
+		"TC201_ZeissId_Test05_PutZeissIdWithInvalidConfigKey":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":{}
+					},
+					"expCode":"400"
+				}
+		],
+		"TC201_ZeissId_Test06_PutZeissIdWithSSCAuth":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		]
+			
+			
+}

@@ -1,0 +1,107 @@
+{
+    "ReviewPhaseDto": "Manual",
+    "Culture": "En-US",
+    "SupplementaryInformations": [
+        {
+            "Id": 0,
+            "StudyId": 0,
+            "AdditionalInformation": "test"
+        }
+    ],
+    "GroupId": "35481845",
+    "ProductId": "",
+    "ReasonForConsultation": "Test",
+    "OriginalStudy": "",
+    "Medias": [
+        {
+            "Id": 9187,
+            "StudyGroupId": "35481845",
+            "Location": "https://dcpintegrated.blob.core.windows.net/imagesastest/2019/10/4/1570170339174/npr1.jpg",
+            "Laterality": 0,
+            "Category": 0,
+            "ImageFormat": 0,
+            "Hashcode": "b8203f90762e7b1e7d117ac9d2ef49fc",
+            "ImageGradingDto": null,
+            "StorageLog": "",
+            "MetadataInformation": null
+        },
+        {
+            "Id": 9187,
+            "StudyGroupId": "35481845",
+            "Location": "https://dcpintegrated.blob.core.windows.net/imagesastest/2019/10/4/1570170339174/npr2.jpg",
+            "Laterality": 0,
+            "Category": 0,
+            "ImageFormat": 0,
+            "Hashcode": "b8203f90762e7b1e7d117ac9d2ef49fc",
+            "ImageGradingDto": null,
+            "StorageLog": "",
+            "MetadataInformation": null
+        }
+    ],
+    "ClientRequestId": "1",
+    "Messages": [
+        {
+            "Id": 0,
+            "StudyId": "0",
+            "MessageFrom": "Test@gmail.com",
+            "Audience": 0,
+            "Message": "test",
+            "CreatedAt": "2019-10-03T05:21:16.863Z"
+        }
+    ],
+    "Status": "2",
+    "CreatedBy": "ce3ea9a8-4b82-4a5c-b444-ad082c105ac7",
+    "CreatedAt": "2019-10-03T05:21:16.863Z",
+    "Priority": 0,
+    "AcqisitionSiteId": "2",
+    "Patient": {
+        "IsActive": "true",
+        "OptometricInformation": {
+            "Id": 0,
+            "PatientKey": 0,
+            "Informations": [
+                {
+                    "OptometricInformationType": 0,
+                    "OdValue": "2",
+                    "OsValue": "3"
+                }
+            ]
+        },
+        "History": {
+            "Id": "0",
+            "PatientKey": null,
+            "CreatedAt": "2019-10-03T05:21:16.863Z",
+            "DiabeticStatus": "1",
+            "OtherMediaclHistory": "test",
+            "GlaucomaStatus": "1",
+            "OtherOcularHistory": "test",
+            "OtherRelevantInformation": "test"
+        },
+        "AdditionalInformation": {
+            "Id": "0",
+            "PatientKey": null,
+            "AdditionalInformation": "test"
+        },
+        "DateOfBirth": "1987-06-04 05:50:43.487",
+        "Gender": 0,
+        "CreatedAt": "2019-10-03T05:21:16.863Z",
+        "Email": "testpat123@gmail.com",
+        "LastName": "Web",
+        "FirstName": "AutoTest",
+        "Title": "Mrs",
+        "UserName": "postman",
+        "PatientId": "1923890889",
+        "Id": null,
+        "PhoneNumber": "8989789789",
+        "UpdatedAt": null
+    },
+    "Id": 0,
+    "QueryId": "B5370C9C-326F-4FD5-B4CC-1E7CB4A37F56",
+    "Source": 2,
+    "DeviceSerialNumber": null,
+    "ScreeningStatus": null,
+    "GraderLevel": 0,
+    "ReviewSite": "",
+    "ReviewedBy": "Test",
+    "UpdatedAt": "2019-10-03T05:21:16.863Z"
+}

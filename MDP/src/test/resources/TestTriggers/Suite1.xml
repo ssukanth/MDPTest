@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" ><!-- parallel="methods" -->
+<suite name ="testsuite1">
+<listeners>
+	<listener class-name="com.selenium.utils.TestTrackers"/>
+</listeners>
+	<parameter name ="env" value="stg"/>
+<!-- 	<test name ="Patientservice" >
+	<groups>
+			<run>
+				<include name ="patient"/>
+			 </run>	
+	</groups>		 
+			<packages>			
+				<package name ="com.mdp.api.tests"/>		
+			</packages>	
+	</test>
+	<test name ="Reportservice" >
+	<groups>
+			<run>
+				<include name ="report"/>
+			 </run>	
+	</groups>		 
+			<packages>			
+				<package name ="com.mdp.api.tests"/>		
+			</packages>	
+	</test> -->
+	<test name ="AdminUserservice" >
+	<groups>
+			<run>
+				<include name ="adminuserservice"/>
+			 </run>	
+	</groups>		 
+			<packages>			
+				<package name ="com.mdp.api.tests"/>		
+			</packages>	
+	</test>
+	
+	<test name ="MDPApps" >
+	<groups>
+			<run>
+				<include name ="mdpapps"/> 
+			 </run>	
+	</groups>		 
+			<packages>			
+				<package name ="com.mdp.api.tests"/>		
+			</packages>	
+	</test>
+	
+	<!-- 	<test name ="ZeissId" >
+	<groups>
+			<run>
+				<include name ="zeissid"/> 
+			 </run>	
+	</groups>		 
+			<packages>			
+				<package name ="com.mdp.api.tests"/>		
+			</packages>	
+	</test> -->
+	
+	
+</suite>

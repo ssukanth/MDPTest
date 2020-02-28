@@ -1,0 +1,44 @@
+TestCaseName:TC191_GetAllReports_Series_Test06_GetAllReportsForSeriesWithInvalidClustername
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Series/f19bb71e-350a-4b8e-d44f-200127210926/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"1f07c0dd-e1a1-4349-8689-86e71e981b0a","createdAt":"2020-01-27T15:39:27.3304398Z","referencedUID":"f19bb71e-350a-4b8e-d44f-200127210926","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Series/f19bb71e-350a-4b8e-d44f-200127210926/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"5fdc7a75-b723-48e0-9a59-371c05a40736","createdAt":"2020-01-27T15:39:27.8109765Z","referencedUID":"f19bb71e-350a-4b8e-d44f-200127210926","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Series/f19bb71e-350a-4b8e-d44f-200127210926/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"4b1e55ec-8e0d-4a5b-8fe7-0958759551fe","createdAt":"2020-01-27T15:39:28.3061763Z","referencedUID":"f19bb71e-350a-4b8e-d44f-200127210926","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Study/f19bb71e-350a-4b8e-d44f-200127210926/Reports
+
+ The Query Param:
+
+The Response is :[{"links":[{"rel":"slef","href":"http://mdptest.api.zeiss.com/reportservice/api/v2.0/Study/f19bb71e-350a-4b8e-d44f-200127210926/Reports/4b1e55ec-8e0d-4a5b-8fe7-0958759551fe","action":"GET"}],"id":"4b1e55ec-8e0d-4a5b-8fe7-0958759551fe","createdAt":"2020-01-27T15:39:28.3061763Z","referencedUID":"f19bb71e-350a-4b8e-d44f-200127210926","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"},{"links":[{"rel":"slef","href":"http://mdptest.api.zeiss.com/reportservice/api/v2.0/Study/f19bb71e-350a-4b8e-d44f-200127210926/Reports/5fdc7a75-b723-48e0-9a59-371c05a40736","action":"GET"}],"id":"5fdc7a75-b723-48e0-9a59-371c05a40736","createdAt":"2020-01-27T15:39:27.8109765Z","referencedUID":"f19bb71e-350a-4b8e-d44f-200127210926","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"},{"links":[{"rel":"slef","href":"http://mdptest.api.zeiss.com/reportservice/api/v2.0/Study/f19bb71e-350a-4b8e-d44f-200127210926/Reports/1f07c0dd-e1a1-4349-8689-86e71e981b0a","action":"GET"}],"id":"1f07c0dd-e1a1-4349-8689-86e71e981b0a","createdAt":"2020-01-27T15:39:27.3304398Z","referencedUID":"f19bb71e-350a-4b8e-d44f-200127210926","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}]
+
+The Issues was :java.lang.AssertionError: expected [0] but found [3]

@@ -1,0 +1,25 @@
+TestCaseName:tC201_AdminUser_Test09_CreateSSCAdminWithSSCAdmin
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+
+UserName:zeiss0719+20200204_170617@gmail.com
+
+PasswordTest123!
+The Auth token Used :eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IlRva2VuU2lnbmluZ0tleUNvbnRhaW5lciJ9.eyJpc3MiOiJodHRwczovL3plaXNzaWRiMmN0ZXN0LmIyY2xvZ2luLmNvbS83Yzg5NjlkMS0zZDFjLTQ2MGMtYTMyZi04NzlkODk0MTI1NWYvdjIuMC8iLCJleHAiOjE1ODA4MjA1MzYsIm5iZiI6MTU4MDgxNjkzNiwiYXVkIjoiM0QzMENDQzktNzk2NC00MzIzLTkwQkItNkQ3MkFBOERDOUM2Iiwib2lkIjoiNTI3MzE0YTAtMGZlZC00OWVmLTgyODUtOTMwNDJkZWZjNmMxIiwic3ViIjoiTm90IHN1cHBvcnRlZCBjdXJyZW50bHkuIFVzZSBvaWQgY2xhaW0uIiwiZW1haWwiOiJ7T0lEQzpVc2VybmFtZX0iLCJaZWlzc0lkQmFzZSI6IntcclxuICBcImFjY291bnRJZFwiOiAxNDQ0NyxcclxuICBcImZpcnN0TmFtZVwiOiBcIlplaXNzVVNlclwiLFxyXG4gIFwibGFzdE5hbWVcIjogXCJBZG1pblwiLFxyXG4gIFwiZU1haWxcIjogXCJ6ZWlzczA3MTkrMjAyMDAyMDRfMTcwNjE3QGdtYWlsLmNvbVwiLFxyXG4gIFwibGFzdENoYW5nZVwiOiBcIjIwMjAtMDItMDRUMTE6Mzc6MzguNjIzXCIsXHJcbiAgXCJpZGVudGl0eVByb3ZpZGVyXCI6IDEsXHJcbiAgXCJzYWx1dGF0aW9uXCI6IFwibmFcIixcclxuICBcImxhbmd1YWdlXCI6IFwiZW4tR0JcIixcclxuICBcImNsaWVudEFwcExvZ2luRGVuaWVkXCI6IFwie1xcclxcbiAgXFxcIkFjY2Vzc0RlbmllZFxcXCI6IFxcXCIzNzZcXFwiXFxyXFxufVwiXHJcbn0iLCJaZWlzc0lkQ29udGFjdCI6Int9IiwiWmVpc3NJZE9yZ2FuaXNhdGlvbiI6Int9IiwiWmVpc3NJZEFwcGxpY2F0aW9uIjoie1xyXG4gIFwiY2xpZW50QXBwSWRcIjogMSxcclxuICBcImFwcGxpY2F0aW9uRG9tYWluSWRcIjogMCxcclxuICBcInRlcm1zQW5kQ29uZGl0aW9uc0lkXCI6IDMxOCxcclxuICBcImFjY2VwdGFuY2VPZlRlcm1zQW5kQ29uZGl0aW9uc0lkXCI6IDE5MTU4LFxyXG4gIFwiZGlyZWN0QWNjZXNzXCI6IHRydWUsXHJcbiAgXCJpbnZpdGF0aW9uSWRcIjogMFxyXG59IiwiWmVpc3NJZEN1c3RvbUZpZWxkcyI6Int9IiwiWmVpc3NJZEFncmVlbWVudHMiOiJ7XHJcbiAgXCJhZ3JlZW1lbnRzXCI6IFtdXHJcbn0iLCJhenAiOiIzRDMwQ0NDOS03OTY0LTQzMjMtOTBCQi02RDcyQUE4REM5QzYiLCJ2ZXIiOiIxLjAiLCJpYXQiOjE1ODA4MTY5MzZ9.5pDpA5KJf0c3W2gr_x3DYLDtfM8dYZbXP1Y6pYRlWAuBI4B4iVZnOzI0zRwa12eihb_B6_yn8fn6-jwMYMowImQBW-eZtAUKDBQEgl5OBpF8Zgzx4qpbzjNnEU5GBTCc4GOLFOhoEjcDjdjXP9Jp4XQdPaM0gOeuQImJTWws2Z8QMG1KqPkNGNNAzYHRlkxwRh8Fd4Qw1i7Hr8XUoJkceqRuLCRkwFI1T3tzZglXUKoRdzFfX021310wv-txyhIr_TqJf57Ntpfg1hN83JebWdlBnaCCcYLusFOF6bNC2LBiDRcdF5d5-IQtYBl2QtKx9VqhQh9IpLOsl9J7lbF-Qw
+The Base Uri: https://mdptest.api.zeiss.com
+/nThe Values to change In JSON:{"ALTERNATEEMAIL":"noemaildude@fuckoff.com","ZEISSIDUSERTYPE":1,"ROLEID":"985b931d-a04f-491c-de88-08d790386491","EMAIL":"zeiss0719+20200204_171901@gmail.com","CLIENTID":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5"}
+
+The Changed JSONObjects are :{contactDetails[0].alternateEmail=noemaildude@fuckoff.com, zeissIdUserType=1, clientId=ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5, roleId=985b931d-a04f-491c-de88-08d790386491, email=zeiss0719+20200204_171901@gmail.com}
+
+The Effective end point is :/adminuserservice/api/v2.0/mdpapps/96b144c4-db4d-4cee-e6e9-08d7629609b9/AdminUsers
+
+ payload{"firstName":"ZeissUSer","lastName":"Admin","clientId":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5","zeissIdUserType":1,"roleId":"985b931d-a04f-491c-de88-08d790386491","contactDetails":[{"country":"string","alternateEmail":"noemaildude@fuckoff.com","period":"string","city":"Bangalore","district":"string","postalCode":"string","addressLine1":"Zeiss","addressLine2":"EC","state":"KA","type":"string","alternateNo":"string","contactNo":"string"}],"email":"zeiss0719+20200204_171901@gmail.com"}
+
+ Response Code:500
+
+The Issues was :java.lang.AssertionError: expected [401] but found [500]

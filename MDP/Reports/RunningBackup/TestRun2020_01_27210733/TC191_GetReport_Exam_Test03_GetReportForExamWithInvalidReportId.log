@@ -1,0 +1,42 @@
+TestCaseName:TC191_GetReport_Exam_Test03_GetReportForExamWithInvalidReportId
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Instance/f19bb71e-350a-4b8e-d44f-200127211007/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"97332bf0-d920-4f4b-8db1-e5bae6edf82b","createdAt":"2020-01-27T15:40:07.771818Z","referencedUID":"f19bb71e-350a-4b8e-d44f-200127211007","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Instance/f19bb71e-350a-4b8e-d44f-200127211007/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"0b3cb94b-a57a-4d74-97d5-06f24cb2f1de","createdAt":"2020-01-27T15:40:08.2760816Z","referencedUID":"f19bb71e-350a-4b8e-d44f-200127211007","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Instance/f19bb71e-350a-4b8e-d44f-200127211007/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"23712a4b-6b3e-4292-8044-2da8d29fa6a9","createdAt":"2020-01-27T15:40:08.7606426Z","referencedUID":"f19bb71e-350a-4b8e-d44f-200127211007","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+The Original Id:23712a4b-6b3e-4292-8044-2da8d29fa6a9The Modified Invalid Id is :23712a4b-6b3e-4292-8044-2da8d29fa6su1
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Series/f19bb71e-350a-4b8e-d44f-200127211007/Reports/23712a4b-6b3e-4292-8044-2da8d29fa6su1
+The Response is :{"error":{"code":"InvalidOrMissingParameter","message":"One or more required parameters are invalid or missing","target":null,"details":[{"code":"InvalidOrMissingParameter","message":"Missing Id","target":null,"details":null,"innerError":null}],"innerError":null}}
+
+The Issues was :java.lang.AssertionError: expected [404] but found [400]

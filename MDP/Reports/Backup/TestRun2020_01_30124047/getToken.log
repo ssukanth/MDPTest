@@ -1,0 +1,14 @@
+TestCaseName:getToken
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+
+UserName:zeiss0719@gmail.com
+
+Passwordzeiss2017
+
+The Issues was :java.lang.Exception: The error occured at:139 Of the class :com.selenium.utils.ApiUtilsDue to :Expected condition failed: waiting for com.selenium.utils.SeleniumUtils$1@5e8a459 (tried for 45 second(s) with 500 milliseconds interval)

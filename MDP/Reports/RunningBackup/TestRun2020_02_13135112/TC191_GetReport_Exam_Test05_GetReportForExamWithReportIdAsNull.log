@@ -1,0 +1,43 @@
+Initialized the Logs and Browser with :
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.100, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: /var/folders/0d/0fwh5qyd2z5...}, goog:chromeOptions: {debuggerAddress: localhost:51280}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+TestCaseName:TC191_GetReport_Exam_Test05_GetReportForExamWithReportIdAsNull
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Instance/1.2.840.200213.14/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"2e285c4e-db8f-4f01-ba8c-d24a965e7021","createdAt":"2020-02-13T08:30:12.9457306Z","referencedUID":"1.2.840.200213.14","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Instance/1.2.840.200213.14/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"de751db3-aac9-41a3-9028-9929a9543873","createdAt":"2020-02-13T08:30:13.446511Z","referencedUID":"1.2.840.200213.14","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Instance/1.2.840.200213.14/Reports
+
+The Changed JSONObjects are :
+
+Payload:{"additionalInfo":{},"tag":"string","content":"string"}
+
+The Response is :{"id":"c5c23d55-ba31-47db-92eb-2a88982a6f83","createdAt":"2020-02-13T08:30:13.9365563Z","referencedUID":"1.2.840.200213.14","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}
+The Base Uri: https://mdptest.api.zeiss.com
+
+Effective End Point:/reportservice/api/v2.0/Instance/1.2.840.200213.14/Reports
+The Response is :[{"links":[{"rel":"slef","href":"http://mdptest.api.zeiss.com/reportservice/api/v2.0/Instance/1.2.840.200213.14/Reports/c5c23d55-ba31-47db-92eb-2a88982a6f83","action":"GET"}],"id":"c5c23d55-ba31-47db-92eb-2a88982a6f83","createdAt":"2020-02-13T08:30:13.9365563Z","referencedUID":"1.2.840.200213.14","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"},{"links":[{"rel":"slef","href":"http://mdptest.api.zeiss.com/reportservice/api/v2.0/Instance/1.2.840.200213.14/Reports/de751db3-aac9-41a3-9028-9929a9543873","action":"GET"}],"id":"de751db3-aac9-41a3-9028-9929a9543873","createdAt":"2020-02-13T08:30:13.446511Z","referencedUID":"1.2.840.200213.14","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"},{"links":[{"rel":"slef","href":"http://mdptest.api.zeiss.com/reportservice/api/v2.0/Instance/1.2.840.200213.14/Reports/2e285c4e-db8f-4f01-ba8c-d24a965e7021","action":"GET"}],"id":"2e285c4e-db8f-4f01-ba8c-d24a965e7021","createdAt":"2020-02-13T08:30:12.9457306Z","referencedUID":"1.2.840.200213.14","createdBy":"System","content":"string","additionalInfo":{},"tag":"string"}]
+
+The Issues was :java.lang.AssertionError: expected [400] but found [200]
