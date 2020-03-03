@@ -1,62 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" ><!-- parallel="methods" -->
-<suite name ="testsuite1">
+<suite name ="testsuite1" configfailurepolicy="continue">
 <listeners>
 	<listener class-name="com.selenium.utils.TestTrackers"/>
 </listeners>
 	<parameter name ="env" value="stg"/>
-<!-- 	<test name ="Patientservice" >
+	<test name ="MDPAPIRegTest" >
 	<groups>
-			<run>
-				<include name ="patient"/>
-			 </run>	
+		<run>
+			<!--
+			<include name ="patientservice"/> 
+			<include name ="reportservice"/>
+			<include name ="studyservice"/> 
+			<include name ="seriesservice"/> 
+			<include name ="instanceservice"/>
+			<include name ="storageservice"/> 
+			<include name ="adminuserservice"/>
+			<include name ="mdpapps"/> 
+			<include name ="zeissid"/>
+			-->
+			<include name ="studyservice"/>
+		</run>	
 	</groups>		 
-			<packages>			
-				<package name ="com.mdp.api.tests"/>		
-			</packages>	
+	<packages>			
+		<package name ="com.mdp.api.tests"/>		
+	</packages>	
 	</test>
-	<test name ="Reportservice" >
-	<groups>
-			<run>
-				<include name ="report"/>
-			 </run>	
-	</groups>		 
-			<packages>			
-				<package name ="com.mdp.api.tests"/>		
-			</packages>	
-	</test> -->
-	<test name ="AdminUserservice" >
-	<groups>
-			<run>
-				<include name ="adminuserservice"/>
-			 </run>	
-	</groups>		 
-			<packages>			
-				<package name ="com.mdp.api.tests"/>		
-			</packages>	
-	</test>
-	
-	<test name ="MDPApps" >
-	<groups>
-			<run>
-				<include name ="mdpapps"/> 
-			 </run>	
-	</groups>		 
-			<packages>			
-				<package name ="com.mdp.api.tests"/>		
-			</packages>	
-	</test>
-	
-	<!-- 	<test name ="ZeissId" >
-	<groups>
-			<run>
-				<include name ="zeissid"/> 
-			 </run>	
-	</groups>		 
-			<packages>			
-				<package name ="com.mdp.api.tests"/>		
-			</packages>	
-	</test> -->
-	
-	
 </suite>
