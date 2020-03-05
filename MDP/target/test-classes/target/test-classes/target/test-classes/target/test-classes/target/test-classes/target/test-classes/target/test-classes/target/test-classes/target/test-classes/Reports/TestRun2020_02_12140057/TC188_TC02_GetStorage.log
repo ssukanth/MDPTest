@@ -1,0 +1,13 @@
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+The Base Uri: https://mdptest.api.zeiss.com
+Effective End Point: /storageservice/api/v2.0/accounts/c56a4110-65aa-42fc-a946-5fd21dec0539/storage
+The res is:
+{"error":{"code":"ContainerDoesnotExists","message":"Container Doesnot Exists","target":null,"details":null}}
+
+The Issues was :java.lang.AssertionError: expected [200] but found [404]

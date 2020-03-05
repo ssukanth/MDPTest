@@ -1,0 +1,20 @@
+{
+  "imageLaterality": "OU",
+  "additionalInformation": "add info edited",
+  "observationDto": [
+    {
+      "contentCreatorName": "author1",
+      "contentCreationSite": "site location",
+      "contentDescription": {"EyeDryness":"Dry Eye evidence found"},
+      "contentLabel": "label",
+      "note": "notes",
+      "tag": "tags",
+      "imageInformation": [
+        {
+          "frameNumber": 2,
+          "frameComments": "frame comments"
+        }
+      ]
+    }
+  ]
+}

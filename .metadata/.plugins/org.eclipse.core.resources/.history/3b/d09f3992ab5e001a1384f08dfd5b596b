@@ -1,0 +1,106 @@
+{
+  "applicationType": "VH Connect",
+  "studyInstanceUID": "1.2.840.10008.01",
+  "studyComments": "Comments from study",
+  "referringPhysician": {
+    "familyName": "Abhira",
+    "givenName": "Jairam",
+    "middleName": "",
+    "prefix": "Dr",
+    "suffix": "",
+    "familyNameIdeographic": "",
+    "givenNameIdeographic": "",
+    "middleNameIdeographic": "",
+    "prefixIdeographic": "",
+    "suffixIdeographic": "",
+    "familyNamePhonetic": "",
+    "givenNamePhonetic": "",
+    "middleNamePhonetic": "",
+    "prefixPhonetic": "",
+    "suffixPhonetic": "",
+    "institutionName": "",
+    "institutionAddress": ""
+  },
+  "accessionNumber": "AN001",
+  "requestedProcedure": {
+    "id": "80fa810d-f321-4ac3-a28a-c4275c8eb8ab",
+    "requestedProcedureCode": "0011",
+    "requestedProcedureDescription": "Scanning",
+    "requestedProcedureComments": "Enlarged",
+    "scheduledSteps": [
+      {
+        "id": "80fa810d-f321-4ac3-a28a-c4275c8eb8ab",
+        "scheduledStepDescription": "scheduled1",
+        "scheduledStepStartDate": "2020-01-03T08:09:58.923Z"
+      }
+    ]
+  },
+  "reasonForPerformedProcedure": "reason for performing procedure",
+  "series": [
+    {
+      "seriesInstanceUID": "1.2.840.10008.01.01",
+      "modality": "AR",
+      "laterality": "LAT",
+      "description": "Series description",
+      "seriesDate": "2020-01-02T08:09:58.923Z",
+      "equipmentDetails": {
+        "manufacturer": "Zeiss",
+        "institutionName": "Carl Zeiss",
+        "institutionAddress": "Bommasandra",
+        "stationName": "BOM",
+        "departmentName": "CARIN",
+        "manufacturerModelName": "CZModel",
+        "deviceSerialNumber": "34567",
+        "softwareVersion": "1.0"
+      },
+      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+      "performedStepDescription": "description",
+      "scheduledStepsIds": [
+        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+      ],
+      "performingPhysican": {
+        "familyName": "Abhira",
+        "givenName": "Tukaram",
+        "middleName": "",
+        "prefix": "Dr",
+        "suffix": "",
+        "familyNameIdeographic": "",
+        "givenNameIdeographic": "",
+        "middleNameIdeographic": "",
+        "prefixIdeographic": "",
+        "suffixIdeographic": "",
+        "familyNamePhonetic": "",
+        "givenNamePhonetic": "",
+        "middleNamePhonetic": "",
+        "prefixPhonetic": "",
+        "suffixPhonetic": "",
+        "institutionName": "",
+        "institutionAddress": ""
+      },
+      "impressions": [
+        {
+          "contentDate": "2020-01-02T08:09:58.924Z",
+          "contentCreatorName": "Content Creatore Name",
+          "contentCreationSite": "Creation Site",
+          "contentDescription": {},
+          "contentLabel": "Content Label",
+          "note": "Note",
+          "tag": "Tag"
+        }
+      ],
+      "additionalInfo": {}
+    }
+  ],
+  "impressions": [
+    {
+     "contentCreatorName": "Content Creatore Name",
+	 "contentCreationSite": "Creation Site",
+	 "contentDescription": {},
+	 "contentLabel": "Content Label",
+	 "note": "Note",
+	 "tag": "Tag"
+    }
+  ],
+  "additionalInfo": {}
+}

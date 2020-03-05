@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" ><!-- parallel="methods" -->
+<suite name ="testsuite1" configfailurepolicy="continue">
+<listeners>
+	<listener class-name="com.selenium.utils.TestTrackers"/>
+</listeners>
+	<parameter name ="env" value="stg"/>
+	<test name ="AdminUserservice" >
+	<groups>
+			<run>
+				<!-- <include name ="adminuser"/> --> 
+				<!-- <include name ="report"/> -->
+				<include name ="testg"/> 
+			 </run>	
+	</groups>		 
+			<packages>			
+				<package name ="com.mdp.api.tests"/>		
+			</packages>	
+	</test>
+</suite>

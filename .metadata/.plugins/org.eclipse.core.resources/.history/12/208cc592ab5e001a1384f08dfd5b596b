@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" ><!-- parallel="methods" -->
+<suite name ="testsuite1" configfailurepolicy="continue">
+<listeners>
+	<listener class-name="com.selenium.utils.TestTrackers"/>
+</listeners>
+	<parameter name ="env" value="stg"/>
+	<test name ="MDPAPIRegTest" >
+	<groups>
+		<run>
+			<!--
+			<include name ="patientservice"/> 
+			<include name ="reportservice"/>
+			<include name ="studyservice"/> 
+			<include name ="seriesservice"/> 
+			<include name ="instanceservice"/>
+			<include name ="storageservice"/> 
+			<include name ="adminuserservice"/>
+			<include name ="mdpapps"/> 
+			<include name ="zeissid"/>
+			-->
+			<include name ="studyservice"/>
+		</run>	
+	</groups>		 
+	<packages>			
+		<package name ="com.mdp.api.tests"/>		
+	</packages>	
+	</test>
+</suite>

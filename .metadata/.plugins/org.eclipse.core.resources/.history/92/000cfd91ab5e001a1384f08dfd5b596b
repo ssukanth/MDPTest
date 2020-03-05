@@ -1,0 +1,173 @@
+{ 
+
+   "Id":"0", 
+	"QueryId":"00000000-0000-0000-0000-000000000000",
+	"Patient":{ 
+
+      "Id":"e81c8dd0-1e99-4be5-a26f-b6dc67b0c4ed",
+
+      "PatientId":"1923622668",
+
+      "UserName":null,
+
+      "Title":null,
+
+      "FirstName":"Satish",
+
+      "LastName":"praveen",
+
+      "PhoneNumber":"9999999999",
+
+      "Email":"kjapp@test.com",
+
+      "Gender":0,
+
+      "DateOfBirth":"1996-01-01T00:00:00",
+
+      "AdditionalInformation":{ 
+
+         "Id":0,
+
+         "PatientKey":null,
+
+         "AdditionalInformation":"[{\"Key\":\"Weight\",\"Information\":null,\"Length\":15},{\"Key\":\"Height\",\"Information\":null,\"Length\":6},{\"Key\":\"Test1\",\"Information\":null,\"Length\":500},{\"Key\":\"Test2\",\"Information\":null,\"Length\":300},{\"Key\":\"Test3\",\"Information\":null,\"Length\":20}]"
+
+      },
+
+      "History":{ 
+
+         "Id":0,
+
+         "PatientKey":null,
+
+         "CreatedAt":"2019-10-14T16:55:46.8581171+05:30",
+
+         "DiabeticStatus":"DiabeticSuspect",
+
+         "OtherMediaclHistory":null,
+
+         "GlaucomaStatus":null,
+
+         "OtherOcularHistory":null,
+
+         "OtherRelevantInformation":null
+
+      },
+
+      "OptometricInformation":{ 
+
+         "Id":0,
+
+         "PatientKey":null,
+
+         "Informations":[ 
+
+ 
+
+         ]
+
+      },
+
+      "IsActive":false,
+
+      "CreatedAt":null,
+
+      "UpdatedAt":null
+
+   },
+
+   "AcqisitionSiteId":4,
+
+   "Priority":0,
+
+   "CreatedAt":"0001-01-01T00:00:00",
+
+   "CreatedBy":"6a9e5a3b-e393-4718-a797-a4b9b3e10296",
+
+   "Status":2,
+
+   "Source":2,
+
+   "Messages":[ 
+
+ 
+
+   ],
+
+   "Medias":[ 
+
+      { 
+
+         "Id":0,
+
+         "StudyGroupId":"0",
+
+         "Location": "https://dcpintegrated.blob.core.windows.net/imagesastest/2019/10/4/1570170339174/npr1.jpg",
+
+         "Laterality":2,
+
+         "Category":0,
+
+         "ImageFormat":0,
+
+         "Hashcode":"b4345d26d830056bcdf9be9c37f33940",
+
+         "ImageGradingDto":null,
+
+         "StorageLog":"Status:201,x-ms-client-request-id:041e445b-7ae8-fe41-6984-2e5ac5143462,x-ms-request-id:d3d7b315-e01e-00c3-3282-82b7d5000000,xhr:date: Mon, 14 Oct 2019 11:25:03 GMT\r\nlast-modified: Mon, 14 Oct 2019 11:25:04 GMT\r\nserver: Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0\r\ncontent-md5: pKKo57e4DMmWH94utWLvQw==\r\netag: \"0x8D7509928DCD2AA\"\r\nx-ms-request-id: d3d7b315-e01e-00c3-3282-82b7d5000000\r\nx-ms-version: 2016-05-31\r\nx-ms-request-server-encrypted: true\r\ncontent-length: 0\r\n",
+
+         "MetadataInformation":null
+
+      },
+
+      { 
+
+         "Id":0,
+
+         "StudyGroupId":"0",
+
+         "Location": "https://dcpintegrated.blob.core.windows.net/imagesastest/2019/10/4/1570170339174/npr2.jpg",
+
+         "Laterality":2,
+
+         "Category":0,
+
+         "ImageFormat":0,
+
+         "Hashcode":"b8203f90762e7b1e7d117ac9d2ef49fc",
+
+         "ImageGradingDto":null,
+
+         "StorageLog":"Status:201,x-ms-client-request-id:041e445b-7ae8-fe41-6984-2e5ac5143462,x-ms-request-id:d3d7b315-e01e-00c3-3282-82b7d5000000,xhr:date: Mon, 14 Oct 2019 11:25:03 GMT\r\nlast-modified: Mon, 14 Oct 2019 11:25:04 GMT\r\nserver: Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0\r\ncontent-md5: pKKo57e4DMmWH94utWLvQw==\r\netag: \"0x8D7509928DCD2AA\"\r\nx-ms-request-id: d3d7b315-e01e-00c3-3282-82b7d5000000\r\nx-ms-version: 2016-05-31\r\nx-ms-request-server-encrypted: true\r\ncontent-length: 0\r\n",
+
+         "MetadataInformation":null
+
+      }
+
+   ],
+
+   "OriginalStudy":null,
+
+   "ReasonForConsultation":null,
+
+   "ProductId":null,
+
+   "GroupId":null,
+
+   "SupplementaryInformations": [
+        {
+            "Id": 0,
+            "StudyId": 0,
+            "AdditionalInformation": "test"
+        }
+    ],
+
+   "Culture":"en-US",
+
+   "ReviewPhase":1,
+
+   "ClientRequestId":null,
+
+   "DeviceSerialNumber":null
+
+}

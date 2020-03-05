@@ -1,0 +1,100 @@
+{			
+		"Start Of ZeissId":"All The AdminServices API Related To The ZeissId Creation and edit and Get",
+		"PostZeissIdRequest" :"---------------------------Create An MDPApp----------------------------",
+		"TC201_ZeissId_Test01_PostZeissId":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"201"
+				}
+		],
+		"TC201_ZeissId_Test02_PostZeissIdWithSSCAdmin":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		],
+		"TC201_ZeissId_Test03_PostZeissIdWithNonExistingAppId":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"404"
+				}
+		],
+		"TC201_ZeissId_Test04_PostZeissIdWithInvalidGuidClientid":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"400"
+				}
+		],
+		"TC201_ZeissId_Test05_PostZeissIdWithEmptyZeissId":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":{}
+					},
+					"expCode":"400"
+				}
+		],
+		
+		"GetZeissId":"---------------------------Get A Particular ZeissId----------------------------",
+		
+			
+			"TC201_ZeissId_Test01_GetZeissId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			"TC201_ZeissId_Test02_GetZeissIdWithSSCAuth":[
+				{
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+			],
+			
+			"TC201_ZeissId_Test03_GetZeissIdWithValidMDPidButInvalidZid":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"404"
+				}
+			],
+			
+			"TC201_ZeissId_Test04_GetZeissIdWithValidZidButInvalidMDPId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"404"
+				}
+			],
+			
+			"PutZeissId":"---------------------------Get A Particular ZeissId----------------------------",
+		
+			
+			"TC201_ZeissId_Test01_PutZeissId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"204"
+				}
+			],
+			
+		"TC201_ZeissId_Test04_PutZeissIdWithValidZeissIdButInvalidMdpId":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"404"
+				}
+		],
+		"TC201_ZeissId_Test05_PutZeissIdWithInvalidConfigKey":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":{}
+					},
+					"expCode":"400"
+				}
+		],
+		"TC201_ZeissId_Test06_PutZeissIdWithSSCAuth":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		]
+	
+}

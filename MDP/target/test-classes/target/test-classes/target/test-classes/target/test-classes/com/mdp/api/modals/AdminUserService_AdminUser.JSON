@@ -1,0 +1,24 @@
+{
+  "clientId": "ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+  "roleId": "985b931d-a04f-491c-de88-08d790386491",
+  "email": "user230120201500@example.com",
+  "firstName": "ZeissUSer",
+  "lastName": "Admin",
+  "contactDetails": [
+    {
+      "addressLine1": "Zeiss",
+      "addressLine2": "EC",
+      "city": "Bangalore",
+      "district": "string",
+      "state": "KA",
+      "country": "string",
+      "postalCode": "string",
+      "period": "string",
+      "alternateEmail": "user@example.com",
+      "contactNo": "string",
+      "alternateNo": "string",
+      "type": "string"
+    }
+  ],
+  "zeissIdUserType": 1
+}

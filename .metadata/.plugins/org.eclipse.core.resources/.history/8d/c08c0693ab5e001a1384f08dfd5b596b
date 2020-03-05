@@ -1,0 +1,7 @@
+[
+	{
+		"roleId": "string",
+    	"roleName": "string",
+    	"weightage": 0
+  	}
+]

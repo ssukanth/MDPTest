@@ -1,0 +1,9 @@
+package com.mdp.api.tests;
+
+import org.testng.annotations.Test;
+
+public class ApplicationUserService_AccountServiceTests {
+  @Test
+  public void f() {
+  }
+}

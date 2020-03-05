@@ -1,0 +1,31 @@
+package com.mdp.api.services;
+
+import java.util.Map;
+
+import org.json.simple.JSONObject;
+
+import com.selenium.utils.ApiUtils;
+
+public class ApplicationUserService_AccountService extends ApiUtils {
+	
+	JSONObject mdpAdminUserService_Zeissid=(JSONObject)(((Map)credentialJson.get("adminuserservice")).get("zid"));
+	private String ACCOUNTNAME ="accountName";
+	private String MDPAPPID ="mdpAppId";
+	private String ACCOUNTTYPE ="accountType";
+	private String CONTACTDETAILS ="contactDetails";
+	private String ADDRESSLINE1 ="contactDetails.addressLine1";
+	private String ADDRESSLINE2 ="contactDetails.addressLine2";
+	private String CITY ="contactDetails.city";
+	private String DISTRICT ="contactDetails.district";
+	private String STATE ="contactDetails.state";
+	private String COUNTRY ="contactDetails.country";
+	private String PIN ="contactDetails.postalCode";
+	private String EMAIL ="contactDetails.email";
+	private String ALTMAIL ="contactDetails.alternateEmail";
+	private String CONTACT ="contactDetails.contactNo";
+	private String ALTERNATE ="contactDetails.alternateNo";
+	
+	
+	
+
+}

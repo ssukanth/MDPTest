@@ -1,0 +1,79 @@
+package com.mdp.api.services;
+
+import java.util.Map;
+
+import org.json.simple.JSONObject;
+
+import com.selenium.utils.ApiUtils;
+
+public class ApplicationUserService_AccountService extends ApiUtils {
+	
+	JSONObject mdpAdminUserService_Zeissid=(JSONObject)(((Map)credentialJson.get("adminuserservice")).get("zid"));
+	private String ACCOUNTNAME ="accountName";
+	private String MDPAPPID ="mdpAppId";
+	private String ACCOUNTTYPE ="accountType";
+	private String CONTACTDETAILS ="contactDetails";
+	private String ADDRESSLINE1 ="contactDetails.addressLine1";
+	private String ADDRESSLINE2 ="contactDetails.addressLine2";
+	private String CITY ="contactDetails.city";
+	private String DISTRICT ="contactDetails.district";
+	private String STATE ="contactDetails.state";
+	private String COUNTRY ="contactDetails.country";
+	private String PIN ="contactDetails.postalCode";
+	private String EMAIL ="contactDetails.email";
+	private String ALTMAIL ="contactDetails.alternateEmail";
+	private String CONTACT ="contactDetails.contactNo";
+	private String ALTERNATENO ="contactDetails.alternateNo";
+	public JSONObject getMdpAdminUserService_Zeissid() {
+		return mdpAdminUserService_Zeissid;
+	}
+	public String getACCOUNTNAME() {
+		return ACCOUNTNAME;
+	}
+	public String getMDPAPPID() {
+		return MDPAPPID;
+	}
+	public String getACCOUNTTYPE() {
+		return ACCOUNTTYPE;
+	}
+	public String getCONTACTDETAILS() {
+		return CONTACTDETAILS;
+	}
+	public String getADDRESSLINE1() {
+		return ADDRESSLINE1;
+	}
+	public String getADDRESSLINE2() {
+		return ADDRESSLINE2;
+	}
+	public String getCITY() {
+		return CITY;
+	}
+	public String getDISTRICT() {
+		return DISTRICT;
+	}
+	public String getSTATE() {
+		return STATE;
+	}
+	public String getCOUNTRY() {
+		return COUNTRY;
+	}
+	public String getPIN() {
+		return PIN;
+	}
+	public String getEMAIL() {
+		return EMAIL;
+	}
+	public String getALTMAIL() {
+		return ALTMAIL;
+	}
+	public String getCONTACT() {
+		return CONTACT;
+	}
+	public String getALTERNATENO() {
+		return ALTERNATENO;
+	}
+	
+	
+	
+
+}

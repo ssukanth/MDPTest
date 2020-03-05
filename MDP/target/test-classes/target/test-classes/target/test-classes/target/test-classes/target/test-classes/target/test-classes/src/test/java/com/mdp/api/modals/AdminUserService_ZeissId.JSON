@@ -1,0 +1,36 @@
+{
+  "zeissIdConfiguration": {
+							"ClientId":"9ec53cca-baad-2020-b02c-6ff3c61b1453",
+							 
+							"ApiClientId":"$ApiClientId",
+							 
+							"ApiClientSecret":"$ApiClientSecret",
+							 
+							"InitiatorAccountId":"$InitiatorAccountId",
+							 
+							"DefaultUserPassword":"$DefaultUserPassword",
+							 
+							"MetatDataAddress":"$MetatDataAddress",
+							 
+							"ApiConfigurations":[
+														{
+														 
+														"Name":1,
+														 
+														"Url":"$InviteUrl",
+														 
+														"SubscriptionKey":"$SubscriptionKey"
+														 
+														},
+														 
+														{
+														"Name":41,
+														 
+														"Url":"$CreateAccountWithPasswordUrl",
+														 
+														"SubscriptionKey":"$SubscriptionKey"
+														}
+												]
+						}
+							 
+}

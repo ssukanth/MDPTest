@@ -1,0 +1,13 @@
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+The Base Uri: https://mdptest.api.zeiss.com
+Effective End Point: /storageservice/api/v2.0/accounts/ab6c7491-2b5f-4168-8d95-705fac82b908/storage
+The res is:
+true
+
+The Issues was :java.lang.AssertionError: expected [409] but found [201]
