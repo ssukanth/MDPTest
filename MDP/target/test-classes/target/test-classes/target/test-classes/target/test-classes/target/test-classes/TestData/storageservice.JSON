@@ -1,0 +1,77 @@
+{
+	"TC188_TC01_CreateStorage":
+	[
+		{
+			"testname":"Create Storage with valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Create Storage with invalid account ID",
+			"accountId":"11840559",
+		
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Create Storage with existing valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"409"
+		}
+	],
+	
+	"TC188_TC02_GetStorage":
+	[
+		{
+			"testname":"Get Storage with valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Get Storage with invalid account ID",
+			"accountId":"11840559",
+		
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Get Storage with non existing valid account ID",
+			"accountId":"22840559-2eab-4f1f-9090-0260fa0354bb",
+		
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Get Storage with multiple blob SAS URL for account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"200"
+		}
+		
+	],
+	
+	"TC188_TC03_EditStorage":
+	[
+		{
+			"testname":"Edit Storage with valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"405"
+		}
+	],
+	
+	"TC188_TC04_DeleteStorage":
+	[
+		{
+			"testname":"Delete Storage with valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"405"
+		}
+	]
+}

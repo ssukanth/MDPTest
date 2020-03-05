@@ -1,0 +1,168 @@
+{
+
+		"Start Of MDPApps":"All The AdminServices API Related To The MDPApps Creation and edit and Get",
+		"PostMDPAppRequest" :"---------------------------Create An MDPApp----------------------------",
+		"TC201_MDPApps_Test01_PostMDPApp":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"201"
+				}
+		],
+		"TC201_MDPApps_Test02_PostMDPAppWithSSCAdminAuth":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		],
+		"TC201_MDPApps_Test03_PostMDPAppWithExistingZeissIdConfig":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":[
+									    {
+									      "ClientId": "9ec53cca-baad-4126-b43c-6ff3c61b1422",
+									      "ApiClientId": "$ApiClientId",
+									      "ApiClientSecret": "$ApiClientSecret",
+									      "InitiatorAccountId": "$InitiatorAccountId",
+									      "DefaultUserPassword": "$DefaultUserPassword",
+									      "MetatDataAddress": "$MetatDataAddress",
+									      "ApiConfigurations": [
+									        {
+									          "Name": 1,
+									          "Url": "$InviteUrl",
+									          "SubscriptionKey": "$SubscriptionKey"
+									        },
+									        {
+									          "Name": 41,
+									          "Url": "$CreateAccountWithPasswordUrl",
+									          "SubscriptionKey": "$SubscriptionKey"
+									        }
+									      ]
+									    }
+									  ]
+					},
+					"expCode":"409"
+				}
+		],
+		"TC201_MDPApps_Test04_PostMDPAppWithExistingAppName":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"409"
+				}
+		],
+		
+		"TC201_MDPApps_Test05_PostMDPAppWithoutZeissIdConfiguration":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":[]
+					},
+					"expCode":"201"
+				}
+		],
+		"TC201_MDPApps_Test06_PostMDPAppWithConfigurationAsString":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"CONFIGURATION":"String"
+					},
+					"expCode":"400"
+				}
+		],
+		"TC201_MDPApps_Test07_PostMDPAppWithNameAsNull":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"400"
+				}
+		],
+		"TC201_MDPApps_Test08_PostMDPAppWithZeissIdAsJsonObject":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"ZEISSIDCONFIGURATION":{"key1":"val1"}
+					},
+					"expCode":"400"
+				}
+		],
+		
+		
+			"GetAllMDPApps":"---------------------------Get All The MDPApps----------------------------",
+		
+			
+			"TC201_AdminUser_Test01_GetAllMDPApps":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			
+			"TC201_AdminUser_Test02_GetAllMDPAppsWithZeissIdFilter":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			"TC201_MDPApps_Test03_GetAllMDPAppWithSSCAdminAuth":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		],
+			
+			"TC201_AdminUser_Test04_GetAllMDPAppsWithNonExistingZeissId":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			
+			
+			"GetMDPApp":"---------------------------Get A Particular MDPApps----------------------------",
+		
+			
+			"TC201_AdminUser_Test01_GetMDPApp":[
+				{
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"expCode":"200"
+				}
+			],
+			"TC201_MDPApps_Test02_GetMDPAppWithSSCAdminAuth":[
+				{ 
+					"sscusercleintid":"ed8d6270-da8b-4ea0-aaa0-7214f6dd09d5",
+					"expCode":"401"
+				}
+		],
+		
+		"PutMDPApp":"---------------------------Edit An MDPApp----------------------------",
+		
+		"TC201_MDPApps_Test01_PutMDPAppWithConfigurationAsEditedValue":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"CONFIGURATION":{"key2":"Updated config"}
+					},
+					"expCode":"204"
+				}
+		],
+		
+		"TC201_MDPApps_Test02_PutMDPAppForNonExistingMDPApp":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"CONFIGURATION":{"key2":"Updated config"}
+					},
+					"expCode":"404"
+				}
+		],
+		
+		"TC201_MDPApps_Test03_PutMDPAppWithConfigurationAsEmpty":[
+				{ 
+					"authuser":"MDPAdmin@id.zeiss.com",
+					"jsonobjects":{
+					"CONFIGURATION":{}
+					},
+					"expCode":"204"
+				}
+		]
+
+}

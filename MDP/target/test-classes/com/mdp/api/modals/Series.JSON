@@ -1,0 +1,54 @@
+{
+  "seriesInstanceUID": "1.2.840.100010.01",
+  "modality": "CAT",
+  "laterality": "ARS",
+  "description": "series description",
+  "seriesDate": "2020-01-23T09:43:00.172Z",
+  "equipmentDetails": {
+    "manufacturer": "man",
+    "institutionName": "inst",
+    "institutionAddress": "inst addr",
+    "stationName": "station",
+    "departmentName": "dept",
+    "manufacturerModelName": "manname",
+    "deviceSerialNumber": "7657487",
+    "softwareVersion": "1.0"
+  },
+  "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd2923",
+  "performedStepStartDate": "2020-01-23T09:43:00.172Z",
+  "performedStepDescription": "desc",
+  "scheduledStepsIds": [
+    "ad56e728-e601-46e5-ba95-057a14cd2923"
+  ],
+  "performingPhysican": {
+    "familyName": "Rao",
+    "givenName": "Shankar",
+    "middleName": "",
+    "prefix": "Dr",
+    "suffix": "",
+    "familyNameIdeographic": "",
+    "givenNameIdeographic": "",
+    "middleNameIdeographic": "",
+    "prefixIdeographic": "",
+    "suffixIdeographic": "",
+    "familyNamePhonetic": "",
+    "givenNamePhonetic": "",
+    "middleNamePhonetic": "",
+    "prefixPhonetic": "",
+    "suffixPhonetic": "",
+    "institutionName": "inst",
+    "institutionAddress": "instAddr"
+  },
+  "impressions": [
+    {
+      "contentDate": "2020-01-23T09:43:00.172Z",
+      "contentCreatorName": "impname",
+      "contentCreationSite": "imp site",
+      "contentDescription": {},
+      "contentLabel": "imp label",
+      "note": "imp note",
+      "tag": "imp tag"
+    }
+  ],
+  "additionalInfo": {}
+}

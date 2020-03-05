@@ -1,0 +1,11 @@
+The Sequence of the execution data as follows
+Admin name(if applicable):
+Passwrod
+Baseuri
+endpoint: or queryparam:
+constructedpayload
+Response
+The Base Uri: https://mdptest.api.zeiss.com
+Effective End Point: /visitservice/api/v2.0/patients/abc123/studies/47a316e0-758b-4eb7-a8d6-8a4c0c938e4b
+
+The Issues was :java.net.UnknownHostException: mdptest.api.zeiss.com

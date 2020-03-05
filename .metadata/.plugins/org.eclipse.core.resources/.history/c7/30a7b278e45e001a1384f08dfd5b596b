@@ -1,0 +1,51 @@
+package com.mdp.api.tests;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.json.simple.JSONObject;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.mdp.api.services.AdminUserService_AdminUser;
+import com.mdp.visu.web.pages.Web_MailVerificationPage;
+import com.selenium.utils.MailBox;
+
+import io.restassured.response.Response;
+
+public class ApplicationUserService_AccountServiceTests extends TestBase{
+
+	 @DataProvider(name="TC133_Accounts_Test01_PostAccountWithValidDataUsingSSCAdmin")
+	 public  JSONObject[][] TC133_Accounts_Test01_PostAccountWithValidDataUsingSSCAdmin() throws IOException, InvalidFormatException
+	 {	  
+	  	return getTestData("TC133_Accounts_Test01_PostAccountWithValidDataUsingSSCAdmin","accountservice");
+	 }
+	@Test(dataProvider="TC133_Accounts_Test01_PostAccountWithValidDataUsingSSCAdmin",groups= {"accountservice"},enabled=true)
+  public void tC133_Accounts_Test01_PostAccountWithValidDataUsingSSCAdmin(JSONObject j) throws Exception {
+		MailBox.markAllMailsRead("zeiss0719@gmail.com","zeiss2017","MDP");;
+		WebDriver dri=getDriver();
+		String authUser=(String) j.get("authuser");
+		Map<String,Object>m= new HashMap<String,Object>();		
+		String atn= getIdToken(dri, authUser ,(String)((Map) credentialJson.get(authUser)).get("pwd"), (String)credentialJson.get("mdpopsclid"));
+		AdminUserService_AdminUser aUser=new AdminUserService_AdminUser();
+		Response res=aUser.post_CreateUserMDPUser(true,false, atn, (String)j.get("mdpappid"),(Map<String,Object>) j.get("jsonobjects"));
+		Assert.assertEquals(res.getStatusCode(), Integer.parseInt((String)j.get("expCode")));
+		String effMail=res.jsonPath().getString(aUser.getEMAIL());
+		String entId=res.jsonPath().getString("id");
+		String y=MailBox.getContent("gmail","zeiss0719@gmail.com", "zeiss2017","MDP", "MED CONVIVO","href=\"","&language","html",false);
+		System.out.println("The link for Activtion is :"+y);
+		Web_MailVerificationPage mv=new Web_MailVerificationPage(null);
+		mv.verifyMail(y,effMail,"Test123!");
+		List<String> l=Arrays.asList(effMail,"Test123!",entId);
+		dynamicCredentials.put("tC201_AdminUser_Test01_CreateAppAdminSibblingWithUserType1", l);
+		
+	}
+	
+	
+}

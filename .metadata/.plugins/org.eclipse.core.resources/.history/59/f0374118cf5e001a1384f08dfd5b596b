@@ -1,0 +1,5 @@
+package com.mdp.api.services;
+
+public class ApplicationUserService_AccountService {
+
+}

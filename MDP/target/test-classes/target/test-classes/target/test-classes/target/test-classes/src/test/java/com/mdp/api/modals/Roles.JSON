@@ -1,0 +1,7 @@
+{
+	"roleName": "string",
+  	"privileges": [
+    	"string"
+  	],
+  	"weightage": 0
+}
