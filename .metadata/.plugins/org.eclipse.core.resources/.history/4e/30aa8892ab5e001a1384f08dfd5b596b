@@ -1,0 +1,432 @@
+{
+	"TC189_TC21_CreateSeries":
+	[
+		{
+			"testname":"Series with one impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"studyId":"dd9f0c4e-668b-42fb-bc80-0787e79c7671",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767676"
+			},
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Series with two impressions",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"studyId":"dd9f0c4e-668b-42fb-bc80-0787e79c7671",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767671",
+				"SERIESIMPRESSIONS": [
+					{
+						"contentDate": "2020-01-02T08:09:58.924Z",
+						"contentCreatorName": "Content Creatore Name1",
+						"contentCreationSite": "Creation Site1",
+						"contentDescription": {},
+						"contentLabel": "Content Label1",
+						"note": "Note1",
+						"tag": "Tag1"
+					},
+					{
+						"contentDate": "2020-01-02T08:09:58.924Z",
+						"contentCreatorName": "Content Creatore Name2",
+						"contentCreationSite": "Creation Site2",
+						"contentDescription": {},
+						"contentLabel": "Content Label2",
+						"note": "Note2",
+						"tag": "Tag2"
+					}
+				]
+			},
+			
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC22_CreateSeriesWithInvalidGUIDs":
+	[
+		{
+			"testname":"Create Series with different Patient ID and Study ID combination",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"dd9f0c4e-668b-42fb-bc80-0787e79c7671",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767672"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Create Series with Invalid Study GUID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"dd9f0c4e",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767672"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Create Series with Invalid Patient GUID",
+			"patientId":"e5ad06",
+			"studyId":"dd9f0c4e-668b-42fb-bc80-0787e79c7671",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767672"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Invalid SERIES PERFORMED STEP ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESPERFORMEDSTEPID":"abc123"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Invalid SERIES SCHEDULED STEPS ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESSCHEDULEDSTEPSID":"abc123"
+			},
+			"expCode":"400"
+		}
+	
+	],
+	
+	"TC189_TC23_CreateSeriesWithInvalidDataFormat":
+	[
+		{
+			"testname":"Invalid Series Data Format",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":[123]
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"TC189_TC24_CreateSeriesWithDuplicateSeriesInstanceUID":
+	[
+		{
+			"testname":"Create Series with duplicate Series Instance UID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767676"
+			},
+			"expCode":"400"
+		}
+		
+	],
+	
+	"TC189_TC25_GetAllSeriesByStudyId":
+	[
+		{
+			"testname":"Get all Series by Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC26_GetAllSeriesByStudyIdAndFilterByCreatedDate":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Created Date",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC27_GetAllSeriesByStudyIdAndFilterBySeriesInstanceUID":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Series Instance UID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01"
+			}
+		}
+	],
+	
+	"TC189_TC28_GetAllSeriesByStudyIdAndFilterByModality":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Modality",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"Modality":"AS"
+			}
+		}
+	],
+	
+	"TC189_TC29_GetAllSeriesByStudyIdAndFilterByDateAndSeriesInstanceUID":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Date & Series Instance UID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01",
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC30_GetAllSeriesByStudyIdAndFilterByDateAndModality":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Date and Modality",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"Modality":"AS",
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC31_GetAllSeriesByStudyIdAndFilterByAllParams":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by all params",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01",
+				"Modality":"AS",
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC32_GetNoSeriesByStudyId":
+	[
+		{
+			"testname":"Get no Series by Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f803459",
+			"studyId":"6e64c7fe-b230-4dbc-80b0-723a00a4f0ab",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC33_GetAllSeriesByInvalidStudyId":
+	[
+		{
+			"testname":"Get all Series by invalid Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-42bf-a7ad-62378a30ec50",
+			
+			"expCode":"404"
+		}
+	],
+	
+	"TC189_TC34_GetSeriesBySeriesId":
+	[
+		{
+			"testname":"Get a Series by Series ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.1012"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC35_GetSeriesBySeriesIdAndDiffPatientId":
+	[
+		{
+			"testname":"Get a Series by Series ID and Different patient ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"patientId2":"ac9fd81d-db72-4997-9bb5-e26273c7b861",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.10124"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC36_GetSeriesBySeriesIdAndDiffStudyId":
+	[
+		{
+			"testname":"Get a Series by Series ID and Different Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"studyId2":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.10125"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC37_GetSeriesByInvalidSeriesId":
+	[
+		{
+			"testname":"Get a Series by Invalid Series ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"invalidseriesId":"abc123"
+		}
+	],
+	
+	"TC189_TC38_GetSeriesBySeriesIdAndInvalidStudyId":
+	[
+		{
+			"testname":"Get a Series by Series ID and invalid Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"invalidstudyId":"abc123",
+			"seriesId":"ab23102d-f30b-48d8-9a78-e58073eac819"
+		}
+	],
+	
+	"TC189_TC39_EditSeries":
+	[
+		{
+			"testname":"Edit Series with Additional Info",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Series with Additional Info as null",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{}
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Series with Impressions",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESIMPRESSIONS":[
+					{
+						 "contentCreatorName": "Content Creatore Name",
+						 "contentCreationSite": "Creation Site",
+						 "contentDescription": {},
+						 "contentLabel": "Content Label",
+						 "note": "Note",
+						 "tag": "Tag"
+					}
+				]
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Series with Impressions as null",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESIMPRESSIONS":[]
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Series with Impressions and Additional Info",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESIMPRESSIONS":[
+					{
+						 "contentCreatorName": "Content Creatore Name",
+						 "contentCreationSite": "Creation Site",
+						 "contentDescription": {},
+						 "contentLabel": "Content Label",
+						 "note": "Note",
+						 "tag": "Tag"
+					}
+				],
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"200"
+		}
+			
+	],
+	
+	"TC189_TC40_EditSerieswithDifferentIDs":
+	[
+		{
+			"testname":"Edit Series with different Study and Series ID combination",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"seriesId":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+			
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Edit Series with different Patient and Series ID combination",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"980cd74f-0117-4b31-aab1-d2444f4ffe9f",
+			"seriesId":"d47aebd3-aa77-42c2-b5a3-a2e4350af6b4",
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Edit Series with different Patient, Study and Series ID combination",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"seriesId":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+			"studyId":"980cd74f-0117-4b31-aab1-d2444f4ffe9f",
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"404"
+		}
+	]
+}

@@ -1,0 +1,3092 @@
+{
+	"TC192_CreatePatient_Test01_CreatePatientValid":
+	[
+		{
+		"scname":"valid_male",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+		"SEX":"male",
+		"DOB":"2009-12-26T09:05:55.320Z",
+		"PATIENTPHONE":1234567891,
+		"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		{
+		"scname":"valid_female",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+			"SEX":"female",
+			"DOB":"2009-12-26T09:05:55.320Z",
+			"PATIENTPHONE":1234567891,
+			"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		{
+		"scname":"valid_1_monthold",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"DOB":"2019-12-11T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		{
+		"scname":"valid_100_year_old",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+			"SEX":"female",
+			"DOB":"1909-11-26T09:05:55.320Z",
+			"PATIENTPHONE":1234567891,
+			"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		{
+		"scname":"valid_delimited_PATIENTEMAIL",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_9999999999",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":9999999999,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_9999999999_with_countrycode_+91",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":919999999999,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_ideographyname",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"FAMILYNAME":null,
+				"GIVENNAME":null,
+				"FAMILYNAMEIDO":"FamilyIdeo",
+				"GIVENNAMEIDO":"GivenIdeo",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_phonetic_name",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"SEX":"female",
+				"FAMILYNAME":null,
+				"GIVENNAME":null,
+				"FAMILYNAMEPH":"FamilyPho",
+				"GIVENNAMEPH":"GivenPho",
+				"DOB":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"true"
+		},
+		
+		{
+		"scname":"valid_conflict_false",
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"expCode":"201",
+		"conflict":"false"
+		}
+	],
+		
+	
+	
+	"TC192_Test02_Create_Patient_With_Invalid_less_than_ten_digits":
+	[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"PATIENTPHONE":123456789
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test03_Create_Patient_With_Invalid_more_than_twelve_digits":[
+	{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"PATIENTPHONE":1234567891234
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test04_Create_Patient_Invalid_Email_Id":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"PATIENTEMAIL":"test@gmail"
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test05_Create_Patient_Valid_With_Issuer_Of_PatientId_as_null":[
+	
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"ISSUEROFPATIENTID":""
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test06_Create_Patient_With_null_for_PatientId":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+					"PATIENTID":""
+						},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test07_Create_Patient_With_date_format_mm_dd_yyyy":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"DOB":"12-26-2020T09:05:55.320Z"
+					},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test08_Create_Patient_With_date_format_yyyy_dd_mm":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"DOB":"2019-26-12T09:05:55.320Z"
+					},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test09_Create_Patient_With_date_format_yyyy_mm_d":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+				"DOB":"2019-12-6T09:05:55.320Z"
+					},
+		"expCode":"201",
+		"conflict":"true"
+		}
+	],
+	"TC192_Test10_Create_Patient_With_Invalid_Future_Date":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test11_Create_Patient_Invalid_Gender":[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+			"SEX":"random"
+					},
+		"expCode":"400",
+		"conflict":"true"
+		}
+		],
+	"TC192_Test12_Create_Patient_Invalid_Gender_As_null":[
+	{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+			"SEX":""
+					},
+		"expCode":"400",
+		"conflict":"true"
+		}
+	],
+	
+	"TC192_CreatePatient_Test13_CreatePatient_InvalidPayload":	[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+		"SEX":"female",
+		"DOB":"2009-12-26T09:05:55.320Z",
+		"PATIENTPHONE":1234567891,
+		"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"400",
+		"conflict":"false"
+		}
+		],
+		
+		"TC192_CreatePatient_Test14_CreatePatient_DuplicateWithConflictTrue":	[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+		"SEX":"female",
+		"DOB":"2009-12-26T09:05:55.320Z",
+		"PATIENTPHONE":1234567891,
+		"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"409",
+		"conflict":"true"
+		}
+		],
+		
+		"TC192_CreatePatient_Test15_CreatePatient_DuplicateWithConflictFalse":	[
+		{
+		"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+		"jsonobjects":{
+		"SEX":"female",
+		"DOB":"2009-12-26T09:05:55.320Z",
+		"PATIENTPHONE":1234567891,
+		"PATIENTEMAIL":"testmail@gmail.com"
+		},
+		"expCode":"201",
+		"conflict":"false"
+		}
+		],
+		
+
+		
+	"TC192_Test01_GetallthepatientsByAcc":[
+		{"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250"
+		}
+		],
+		
+	"TC192_Test02_GetallthepatientsByAccAndAppType":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"APPTYPE":"Testing"
+					}
+		}
+		],
+		
+	"TC192_Test03_GetallthepatientsByAccandSearchName":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"SearchQuery":"Test"
+					}
+		}
+		],
+		
+		"TC192_Test04_GetallthepatientsByAccandSearchPatId":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"patId":"PatId_Test123",
+			"qparams":{
+			"SearchQuery":"PatId_Test123"
+					}
+		}
+		],
+		
+		"TC192_Test05_GetallthepatientsByAccandSearchDOB":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"SearchQuery":"2009-12-26T09:05:55.320Z"
+					}
+		}
+		],
+		
+	"TC192_Test06_GetallthepatientsByAccandPagenum":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"PageNumber":"10"
+					}
+		}
+		],
+		
+	"TC192_Test07_GetallthepatientsByAccandPageSizeLessThan10":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"PageSize":"4"
+						}
+		}
+		],
+		
+		"TC192_Test08_GetallthepatientsByAccandPageSizeGrtThan10":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"PageSize":"15"
+						}
+		}
+		],
+		
+		
+	"TC192_Test09_GetallthepatientsByAccandAllparams":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":{
+			"APPTYPE":"Testing",
+			"SearchQuery":"Test",
+			"PageSize":"3"
+					}
+		}
+		],
+		
+		
+		
+		
+		"TC192_Test01_GetPatientById":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":{
+			"SEX":"female",
+			"FAMILYNAME":"GetpatByidFamiliy",
+			"GIVENNAME":"GetpatByidGiven",
+			"DOB":"2009-12-26T09:05:55.320Z",
+			"PATIENTPHONE":1234567891,
+			"PATIENTEMAIL":"test.test@gmail.com"
+			},
+			"expCode":"201",
+			"conflict":"true"
+		}
+		],
+		"TC192_Test02_GetPatientByIdWithInvalidId":[
+		{
+			"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250"
+		}
+		],
+		
+		
+		
+		
+		"TC192_Test01_PutPatient_EditPatientWithMandatoryFields":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobjects":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"female",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"200",
+			"conflict":"true"
+			}
+		],
+		
+		"TC192_Test02_PutPatient_EditPatientWithMandatoryFieldSexAsNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobjects":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"400",
+			"conflict":"true"
+			}
+		],
+		
+		"TC192_Test03_PutPatient_EditPatientWithMandatoryFieldDOBNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"female",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"400",
+			"conflict":"true"
+			}
+		],
+		
+		"TC192_Test04_PutPatient_EditPatientWithMandatoryFieldFamilyAndGivenNameNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"female",
+				"FAMILYNAME1":"",
+				"GIVENNAME1":"",
+				"DOB1":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"400",
+			"conflict":"true"
+			}
+		],
+		
+		"TC192_Test05_PutPatient_EditPatientWithMandatoryFieldApplicationTypeNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"female",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"400",
+			"conflict":"true"
+			}
+		],
+		
+		"TC192_Test06_PutPatient_EditPatientWithMandatoryFieldPatientIdNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"",
+				"SEX1":"female",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"400",
+			"conflict":"true"
+			}
+		],
+		
+		"TC192_Test07_PutPatient_EditPatientWithMandatoryFieldPhonenumberNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"female",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE1":"",
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"400",
+			"conflict":"true"
+			}
+		],
+		
+		"TC192_Test08_PutPatient_EditPatientWithMandatoryFieldEmailNull":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"female",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"2009-12-26T09:05:55.320Z",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"400",
+			"conflict":"true"
+			}
+		],
+		
+		"TC192_Test09_PutPatient_EditPatientWithInvalidDateFormatDDMMYYYHHMMSS":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"female",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"26-12-2019T09:05:55.320Z",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"400",
+			"conflict":"true"
+			}
+		],
+		
+		"TC192_Test10_PutPatient_EditPatientWithInvalidDateFormatYYYYMMDDMMSS":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"female",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"26-12-2019T05:55.320Z",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"400",
+			"conflict":"true"
+			}
+		],
+		
+		
+		"TC192_Test11_PutPatient_EditPatientWithInvalidDateFormatDDMMYYY":[
+			{
+				"accountId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+				"jsonobject":{
+				"SEX":"female",
+				"FAMILYNAME":"GetpatByidFamiliy",
+				"GIVENNAME":"GetpatByidGiven",
+				"DOB":"2019-12-26T09:05:55.320Z",
+				"PATIENTPHONE":1234567891,
+				"PATIENTEMAIL":"test.test@gmail.com",
+				"APPTYPE":"TestApp",
+				"expCode":"200",
+				"conflict":"true",
+				"PATIENTID":"editedPATIENTID",
+				"SEX1":"female",
+				"FAMILYNAME1":"EditedFamily",
+				"GIVENNAME1":"EditedGiven",
+				"DOB1":"26-12-2019T09:05:55.320Z",
+				"PATIENTPHONE1":1224567891,
+				"PATIENTEMAIL1":"alternatPATIENTEMAIL@gmail.com",
+				"APPTYPE1":"EditTestApp",
+				"PATIENTSPECIFICINFO":{"spkey1":"spval1","spkey2":"spval2"}
+					},
+			"expCode":"200",
+			"conflict":"true"
+			}
+		],
+		
+		
+	
+		
+		
+		
+"Start Of :":"----------------Report Serivice------------------------------------",
+		
+		"Study Of :":"---------------------Study Level-------------------------------------",
+		"Post Repor At Study Level":"--------------------------------------------------------",
+		"TC191_CreateReport_Study_Test01_CreateReport":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		
+		"TC191_CreateReport_Study_Test02_CreateReportWithRandomentityId":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		"TC191_CreateReport_Study_Test03_CreateReportWithContentNull":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		"TC191_CreateReport_Study_Test04_CreateReportWithTagNull":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"Test Content",
+					"TAG":"",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		"TC191_CreateReport_Study_Test05_CreateReportWithAdditionalInfoNull":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Study_Test06_CreateReportWithEntityIdNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+			}
+		],
+		
+		"TC191_CreateReport_Study_Test07_CreateReportWithAllAttrAsNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"",
+					"TAG":"",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"400"
+			}
+		],
+		
+	"GetAll Repor At Study Level":"--------------------------------------------------------",
+	"TC191_GetAllReports_Study_Test01_GetAllReportsForStudy":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+	
+	"TC191_GetAllReports_Study_Test02_GetAllReportsForStudyWithoutCreatedAt":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+		
+		"TC191_GetAllReports_Study_Test04_GetAllReportsForStudyWithInvalidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		
+		"TC191_GetAllReports_Study_Test05_DeleteAllReportsForStudyWithValidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetAllReports_Study_Test06_GetAllReportsForStudyWithInvalidClustername":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+	
+	"Get Repor At Study Level":"--------------------------------------------------------",
+	
+	
+			
+		"TC191_GetReport_Study_Test01_GetReportForStudy":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetReport_Study_Test02_GetReportForStudyWithInvalidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Study_Test03_GetReportForStudyWithInvalidReportId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Study_Test04_GetReportForStudyWithEntityIdAsNull":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Study_Test05_GetReportForStudyWithReportIdAsNull":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+				}
+		],
+		
+		"TC191_DeleteReport_Study_Test06_GetReportForStudy":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Study Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"405"
+				}
+		],
+		
+		
+		
+		
+		"Series Of :":"---------------------Series Level-------------------------------------",
+		"Post Report At Series Level":"--------------------------------------------------------",
+		"TC191_CreateReport_Series_Test01_CreateReport":[
+				{
+					
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Series_Test02_CreateReportWithRandomentityId":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		"TC191_CreateReport_Series_Test03_CreateReportWithContentNull":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		"TC191_CreateReport_Series_Test04_CreateReportWithTagNull":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"Test Content",
+					"TAG":"",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		"TC191_CreateReport_Series_Test05_CreateReportWithAdditionalInfoNull":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":null
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Series_Test06_CreateReportWithEntityIdNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+			}
+		],
+		
+		
+		"TC191_CreateReport_Series_Test07_CreateReportWithAllAttrAsNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"",
+					"TAG":"",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"400"
+			}
+		],
+		
+	"GetAll Repor At Series Level":"--------------------------------------------------------",
+	
+	
+	"TC191_GetAllReports_Series_Test01_GetAllReportsForSeries":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+	
+	"TC191_GetAllReports_Series_Test02_GetAllReportsForSeriesWithoutCreatedAt":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+		
+		"TC191_GetAllReports_Series_Test04_GetAllReportsForSeriesWithInvalidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		
+		"TC191_GetAllReports_Series_Test05_DeleteAllReportsForStudyWithValidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetAllReports_Series_Test06_GetAllReportsForSeriesWithInvalidClustername":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+	
+	
+	
+	"Get Repor At Sereis Level":"--------------------------------------------------------",
+		
+		
+		"TC191_GetReport_Series_Test01_GetReportForSeries":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetReport_Series_Test02_GetReportForSeriesWithInvalidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Series_Test03_GetReportForSeriesWithInvalidReportId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Series_Test04_GetReportForSeriesWithEntityIdAsNull":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Series_Test05_GetReportForSeriesWithReportIdAsNull":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+				}
+		],
+		
+		"TC191_DeleteReport_Series_Test06_GetReportForSeries":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Series Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"405"
+				}
+		],
+		
+		
+		
+		"Exam Of :":"---------------------Exam Level-------------------------------------",
+		"Post Report At Exam Level":"--------------------------------------------------------",
+		
+		"TC191_CreateReport_Exam_Test01_CreateReport":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Exam_Test02_CreateReportWithRandomentityId":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		"TC191_CreateReport_Exam_Test03_CreateReportWithContentNull":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		"TC191_CreateReport_Exam_Test04_CreateReportWithTagNull":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"Test Content",
+					"TAG":"",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+			}
+		],
+		
+		"TC191_CreateReport_Exam_Test05_CreateReportWithAdditionalInfoNull":[
+				{"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"201"
+			}
+		],
+		"TC191_CreateReport_Exam_Test06_CreateReportWithEntityIdNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"Exam Object or RevierComment as tag boject",
+					"TAG":"TestTag",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+			}
+		],
+		
+		"TC191_CreateReport_Exam_Test07_CreateReportWithAllAttrAsNull":[
+				{"entityid":null ,
+					"jsonobjects":{
+					"CONTENT":"",
+					"TAG":"",
+					"ADDITIONALINFO":{}
+				},
+				"expCode":"400"
+			}
+		],
+		
+		
+	"GetAll Repor At Exam Level":"--------------------------------------------------------",
+	
+	"TC191_GetAllReports_Exam_Test01_GetAllReportsForExam":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+	
+	"TC191_GetAllReports_Exam_Test02_GetAllReportsForExamWithoutCreatedAt":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"201"
+				}
+		],
+		
+		"TC191_GetAllReports_Exam_Test04_GetAllReportsForExamWithInvalidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		
+		"TC191_GetAllReports_Exam_Test05_DeleteAllReportsForStudyWithValidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetAllReports_Exam_Test06_GetAllReportsForExamWithInvalidClustername":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+	
+	
+	
+	"Get Report At Exam Level":"--------------------------------------------------------",
+	
+		"TC191_GetReport_Exam_Test01_GetReportForExam":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"200"
+				}
+		],
+		
+		"TC191_GetReport_Exam_Test02_GetReportForExamWithInvalidEntityId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Exam_Test03_GetReportForExamWithInvalidReportId":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Exam_Test04_GetReportForExamWithEntityIdAsNull":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"404"
+				}
+		],
+		
+		"TC191_GetReport_Exam_Test05_GetReportForExamWithReportIdAsNull":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"400"
+				}
+		],
+		
+		"TC191_DeleteReport_Exam_Test06_GetReportForExam":[
+				{
+					"entityid":"f19bb71e-350a-4b8e-d44f-" ,
+					"jsonobjects":{
+					"CONTENT":"TestContent",
+					"TAG":"Exam Object or RevierComment as tag boject",
+					"ADDITIONALINFO":{"key1:":"val1"}
+				},
+				"expCode":"405"
+				}
+		],
+		
+	"Study Service":"----------------Start of Study Serivice------------------------------------",
+		
+	"TC189_TC01_CreateStudy":
+	[
+		{
+			"testname":"Study with one series, one impression; and one study impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01.02.03.033323",
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767676"
+			},
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Study with one series, two impression; and one study impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01",
+				"SERIES":[
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.01",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        },
+				        {
+				          "contentDate": "2020-01-03T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name2",
+				          "contentCreationSite": "Creation Site2",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label2",
+				          "note": "Note2",
+				          "tag": "Tag2"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    }
+  				]
+			},
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Study with two series, one each impression; and one study impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01",
+				"SERIES":[
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.02",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    },
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.02",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    }
+  				]
+			},
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Study with two series, two each impression; and two study impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01",
+				"SERIES":[
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.02",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        },
+				        {
+				          "contentDate": "2020-01-03T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name2",
+				          "contentCreationSite": "Creation Site2",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label2",
+				          "note": "Note2",
+				          "tag": "Tag2"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    },
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.02",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        },
+				        {
+				          "contentDate": "2020-01-03T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name2",
+				          "contentCreationSite": "Creation Site2",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label2",
+				          "note": "Note2",
+				          "tag": "Tag2"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    }
+  				],
+  				
+  				"IMPRESSIONS": [
+				    {
+				     "contentCreatorName": "Content Creatore Name",
+					 "contentCreationSite": "Creation Site",
+					 "contentDescription": {},
+					 "contentLabel": "Content Label",
+					 "note": "Note",
+					 "tag": "Tag"
+				    },
+				    {
+				     "contentCreatorName": "Content Creatore Name2",
+					 "contentCreationSite": "Creation Site2",
+					 "contentDescription": {},
+					 "contentLabel": "Content Label2",
+					 "note": "Note2",
+					 "tag": "Tag2"
+				    }
+				]
+			},
+			"expCode":"201"
+		}
+	
+	],
+	
+	"TC189_TC02_CreateStudyWithInvalidGUIDs":
+	[
+		{
+			"testname":"Invalid Patient GUID in URI",
+			"patientId":"abc123",
+			"jsonobjects":
+			{
+				
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Provide Patient GUID that doesn't exist, in URI",
+			"patientId":"f19bb71e-440r-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				
+			},
+			"expCode":"404"
+		},
+		
+		
+		{
+			"testname":"Invalid REQUESTED PROCEDURE ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"REQUESTEDPROCEDUREID":"abc123"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Invalid REQUESTED PROCEDURE SCHEDULED STEP ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"REQUESTEDPROCEDURESCHEDULEDSTEPSID":"abc123"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Invalid SERIES PERFORMED STEP ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"SERIESPERFORMEDSTEPID":"abc123"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Invalid SERIES SCHEDULED STEPS ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"SERIESSCHEDULEDSTEPSID":"abc123"
+			},
+			"expCode":"400"
+		}
+	
+	],
+	
+	"TC189_TC03_CreateStudyWithInvalidDataFormat":
+	[
+		{
+			"testname":"Invalid Study Data Format",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":[123]
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"TC189_TC04_CreateStudyWithNoAppType":
+	[
+		{
+			"testname":"Study with No App Type",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"APPTYPE":null
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"TC189_TC05_GetAllStudiesByPatientId":
+	[
+		{
+			"testname":"Get all Studies by Patient ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC06_GetAllStudiesByPatientIdAndFilterByCreatedDate":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by Created Date",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC07_GetAllStudiesByPatientIdAndFilterByStudyInstanceUID":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by StudyInstance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"StudyInstanceUID":"1.2.840.10008.01"
+			}
+		}
+	],
+	
+	"TC189_TC08_GetAllStudiesByPatientIdAndFilterBySeriesInstanceUID":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by Series Instance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01"
+			}
+		}
+	],
+	
+	"TC189_TC09_GetAllStudiesByPatientIdAndFilterByDateAndStudyInstanceUID":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by Date & StudyInstance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"StudyInstanceUID":"1.2.840.10008.01"
+			}
+		}
+	],
+	
+	"TC189_TC10_GetAllStudiesByPatientIdAndFilterByDateAndSeriesInstanceUID":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by Date and Series Instance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01"
+			}
+		}
+	],
+	
+	"TC189_TC11_GetAllStudiesByPatientIdAndFilterByAllParams":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by all params",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01",
+				"StudyInstanceUID":"1.2.840.10008.01",
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC12_GetNoStudiesByPatientId":
+	[
+		{
+			"testname":"Get no Studies by Patient ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040345",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC13_GetAllStudiesByInvalidPatientId":
+	[
+		{
+			"testname":"Get all Studies by invalid Patient ID",
+			"patientId":"f19bb71e-350a-488e-d44f-08d753040250",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC14_GetStudyByStudyId":
+	[
+		{
+			"testname":"Get a Study by Study ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.10",
+				"SERIESINSTANCEUID":"1.2.840.10008.01.10"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC15_GetStudyByStudyIdAndDiffPatientId":
+	[
+		{
+			"testname":"Get a Study by Study ID and Different patient ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"patientId2":"",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.10",
+				"SERIESINSTANCEUID":"1.2.840.10008.01.10"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC16_GetStudyByInvalidStudyId":
+	[
+		{
+			"testname":"Get a Study by Invalid Study ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"invalidstudyId":"abc123",
+			
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC17_GetStudyByStudyIdAndInvalidPatientId":
+	[
+		{
+			"testname":"Get a Study by Study ID and invalid patient ID",
+			"invalidpatientId":"abc123",
+			"studyId":"47a316e0-758b-4eb7-a8d6-8a4c0c938e4b",
+			
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC18_CreateStudyWithDuplicateStudySeriesInstanceUID":
+	[
+		{
+			"testname":"Create Study with duplicate Study Instance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Create Study with duplicate Series Instance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01"
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"TC189_TC19_EditStudy":
+	[
+		{
+			"testname":"Edit Study with Additional Info",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Study with Additional Info as null",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYADDITIONALINFO":{}
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Study with Impressions",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"IMPRESSIONS":[
+					{
+						 "contentCreatorName": "Content Creatore Name",
+						 "contentCreationSite": "Creation Site",
+						 "contentDescription": {},
+						 "contentLabel": "Content Label",
+						 "note": "Note",
+						 "tag": "Tag"
+					}
+				]
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Study with Impressions as null",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"IMPRESSIONS":[]
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Study with Impressions and Additional Info",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"IMPRESSIONS":[
+					{
+						 "contentCreatorName": "Content Creatore Name",
+						 "contentCreationSite": "Creation Site",
+						 "contentDescription": {},
+						 "contentLabel": "Content Label",
+						 "note": "Note",
+						 "tag": "Tag"
+					}
+				],
+				"STUDYADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"200"
+		}
+			
+	],
+	
+	"TC189_TC20_EditStudywithInvalidPatientStudyID":
+	[
+		{
+			"testname":"Edit Study with Additional Info",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"patientId2":"f20bb71e-450a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"404"
+		}
+	],
+	
+	"Series Service":"----------------Start of Series Serivice------------------------------------",
+		
+	"TC189_TC21_CreateSeries":
+	[
+		{
+			"testname":"Series with one impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"studyId":"dd9f0c4e-668b-42fb-bc80-0787e79c7671",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767676"
+			},
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Series with two impressions",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"studyId":"dd9f0c4e-668b-42fb-bc80-0787e79c7671",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767671",
+				"SERIESIMPRESSIONS": [
+					{
+						"contentDate": "2020-01-02T08:09:58.924Z",
+						"contentCreatorName": "Content Creatore Name1",
+						"contentCreationSite": "Creation Site1",
+						"contentDescription": {},
+						"contentLabel": "Content Label1",
+						"note": "Note1",
+						"tag": "Tag1"
+					},
+					{
+						"contentDate": "2020-01-02T08:09:58.924Z",
+						"contentCreatorName": "Content Creatore Name2",
+						"contentCreationSite": "Creation Site2",
+						"contentDescription": {},
+						"contentLabel": "Content Label2",
+						"note": "Note2",
+						"tag": "Tag2"
+					}
+				]
+			},
+			
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC22_CreateSeriesWithInvalidGUIDs":
+	[
+		{
+			"testname":"Create Series with different Patient ID and Study ID combination",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"dd9f0c4e-668b-42fb-bc80-0787e79c7671",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767672"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Create Series with Invalid Study GUID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"dd9f0c4e",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767672"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Create Series with Invalid Patient GUID",
+			"patientId":"e5ad06",
+			"studyId":"dd9f0c4e-668b-42fb-bc80-0787e79c7671",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767672"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Invalid SERIES PERFORMED STEP ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESPERFORMEDSTEPID":"abc123"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Invalid SERIES SCHEDULED STEPS ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESSCHEDULEDSTEPSID":"abc123"
+			},
+			"expCode":"400"
+		}
+	
+	],
+	
+	"TC189_TC23_CreateSeriesWithInvalidDataFormat":
+	[
+		{
+			"testname":"Invalid Series Data Format",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":[123]
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"TC189_TC24_CreateSeriesWithDuplicateSeriesInstanceUID":
+	[
+		{
+			"testname":"Create Series with duplicate Series Instance UID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767676"
+			},
+			"expCode":"400"
+		}
+		
+	],
+	
+	"TC189_TC25_GetAllSeriesByStudyId":
+	[
+		{
+			"testname":"Get all Series by Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC26_GetAllSeriesByStudyIdAndFilterByCreatedDate":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Created Date",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC27_GetAllSeriesByStudyIdAndFilterBySeriesInstanceUID":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Series Instance UID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01"
+			}
+		}
+	],
+	
+	"TC189_TC28_GetAllSeriesByStudyIdAndFilterByModality":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Modality",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"Modality":"AS"
+			}
+		}
+	],
+	
+	"TC189_TC29_GetAllSeriesByStudyIdAndFilterByDateAndSeriesInstanceUID":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Date & Series Instance UID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01",
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC30_GetAllSeriesByStudyIdAndFilterByDateAndModality":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by Date and Modality",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"Modality":"AS",
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC31_GetAllSeriesByStudyIdAndFilterByAllParams":
+	[
+		{
+			"testname":"Get all Series by Study ID and filter by all params",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01",
+				"Modality":"AS",
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC32_GetNoSeriesByStudyId":
+	[
+		{
+			"testname":"Get no Series by Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f803459",
+			"studyId":"6e64c7fe-b230-4dbc-80b0-723a00a4f0ab",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC33_GetAllSeriesByInvalidStudyId":
+	[
+		{
+			"testname":"Get all Series by invalid Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-42bf-a7ad-62378a30ec50",
+			
+			"expCode":"404"
+		}
+	],
+	
+	"TC189_TC34_GetSeriesBySeriesId":
+	[
+		{
+			"testname":"Get a Series by Series ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.1012"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC35_GetSeriesBySeriesIdAndDiffPatientId":
+	[
+		{
+			"testname":"Get a Series by Series ID and Different patient ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"patientId2":"ac9fd81d-db72-4997-9bb5-e26273c7b861",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.10124"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC36_GetSeriesBySeriesIdAndDiffStudyId":
+	[
+		{
+			"testname":"Get a Series by Series ID and Different Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"studyId2":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.10125"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC37_GetSeriesByInvalidSeriesId":
+	[
+		{
+			"testname":"Get a Series by Invalid Series ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"invalidseriesId":"abc123"
+		}
+	],
+	
+	"TC189_TC38_GetSeriesBySeriesIdAndInvalidStudyId":
+	[
+		{
+			"testname":"Get a Series by Series ID and invalid Study ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"invalidstudyId":"abc123",
+			"seriesId":"ab23102d-f30b-48d8-9a78-e58073eac819"
+		}
+	],
+	
+	"TC189_TC39_EditSeries":
+	[
+		{
+			"testname":"Edit Series with Additional Info",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Series with Additional Info as null",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{}
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Series with Impressions",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESIMPRESSIONS":[
+					{
+						 "contentCreatorName": "Content Creatore Name",
+						 "contentCreationSite": "Creation Site",
+						 "contentDescription": {},
+						 "contentLabel": "Content Label",
+						 "note": "Note",
+						 "tag": "Tag"
+					}
+				]
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Series with Impressions as null",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESIMPRESSIONS":[]
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Series with Impressions and Additional Info",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"jsonobjects":
+			{
+				"SERIESIMPRESSIONS":[
+					{
+						 "contentCreatorName": "Content Creatore Name",
+						 "contentCreationSite": "Creation Site",
+						 "contentDescription": {},
+						 "contentLabel": "Content Label",
+						 "note": "Note",
+						 "tag": "Tag"
+					}
+				],
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"200"
+		}
+			
+	],
+	
+	"TC189_TC40_EditSerieswithDifferentIDs":
+	[
+		{
+			"testname":"Edit Series with different Study and Series ID combination",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"seriesId":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+			
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Edit Series with different Patient and Series ID combination",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"980cd74f-0117-4b31-aab1-d2444f4ffe9f",
+			"seriesId":"d47aebd3-aa77-42c2-b5a3-a2e4350af6b4",
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Edit Series with different Patient, Study and Series ID combination",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"seriesId":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+			"studyId":"980cd74f-0117-4b31-aab1-d2444f4ffe9f",
+			"jsonobjects":
+			{
+				"SERIESADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"404"
+		}
+	],
+	
+	"Instance Service":"----------------Start of Instance Serivice------------------------------------",
+	
+	"TC190_TC01_CreateInstance":
+	[
+		{
+			"testname":"Create Instance with valid data",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000001",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":"SC0001"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC190_TC02_CreateInstanceInvalidStudyGUID":
+	[
+		{
+			"testname":"Create Instance invaid study GUID",
+			"studyId":"11840559",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000001",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":"SC0001"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Create Instance study GUID which doesn't exist",
+			"studyId":"11840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000001",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":"SC0001"
+			},
+			"expCode":"404"
+		}
+	],
+	
+	"TC190_TC03_CreateInstanceInvalidData":
+	[
+		{
+			"testname":"Create Instance with empty Series Key",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.2000001",
+				"SERIESKEY":"",
+				"SOPCLASSUID":"SC0001"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Create Instance with wrong Series Key",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.2000001",
+				"SERIESKEY":"ab23102d-f30b-48d8-9a78-e58073eac819",
+				"SOPCLASSUID":"SC0001"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Create Instance with invalid Series Key",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.2000001",
+				"SERIESKEY":"ab23102d",
+				"SOPCLASSUID":"SC0001"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Create Instance with empty SOP Class UID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.2000001",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":""
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Create Instance with wrong data type",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.2000001",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":"SC0001",
+				"FRAMENUMBER": "abc"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Create Instance with duplicate Instance UID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000001",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":"SC0001"
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"TC190_TC04_CreateInstanceWithNoFrameNumber":
+	[
+		{
+			"testname":"Create Instance with no frame number in one bulk data",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000002",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":"SC0001",
+				"BULKDATA":[
+				{
+      				"dataURL": "https://data.com/com",
+      				"thumbnailIcon": [1,2]
+				}]
+			},
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Create Instance with no frame number for mutiple Bulk data",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.2000001",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":"SC0001",
+				"BULKDATA":
+				[
+					{
+						"dataURL": "https://data.com/com",
+      					"thumbnailIcon": [1,2]
+      				},
+      				{
+						"dataURL": "https://data.com/mod",
+      					"thumbnailIcon": [2,3]
+      				},
+      				{
+						"dataURL": "https://data.com/bob",
+      					"thumbnailIcon": [3,4]
+      				}
+      				
+      			]
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC190_TC05_GetAllInstancesByStudyId":
+	[
+		{
+			"testname":"Get all Instances by Study ID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC190_TC06_GetAllInstancesByStudyIdAndFilterByCreatedDate":
+	[
+		{
+			"testname":"Get all Instances by Study ID and filter by Created Date",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"qparams":
+			{
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC190_TC07_GetAllInstancesByStudyIdAndFilterBySopClassUID":
+	[
+		{
+			"testname":"Get all Instances by Study ID and filter by SOP Classs UID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"qparams":
+			{
+				"SopClassUID":"sop"
+			}
+		}
+	],
+	
+	"TC190_TC08_GetAllInstancesByStudyIdAndFilterBySopInstanceUID":
+	[
+		{
+			"testname":"Get all Instances by Study ID and filter by SOP Instance UID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"qparams":
+			{
+				"SopInstanceUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000123"
+			}
+		}
+	],
+	
+	"TC190_TC09_GetAllInstancesByStudyIdAndFilterBySeriesKey":
+	[
+		{
+			"testname":"Get all Instances by Study ID and filter by Series Key",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50",
+			"qparams":
+			{
+				"SeriesKey":"ab23102d-f30b-48d8-9a78-e58073eac819"
+			}
+		}
+	],
+	
+	"TC190_TC10_GetAllInstancesByStudyIdAndFilterByDateAndSopClassUID":
+	[
+		{
+			"testname":"Get all Instances by Study ID and filter by Created Date and SOP Class UID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"qparams":
+			{
+				"CreatedDate":"2020-01-21T12:44:51.273Z",
+				"SopClassUID":"sop"
+			}
+		}
+	],
+	
+	"TC190_TC11_GetAllInstancesByStudyIdAndFilterByDateAndSopInstanceUID":
+	[
+		{
+			"testname":"Get all Instances by Study ID and filter by Created Date and SOP Instance UID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"qparams":
+			{
+				"CreatedDate":"2020-01-21T12:44:51.273Z",
+				"SopInstanceUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000123"
+			}
+		}
+	],
+	
+	"TC190_TC12_GetAllSeriesByStudyIdAndFilterByDateAndSeriesKey":
+	[
+		{
+			"testname":"Get all Instances by Study ID and filter by Created Date & Series Key",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"qparams":
+			{
+				"CreatedDate":"2020-01-21T12:44:51.273Z",
+				"SeriesKey":"ab23102d-f30b-48d8-9a78-e58073eac819"
+			}
+		}
+	],
+	
+	"TC190_TC13_GetAllInstancesByStudyIdAndFilterByAllParams":
+	[
+		{
+			"testname":"Get all Instances by Study ID and filter by all params",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"qparams":
+			{
+				"CreatedDate":"2020-01-21T12:44:51.273Z",
+				"SopClassUID":"sop",
+				"SopInstanceUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000123",
+				"SeriesKey":"ab23102d-f30b-48d8-9a78-e58073eac819"
+			}
+		}
+	],
+	
+	"TC190_TC14_GetNoInstancesByStudyId":
+	[
+		{
+			"testname":"Get No Instances by Study ID",
+			"studyId":"53b9148e-77cf-47ef-a7ad-62378a30ec50"
+		}
+	],
+	
+	"TC190_TC15_GetAllInstancesByInvalidStudyId":
+	[
+		{
+			"testname":"Get all Instances by invalid Study ID",
+			"studyId":"53b9148e-77cf-52bf-a6ad-62378a30ec50",
+			
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Get all Instance by invalid GUID Study ID",
+			"studyId":"53b9148e",
+			
+			"expCode":"404"
+		}
+	],
+	
+	"TC190_TC16_GetInstanceByInstanceId":
+	[
+		{
+			"testname":"Get a Instance by Instance ID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000012",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":"SOP0001"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC190_TC17_GetInstanceByInstanceIdAndDifferentStudyId":
+	[
+		{
+			"testname":"Get a Series by Series ID",
+			"patientId":"e5ad0692-9c50-455c-9bbf-c1239f808430",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"studyId2":"980cd74f-0117-4b31-aab1-d2444f4ffe9f",
+			"jsonobjects":
+			{
+				"INSTANCEUID":"1.2.276.0.75.2.1.11.11.2.200124063637682.90324188532150.1000011",
+				"SERIESKEY":"542ce180-662d-49ad-9ce5-7d76f803e5d4",
+				"SOPCLASSUID":"SOP0001"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC190_TC18_GetInstanceByInstanceIdInvalidGUID":
+	[
+		{
+			"testname":"Invalid Study GUID in base URI",
+			"studyId":"00840559",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c"
+		},
+		
+		{
+			"testname":"Invalid Instance GUID in base URI",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b"
+		}
+	],
+	
+	"TC190_TC19_EditInstance":
+	[
+		{
+			"testname":"Edit Instance with Laterality",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c",
+			"jsonobjects":
+			{
+				"IMAGELATERALITY": "OU"
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Instance with Laterality null",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c",
+			"jsonobjects":
+			{
+				"IMAGELATERALITY": null
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Instance with additional info",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c",
+			"jsonobjects":
+			{
+				"ADDITIONALINFORMATION": "add info1 edited"
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Instance with Additional info to null",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c",
+			"jsonobjects":
+			{
+				
+				"ADDITIONALINFORMATION": null
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Instance with Observation DTO",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c",
+			"jsonobjects":
+			{
+				"OBSERVATIONDTO": [
+				{
+				 	"contentCreatorName": "author2",
+				    "contentCreationSite": "site location",
+				    "contentDescription": {"EyeDryness":"Red Eye evidence found"},
+				    "contentLabel": "label",
+				    "note": "notes",
+				    "tag": "tags",
+				    "imageInformation":[
+				    {
+				    	"frameNumber": 3,
+				        "frameComments": "frame comments"
+				    }]
+				}]
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Instance with Observation DTO null",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c",
+			"jsonobjects":
+			{
+				"OBSERVATIONDTO": []
+			},
+			"expCode":"200"
+		}
+	],
+	
+	"TC190_TC20_EditInstancewithDifferentIDs":
+	[
+		{
+			"testname":"Edit Instance with Invalid Study GUID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c",
+			"jsonobjects":
+			{
+				"IMAGELATERALITY": "OS"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Edit Instance with Different Study GUID",
+			"studyId":"980cd74f-0117-4b31-aab1-d2444f4ffe9f",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c",
+			"jsonobjects":
+			{
+				"IMAGELATERALITY": "OS"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Edit Instance with Invalid Instance GUID",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b",
+			"jsonobjects":
+			{
+				"IMAGELATERALITY": "OS"
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Edit Instance with Invalid data",
+			"studyId":"00840559-2eab-4f1f-9090-0260fa0354ff",
+			"instanceId":"ef61b72b-9908-4d87-bbd4-5302de82df7c",
+			"jsonobjects":
+			{
+				"IMAGELATERALITY": 45
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"Storage Service":"----------------Start of Storage Serivice------------------------------------",
+	
+	"TC188_TC01_CreateStorage":
+	[
+		{
+			"testname":"Create Storage with valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Create Storage with invalid account ID",
+			"accountId":"11840559",
+		
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Create Storage with existing valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"409"
+		}
+	],
+	
+	"TC188_TC02_GetStorage":
+	[
+		{
+			"testname":"Get Storage with valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Get Storage with invalid account ID",
+			"accountId":"11840559",
+		
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Get Storage with non existing valid account ID",
+			"accountId":"22840559-2eab-4f1f-9090-0260fa0354bb",
+		
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Get Storage with multiple blob SAS URL for account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"200"
+		}
+		
+	],
+	
+	"TC188_TC03_EditStorage":
+	[
+		{
+			"testname":"Edit Storage with valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"405"
+		}
+	],
+	
+	"TC188_TC04_DeleteStorage":
+	[
+		{
+			"testname":"Delete Storage with valid account ID",
+			"accountId":"ab6c7491-2b5f-4168-8d95-705fac82b908",
+		
+			"expCode":"405"
+		}
+	]
+	
+}

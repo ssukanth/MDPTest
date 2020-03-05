@@ -1,0 +1,18 @@
+{
+  "contactDetails": [
+    {
+      "addressLine1": "UpdateAdr1",
+      "addressLine2": "UpdateAdr1",
+      "city": "Bengaluru",
+      "district": "Urban",
+      "state": "KA",
+      "country": "INDIA",
+      "postalCode": "560069",
+      "period": "string",
+      "alternateEmail": "user@example.com",
+      "contactNo": "string",
+      "alternateNo": "string",
+      "type": "string"
+    }
+  ]
+}

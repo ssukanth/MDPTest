@@ -1,0 +1,47 @@
+{
+  "patientBasicInfo": {
+    "patientId": "Id#20200106182123",
+    "dateOfBirth": "2020-01-06T11:59:39.365Z",
+    "sex": 0,
+    "patientName": {
+      "familyName":null,
+      "givenName":null,
+      "middleName":null,
+      "prefix":null,
+      "suffix":null,
+      "familyNameIdeographic":null,
+      "givenNameIdeographic":null,
+      "middleNameIdeographic":null,
+      "prefixIdeographic":null,
+      "suffixIdeographic":null,
+      "familyNamePhonetic":null,
+      "givenNamePhonetic":null,
+      "middleNamePhonetic":null,
+      "prefixPhonetic":null,
+      "suffixPhonetic":null
+    },
+    "otherPatientID": [""],
+    "patientComments": "Payload for edting",
+    "ethnicGroup": "indian",
+    "contactDetails": {
+      "phoneNumber": 0,
+      "email": "string",
+      "type": "string"
+    },
+    "patientStudy": [
+      {
+        "medicalAlerts": "string",
+        "additionalPatientHistory": "string",
+        "createdAt": "2020-01-06T11:59:39.365Z",
+        "createdBy": "string"
+      }
+    ],
+    "issuerOfPatientId": "ZeissTest"
+  },
+  "extendedPatient": [
+    {
+      "applicationType": "string",
+      "patientSpecificInfo": {}
+    }
+  ]
+}

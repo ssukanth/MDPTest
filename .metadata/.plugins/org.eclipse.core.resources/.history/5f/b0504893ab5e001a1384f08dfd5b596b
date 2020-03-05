@@ -1,0 +1,724 @@
+{
+	"TC189_TC01_CreateStudy":
+	[
+		{
+			"testname":"Study with one series, one impression; and one study impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01.02.03.033323",
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01.56767676"
+			},
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Study with one series, two impression; and one study impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01",
+				"SERIES":[
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.01",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        },
+				        {
+				          "contentDate": "2020-01-03T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name2",
+				          "contentCreationSite": "Creation Site2",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label2",
+				          "note": "Note2",
+				          "tag": "Tag2"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    }
+  				]
+			},
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Study with two series, one each impression; and one study impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01",
+				"SERIES":[
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.02",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    },
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.02",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    }
+  				]
+			},
+			"expCode":"201"
+		},
+		
+		{
+			"testname":"Study with two series, two each impression; and two study impression",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01",
+				"SERIES":[
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.02",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        },
+				        {
+				          "contentDate": "2020-01-03T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name2",
+				          "contentCreationSite": "Creation Site2",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label2",
+				          "note": "Note2",
+				          "tag": "Tag2"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    },
+				    {
+				      "seriesInstanceUID": "1.2.840.10008.01.02",
+				      "modality": "AR",
+				      "laterality": "LAT",
+				      "description": "Series description",
+				      "seriesDate": "2020-01-02T08:09:58.923Z",
+				      "equipmentDetails": {
+				        "manufacturer": "Zeiss",
+				        "institutionName": "Carl Zeiss",
+				        "institutionAddress": "Bommasandra",
+				        "stationName": "BOM",
+				        "departmentName": "CARIN",
+				        "manufacturerModelName": "CZModel",
+				        "deviceSerialNumber": "34567",
+				        "softwareVersion": "1.0"
+				      },
+				      "performedStepId": "bd56e728-f601-46e5-ba95-057a14cd292a",
+				      "performedStepStartDate": "2020-01-02T08:09:58.923Z",
+				      "performedStepDescription": "description",
+				      "scheduledStepsIds": [
+				        "e70f9ddc-8040-4c36-8cc1-d34528454bcd"
+				      ],
+				      "performingPhysican": {
+				        "familyName": "Abhira",
+				        "givenName": "Tukaram",
+				        "middleName": "",
+				        "prefix": "Dr",
+				        "suffix": "",
+				        "familyNameIdeographic": "",
+				        "givenNameIdeographic": "",
+				        "middleNameIdeographic": "",
+				        "prefixIdeographic": "",
+				        "suffixIdeographic": "",
+				        "familyNamePhonetic": "",
+				        "givenNamePhonetic": "",
+				        "middleNamePhonetic": "",
+				        "prefixPhonetic": "",
+				        "suffixPhonetic": "",
+				        "institutionName": "",
+				        "institutionAddress": ""
+				      },
+				      "impressions": [
+				        {
+				          "contentDate": "2020-01-02T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name1",
+				          "contentCreationSite": "Creation Site1",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label1",
+				          "note": "Note1",
+				          "tag": "Tag1"
+				        },
+				        {
+				          "contentDate": "2020-01-03T08:09:58.924Z",
+				          "contentCreatorName": "Content Creatore Name2",
+				          "contentCreationSite": "Creation Site2",
+				          "contentDescription": {},
+				          "contentLabel": "Content Label2",
+				          "note": "Note2",
+				          "tag": "Tag2"
+				        }
+				      ],
+				      "additionalInfo": {}
+				    }
+  				],
+  				
+  				"IMPRESSIONS": [
+				    {
+				     "contentCreatorName": "Content Creatore Name",
+					 "contentCreationSite": "Creation Site",
+					 "contentDescription": {},
+					 "contentLabel": "Content Label",
+					 "note": "Note",
+					 "tag": "Tag"
+				    },
+				    {
+				     "contentCreatorName": "Content Creatore Name2",
+					 "contentCreationSite": "Creation Site2",
+					 "contentDescription": {},
+					 "contentLabel": "Content Label2",
+					 "note": "Note2",
+					 "tag": "Tag2"
+				    }
+				]
+			},
+			"expCode":"201"
+		}
+	
+	],
+	
+	"TC189_TC02_CreateStudyWithInvalidGUIDs":
+	[
+		{
+			"testname":"Invalid Patient GUID in URI",
+			"patientId":"abc123",
+			"jsonobjects":
+			{
+				
+			},
+			"expCode":"404"
+		},
+		
+		{
+			"testname":"Provide Patient GUID that doesn't exist, in URI",
+			"patientId":"f19bb71e-440r-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				
+			},
+			"expCode":"404"
+		},
+		
+		
+		{
+			"testname":"Invalid REQUESTED PROCEDURE ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"REQUESTEDPROCEDUREID":"abc123"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Invalid REQUESTED PROCEDURE SCHEDULED STEP ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"REQUESTEDPROCEDURESCHEDULEDSTEPSID":"abc123"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Invalid SERIES PERFORMED STEP ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"SERIESPERFORMEDSTEPID":"abc123"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Invalid SERIES SCHEDULED STEPS ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"SERIESSCHEDULEDSTEPSID":"abc123"
+			},
+			"expCode":"400"
+		}
+	
+	],
+	
+	"TC189_TC03_CreateStudyWithInvalidDataFormat":
+	[
+		{
+			"testname":"Invalid Study Data Format",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":[123]
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"TC189_TC04_CreateStudyWithNoAppType":
+	[
+		{
+			"testname":"Study with No App Type",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"APPTYPE":null
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"TC189_TC05_GetAllStudiesByPatientId":
+	[
+		{
+			"testname":"Get all Studies by Patient ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC06_GetAllStudiesByPatientIdAndFilterByCreatedDate":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by Created Date",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC07_GetAllStudiesByPatientIdAndFilterByStudyInstanceUID":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by StudyInstance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"StudyInstanceUID":"1.2.840.10008.01"
+			}
+		}
+	],
+	
+	"TC189_TC08_GetAllStudiesByPatientIdAndFilterBySeriesInstanceUID":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by Series Instance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01"
+			}
+		}
+	],
+	
+	"TC189_TC09_GetAllStudiesByPatientIdAndFilterByDateAndStudyInstanceUID":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by Date & StudyInstance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"StudyInstanceUID":"1.2.840.10008.01"
+			}
+		}
+	],
+	
+	"TC189_TC10_GetAllStudiesByPatientIdAndFilterByDateAndSeriesInstanceUID":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by Date and Series Instance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01"
+			}
+		}
+	],
+	
+	"TC189_TC11_GetAllStudiesByPatientIdAndFilterByAllParams":
+	[
+		{
+			"testname":"Get all Studies by Patient ID and filter by all params",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"qparams":
+			{
+				"SeriesInstanceUID":"1.2.840.10008.01.01",
+				"StudyInstanceUID":"1.2.840.10008.01",
+				"CreatedDate":"2020-01-21T12:44:51.273Z"
+			}
+		}
+	],
+	
+	"TC189_TC12_GetNoStudiesByPatientId":
+	[
+		{
+			"testname":"Get no Studies by Patient ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040345",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC13_GetAllStudiesByInvalidPatientId":
+	[
+		{
+			"testname":"Get all Studies by invalid Patient ID",
+			"patientId":"f19bb71e-350a-488e-d44f-08d753040250",
+			
+			"expCode":"200"
+		}
+	],
+	
+	"TC189_TC14_GetStudyByStudyId":
+	[
+		{
+			"testname":"Get a Study by Study ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.10",
+				"SERIESINSTANCEUID":"1.2.840.10008.01.10"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC15_GetStudyByStudyIdAndDiffPatientId":
+	[
+		{
+			"testname":"Get a Study by Study ID and Different patient ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"patientId2":"",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.10",
+				"SERIESINSTANCEUID":"1.2.840.10008.01.10"
+			},
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC16_GetStudyByInvalidStudyId":
+	[
+		{
+			"testname":"Get a Study by Invalid Study ID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"invalidstudyId":"abc123",
+			
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC17_GetStudyByStudyIdAndInvalidPatientId":
+	[
+		{
+			"testname":"Get a Study by Study ID and invalid patient ID",
+			"invalidpatientId":"abc123",
+			"studyId":"47a316e0-758b-4eb7-a8d6-8a4c0c938e4b",
+			
+			"expCode":"201"
+		}
+	],
+	
+	"TC189_TC18_CreateStudyWithDuplicateStudySeriesInstanceUID":
+	[
+		{
+			"testname":"Create Study with duplicate Study Instance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYINSTANCEUID":"1.2.840.10008.01"
+			},
+			"expCode":"400"
+		},
+		
+		{
+			"testname":"Create Study with duplicate Series Instance UID",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"SERIESINSTANCEUID":"1.2.840.10008.01.01"
+			},
+			"expCode":"400"
+		}
+	],
+	
+	"TC189_TC19_EditStudy":
+	[
+		{
+			"testname":"Edit Study with Additional Info",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Study with Additional Info as null",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYADDITIONALINFO":{}
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Study with Impressions",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"IMPRESSIONS":[
+					{
+						 "contentCreatorName": "Content Creatore Name",
+						 "contentCreationSite": "Creation Site",
+						 "contentDescription": {},
+						 "contentLabel": "Content Label",
+						 "note": "Note",
+						 "tag": "Tag"
+					}
+				]
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Study with Impressions as null",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"IMPRESSIONS":[]
+			},
+			"expCode":"200"
+		},
+		
+		{
+			"testname":"Edit Study with Impressions and Additional Info",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"IMPRESSIONS":[
+					{
+						 "contentCreatorName": "Content Creatore Name",
+						 "contentCreationSite": "Creation Site",
+						 "contentDescription": {},
+						 "contentLabel": "Content Label",
+						 "note": "Note",
+						 "tag": "Tag"
+					}
+				],
+				"STUDYADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"200"
+		}
+			
+	],
+	
+	"TC189_TC20_EditStudywithInvalidPatientStudyID":
+	[
+		{
+			"testname":"Edit Study with Additional Info",
+			"patientId":"f19bb71e-350a-4b8e-d44f-08d753040250",
+			"patientId2":"f20bb71e-450a-4b8e-d44f-08d753040250",
+			"jsonobjects":
+			{
+				"STUDYADDITIONALINFO":{"addinfo": "addinfoval"}
+			},
+			"expCode":"404"
+		}
+	]
+}

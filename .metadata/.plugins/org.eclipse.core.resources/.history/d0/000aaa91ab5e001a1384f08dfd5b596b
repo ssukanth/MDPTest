@@ -1,0 +1,20 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "name": "",
+  "timeZone": "TestZone",
+  "siteType": "TestSite",
+  "isActive": true,
+  "accountId": "string",
+   "addressLine1": "Lane no.1",
+  "addressLine2": "MG Road, Bangalore",
+  "city": "Bangalore",
+  "district": "Urban",
+  "state": "Karnataka",
+  "country": "India",
+  "postalCode": "560001",
+  "period": "(GMT+5:30)",
+  "email": "string",
+  "alternateEmail": "test@gmail.com",
+  "contactNo": "9886651262",
+  "alternateNo": "9886651262"
+}
