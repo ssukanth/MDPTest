@@ -6642,3 +6642,4 @@ java.io.IOException: Invalid argument
 2020-03-05 12:06:01,374 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-03-05 12:06:01,375 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2020-03-05 12:06:01,378 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-03-05 12:06:01,397 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 178 resources
