@@ -1,9 +1,0 @@
-The Sequence of the execution data as follows
-Admin name(if applicable):
-Passwrod
-Baseuri
-endpoint: or queryparam:
-constructedpayload
-Response
-
-The Issues was :com.jayway.jsonpath.PathNotFoundException: Missing property in path $['patientBasicInfo']
